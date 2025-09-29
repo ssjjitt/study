@@ -1,0 +1,57 @@
+.note table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  background: white;
+  max-width: 70%;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: left;
+  border: 1px solid #ccc;
+  margin: 5%;
+}
+.note th {
+  font-weight: normal;
+  color: #039;
+  border-bottom: 2px solid #6678b1;
+  padding: 10px 8px;
+}
+.note td {
+  border-bottom: 1px solid #ccc;
+  color: #669;
+  padding: 9px 8px;
+  transition: 0.3s linear;
+}
+.note tr:hover td {
+  color: #6699ff;
+}
+
+.note input {
+  background: white;
+  color: rgb(7 2 18);
+  height: 1.8rem;
+  padding: 0 calc(1.8rem * 0.5);
+  border-radius: calc(1.8rem * 0.3);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+  display: block;
+}
+.note textarea{
+  background: white;
+  color: rgb(7 2 18);
+  height: 1.8rem;
+  padding: 0 calc(1.8rem * 0.5);
+  border-radius: calc(1.8rem * 0.3);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+  display: block;
+}
+.note button{
+  margin-top: 15px;
+  margin-right: 5px;
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  border: 1px solid #aaa;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  border-radius: calc(1.8rem * 0.3);
+}

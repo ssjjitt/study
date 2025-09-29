@@ -1,0 +1,5 @@
+﻿  ClientB.cpp
+D:\univer\!ПСП\lab4\ClientB\ClientB\ClientB.cpp(8,9): warning C4005: INADDR_ANY: изменение макроопределения
+D:\univer\!ПСП\lab4\ClientB\ClientB\ClientB.cpp(10,9): warning C4005: INADDR_BROADCAST: изменение макроопределения
+D:\univer\!ПСП\lab4\ClientB\ClientB\ClientB.cpp(108,48): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  ClientB.vcxproj -> D:\univer\!ПСП\lab4\ClientB\x64\Debug\ClientB.exe

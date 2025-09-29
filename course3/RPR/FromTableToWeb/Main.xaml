@@ -1,0 +1,272 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="816,3042" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/credentials" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>CredentialManagement</x:String>
+      <x:String>UiPath.Credentials.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>CredentialManagement</AssemblyReference>
+      <AssemblyReference>UiPath.Credentials.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1083,2785" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DtTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="672,2762" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ui:GenericValue" Name="Company" />
+        <Variable x:TypeArguments="ui:GenericValue" Name="Goods" />
+        <Variable x:TypeArguments="x:Int32" Name="Sum" />
+        <Variable x:TypeArguments="ui:GenericValue" Name="Price" />
+        <Variable x:TypeArguments="x:String" Name="mailUser" />
+        <Variable x:TypeArguments="ss:SecureString" Name="mailPass" />
+        <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="resmess" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Заказ товаров - Opera" sap:VirtualizedContainerService.HintSize="638,2679" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="d645b881-68fc-49c5-a1c8-0485bdd9a4ea" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="604,2365" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="570,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+              <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="570,1778" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+                <ueab:ExcelProcessScopeX.Body>
+                  <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="536,1659" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ReadRange AddHeaders="True" DataTable="[DtTable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="502,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Лист1" WorkbookPath="Firms.xlsx">
+                        <ui:ReadRange.Range>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ui:ReadRange.Range>
+                      </ui:ReadRange>
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DtTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="502,1479" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                        <ui:ForEachRow.Body>
+                          <ActivityAction x:TypeArguments="sd:DataRow">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="468,1292" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Фирмы" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="GetRowItem_3" Row="[row]">
+                                <ui:GetRowItem.Value>
+                                  <OutArgument x:TypeArguments="ui:GenericValue">[Company]</OutArgument>
+                                </ui:GetRowItem.Value>
+                              </ui:GetRowItem>
+                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Товары" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="GetRowItem_4" Row="[row]">
+                                <ui:GetRowItem.Value>
+                                  <OutArgument x:TypeArguments="ui:GenericValue">[Goods]</OutArgument>
+                                </ui:GetRowItem.Value>
+                              </ui:GetRowItem>
+                              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[Sum]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[Sum+Convert.ToInt32(row("Цена").ToString)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="1" DisplayName="Type Into 'Компания'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,250" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="d645b881-68fc-49c5-a1c8-0485bdd9a4ea" Text="[Company]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable CvType="InputBox" DesignTimeRectangle="128, 145, 248, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl name='Заказ товаров' role='document' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Заказ товаров' role='document' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="b295f29e-0630-470a-9833-53dbee309051" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPwAAAAaCAYAAACTtjH4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB0SURBVHhe7dOxCcAwEMDAjOz9G6dyYQIZ4HUHGkHPBjIMDyHX8GstSQM7PsMDsxgeQgwPIYaHEMNDiOEhxPAQYngIMTyEGB5CDA8hhocQw0OI4SHE8BBieAgxPIQYHkIMDyG/w0ua13END8xmeAgxPGTs/QK0U4Pb9ztAJgAAAABJRU5ErkJggg==" InformativeScreenshot="84dd60a621cf5ed979e61d0cc33230d7.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='opera.exe' cls='Chrome_WidgetWin_1' title='Заказ товаров - Opera' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target CvTextArgument="KOMIaHHA" CvType="Text" DesignTimeRectangle="57, 146, 72, 18" ElementType="Text" FriendlyName="'Компания'" FullSelectorArgument="&lt;ctrl name='Заказ товаров' role='document' /&gt;&lt;ctrl name='Компания ' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Заказ товаров' role='document' /&gt;&lt;ctrl name='Компания ' role='text' automationid='' check:text='Компания' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAWCAYAAABqgnq6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHdSURBVFhH7ZXBsQMhCIa3Q1vxnGMulmIplrJl+EBEAd3N+nKM/4yZqIj4ieyRt5a0gT2U9760DeyhEBZqA3uoDWxRBtiZozvycfTm4klTai7kVEd/TfMMSwGguNxYoWAsAKUzug0MNAEmoUB2hQi/W8+AQb8/zd/WZ2BnzM5dZZeteWLNUANJ9KRpLqSxZupWy4LwVxrHU+KUtsYf1JAURB/XGV9YZsZzUJslyQ0wXmhqWRNtMn4UOrTgbL0Dm+AgYOmzrqPISeVQbGP2qQdu5iXWe38Fmrx044MukX2kHC5goT5mmHYmJLOQpQJJOUaAJjeHNQHGNDAcvgMmJC6ymU9srb9yhgaML9ZC73F/BYy6uIGGM/9ays0Q2KmCTQCLnsQisHoRZEN7NHOes034azGUc6Ff46OIxnj9V8CaM7mDuhWWDISA9bHaXwZmD2f6D/zR5cox6xPUzkxz/wCmg2BA3RGndgerUh8OEqqtysbB96SGKRtzgBpHP/tnfwXgTQ3jPai/BKy/b25yIT1NauTc2AtY/ExoPQSBC+phuQ1fycGGQMh9jwB1sP5371cfL7ajP7UW4xOxYXu9ZfYRLJ6bQZtn2NalNrBFbWCL2sAWtYEtagNbFALz3uc/FjpvcFxD/NwAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="1" DisplayName="Type Into 'заказала'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,250" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="HardwareEvents" ScopeIdentifier="d645b881-68fc-49c5-a1c8-0485bdd9a4ea" Text="[Goods]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable CvType="InputBox" DesignTimeRectangle="440, 145, 248, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl name='Заказ товаров' role='document' /&gt;&lt;ctrl idx='2' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Заказ товаров' role='document' /&gt;&lt;ctrl automationid='' role='editable text' /&gt;" Guid="c0dc5069-bde8-488c-9a26-f3c2692b4957" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPwAAAAaCAYAAACTtjH4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB0SURBVHhe7dOxCcAwEMDAjOz9G6dyYQIZ4HUHGkHPBjIMDyHX8GstSQM7PsMDsxgeQgwPIYaHEMNDiOEhxPAQYngIMTyEGB5CDA8hhocQw0OI4SHE8BBieAgxPIQYHkIMDyG/w0ua13END8xmeAgxPGTs/QK0U4Pb9ztAJgAAAABJRU5ErkJggg==" InformativeScreenshot="e57ebd24e019188129ee7c7a9c2999f3.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='opera.exe' cls='Chrome_WidgetWin_1' title='Заказ товаров - Opera' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target CvTextArgument="3aka3a.a" CvType="Text" DesignTimeRectangle="375, 146, 66, 18" ElementType="Text" FriendlyName="'заказала'" FullSelectorArgument="&lt;ctrl name='Заказ товаров' role='document' /&gt;&lt;ctrl name=' заказала ' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Заказ товаров' role='document' /&gt;&lt;ctrl name=' заказала ' role='text' automationid='' check:text='заказала' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAWCAYAAAB9oOpzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGnSURBVFhH7ZTNccQgDIXpkFZ8zjEXStgSKIVzqnAZCkI/CBYcZze36M1o4pWwnvjACeBaKhzHARIuUBZ6YxwMSTg4mEkOZiMHs5GD2cjBbORgNroF5swJcskQQ4CAkQpXqk6Tx4gZTsyX1HMhQsak5Pj9kqROoW3rulQKJKlJT9TODzXXNNgfTM8WqWbWugkm9gHYnDZxQo4BIrlOtaoGwgxlgbZaH6xBGqBKjTZDHj/4oWouL/3Zow9n+j7rFphBk5mq5ekk1LsNTmsR7rABFW22vWtPX7TaPGrlh7oAo+Ke+O4fgOENzBOKScvTKegSM8DTe1X0KXVwM5jhFomu/FCXYGg99Zxu36QXb4w0nAdbgaHBCEL/dGYQKzBNlyB+A2YG8TYYbGD/STF1M6g2Z2g66DDYuLaBUFB8GxlMSfaUbe3CD59xTf279uc+UmTgb4BBMQwJc7J0EzhSHYqf4+dHz8twvJH2+8t8ZvV3qjDoGWHxJrTeD2br93hQP56NwMta8h9y9bCTeCjJrptg/p8czEYOZiMHs5GD2UjB4IOEi8AcxwHf2EnNcMjRACYAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click'" sap:VirtualizedContainerService.HintSize="434,180" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d645b881-68fc-49c5-a1c8-0485bdd9a4ea" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable CvElementArea="55, 182, 48, 24" CvTextArea="64, 187, 31, 13" CvTextArgument="Click" CvType="Button" DesignTimeRectangle="57, 184, 45, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Click'" FullSelectorArgument="&lt;ctrl name='Заказ товаров' role='document' /&gt;&lt;ctrl name='Click' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Заказ товаров' role='document' /&gt;&lt;ctrl name='Click' role='push button' automationid='' check:text='Click' /&gt;" Guid="82352873-673d-4323-b120-d3bd793a41ae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAaCAYAAAAe97TpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH7SURBVFhH7ZRbjqpAEIZ7cQLb8QERWYUowyaIKLIIw6jjvBkvwXiNrqJOcW+EYsycl9PmdPIl3fX3pb5gZPAG470k2u22cGSjJPF4PIThvSXu97swkBK3200Y/lLCB4MxYDkG+HzuG3nNNzA3/CKr5RtshYFif9dkNKTE9XptZmWDgo0r9iqvrWwFm+7BNNsz7eXraQ8letPifC2rVKK48xVIicvl0kjWVLn+BR9REx9fyTqTKO1p4un8i5AS5/O5AQ90/Aq6V5dxeDpK6ODh3NNRWvfybGnJmEU/QUS2YBnXl2DJDGRryZ3/+R1S4nQ60SwskJkM1qIm45kkEhOcT2KJSaUerYtskUosKnuaICWOxyPNfBhLDOc1Gc+4i410YYzzcRcb7Y7jOj8vM4dhJCFHXyk5V91ThZQ4HA4NuKDhZ9bcuozD1bAZDVycuxo2rrlY/4SBxEAafFb3pxljEkjkniqkRBiGjYw6+Fhn1FwfdbChDoye6tTZMAzAjJo3AwgDEySUMYPnPVV+LZE8kj6Y1eKmuYcJCb4erQNTAiaZEPASpXp6HwEpsd/vX8ABNfuHiVHB4XNHzWuOirnq5Nms36o5N4N+i0GrP0v3JfcX63pIid1uJwykxHa7FYb3lthsNsJASqzXa2EgJUQjG7mEyOO/xL8xAP4Ax3QPwDnrtTMAAAAASUVORK5CYII=" InformativeScreenshot="52ac28c8dd82e3a95d077ed9c45d24d0.png" ScopeSelectorArgument="&lt;wnd app='opera.exe' cls='Chrome_WidgetWin_1' title='Заказ товаров - Opera' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEachRow.Body>
+                      </ui:ForEachRow>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelProcessScopeX.Body>
+              </ueab:ExcelProcessScopeX>
+              <p:GetSecureCredential CredentialType="Generic" DisplayName="Get Secure Credentials" sap:VirtualizedContainerService.HintSize="570,112" sap2010:WorkflowViewState.IdRef="GetSecureCredential_2" Password="[mailPass]" PersistanceType="Enterprise" Target="UiPath" Username="[mailUser]" />
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[&quot;Hello it's full price&quot; + &quot; &quot; + Sum.ToString]" DisplayName="Send SMTP Mail Message" Email="[mailUser]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="570,184" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Password="[new System.Net.NetworkCredential(mailUser, mailPass).Password]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Test Message2" To="[mailUser]">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+              <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[mailUser]" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="570,57" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[resmess]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="[new System.Net.NetworkCredential(mailUser,mailPass).Password]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" />
+              <ui:SaveMail DisplayName="Save Mail Message" FilePath="Message.eml" sap:VirtualizedContainerService.HintSize="570,117" sap2010:WorkflowViewState.IdRef="SaveMail_2" MailMessage="[resmess(0)]" />
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1874, 1096" Arguments="file:///D:/univer/!РПР/FromTableToWeb/Zakaz.html" FilePath="D:\ey\OperaGX\opera.exe" IconBase64="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" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="3b721686f2f311e52e6e8d53fec4204e.png" Selector="&lt;wnd app='opera.exe' cls='Chrome_WidgetWin_1' title='Заказ товаров - Opera' /&gt;" Title="Заказ товаров - Opera" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

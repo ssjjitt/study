@@ -1,0 +1,10 @@
+﻿  ClientNP.cpp
+D:\univer\!ПСП\lab8-10\ClientNP - Copy\ClientNP\ClientNP.cpp(8,9): warning C4005: INADDR_ANY: изменение макроопределения
+D:\univer\!ПСП\lab8-10\ClientNP - Copy\ClientNP\ClientNP.cpp(10,9): warning C4005: INADDR_BROADCAST: изменение макроопределения
+D:\univer\!ПСП\lab8-10\ClientNP - Copy\ClientNP\ClientNP.cpp(165,61): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+  Создание кода
+  0 of 137 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  ClientNP.vcxproj -> D:\univer\!ПСП\lab8-10\ClientNP - Copy\Release\ClientNP.exe

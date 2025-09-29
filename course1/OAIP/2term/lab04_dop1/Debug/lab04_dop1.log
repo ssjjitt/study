@@ -1,0 +1,4 @@
+﻿  lab04_dop1.cpp
+E:\уник\оаип\lab04_dop1\lab04_dop1.cpp(85,21): warning C4018: <: несоответствие типов со знаком и без знака
+E:\уник\оаип\lab04_dop1\lab04_dop1.cpp(101,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  lab04_dop1.vcxproj -> E:\уник\оаип\lab04_v02_n01\Debug\lab04_dop1.exe

@@ -1,0 +1,163 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="96b17e0d-a89b-4c4f-9e3b-be08b7122baa" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Employee Turnover DB</ID>
+  <Name>Employee Turnover DB</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Employee Turnover DB</DataSourceID>
+  <Schema>
+    <xs:schema id="Employee_x0020_Turnover_x0020_DB" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Employee_x0020_Turnover_x0020_DB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="1ae1fdbf-8536-48c1-8ccc-e8387e14ca71">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Departments" msprop:design-time-name="89af2256-50a4-4cdd-aeaa-d85f52d884f1" msprop:DbTableName="Departments" msprop:FriendlyName="Departments" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DepartmentID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="e32e835d-ff42-46ee-87ec-647df976c657" msprop:DbColumnName="DepartmentID" msprop:FriendlyName="DepartmentID" type="xs:int" />
+                  <xs:element name="DepartmentName" msprop:design-time-name="5f19768a-f1da-4482-a78a-96623c356846" msprop:DbColumnName="DepartmentName" msprop:FriendlyName="DepartmentName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DepartmentManager" msprop:design-time-name="f202a304-f493-4cb8-8869-7da6889bfbd3" msprop:DbColumnName="DepartmentManager" msprop:FriendlyName="DepartmentManager" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Employees" msprop:design-time-name="623b006b-37b6-40e8-bf2f-aa0a6ba50850" msprop:DbTableName="Employees" msprop:FriendlyName="Employees" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="EmployeeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="7f61f6e1-1ffd-45eb-8552-326e629bafa3" msprop:DbColumnName="EmployeeID" msprop:FriendlyName="EmployeeID" type="xs:int" />
+                  <xs:element name="FirstName" msprop:design-time-name="cc652992-7512-4198-a4c4-a243b3e2be79" msprop:DbColumnName="FirstName" msprop:FriendlyName="FirstName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LastName" msprop:design-time-name="4a63ec19-9468-4a6c-99e1-e6d0ae2bfc69" msprop:DbColumnName="LastName" msprop:FriendlyName="LastName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Position" msprop:design-time-name="6c4fc648-0809-4093-ba7b-12270eabdec5" msprop:DbColumnName="Position" msprop:FriendlyName="Position" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DateOfBirth" msprop:design-time-name="955c5f3c-fb3d-4a0a-ada6-f81a29928998" msprop:DbColumnName="DateOfBirth" msprop:FriendlyName="DateOfBirth" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Gender" msprop:design-time-name="489d09a6-3624-45dc-a6b6-dab1cbf620b8" msprop:DbColumnName="Gender" msprop:FriendlyName="Gender" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HireDate" msprop:design-time-name="e274276c-cc0f-4120-b280-ea0d72031a4d" msprop:DbColumnName="HireDate" msprop:FriendlyName="HireDate" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_EmployeeTurnover" msprop:design-time-name="29cd3069-b235-400c-840a-ababd2a7be5f" msprop:DbTableName="EmployeeTurnover" msprop:FriendlyName="EmployeeTurnover" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="EmployeeTurnoverID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="2c8ed7f7-42a1-4eb1-899c-2b830d905066" msprop:DbColumnName="EmployeeTurnoverID" msprop:FriendlyName="EmployeeTurnoverID" type="xs:int" />
+                  <xs:element name="EmployeeID" msprop:design-time-name="6b3bd6f5-6ab5-4880-8708-c324045329c3" msprop:DbColumnName="EmployeeID" msprop:FriendlyName="EmployeeID" type="xs:int" minOccurs="0" />
+                  <xs:element name="DepartmentID" msprop:design-time-name="2ef48f8f-6a55-45ba-aa7c-e6b4d86c6a64" msprop:DbColumnName="DepartmentID" msprop:FriendlyName="DepartmentID" type="xs:int" minOccurs="0" />
+                  <xs:element name="HireDate" msprop:design-time-name="1ea184e1-b94a-4592-8b93-ec94dcfb5038" msprop:DbColumnName="HireDate" msprop:FriendlyName="HireDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="TerminationDate" msprop:design-time-name="34eead12-af20-4f95-b0a1-065097087941" msprop:DbColumnName="TerminationDate" msprop:FriendlyName="TerminationDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="TerminationReason" msprop:design-time-name="9abd7842-fe47-4ebe-a6a9-53bbe56fe808" msprop:DbColumnName="TerminationReason" msprop:FriendlyName="TerminationReason" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IsTerminated" msprop:design-time-name="cf0106eb-d062-4642-b4b9-05f7ea1f874d" msprop:DbColumnName="IsTerminated" msprop:FriendlyName="IsTerminated" type="xs:boolean" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Time" msprop:design-time-name="b897a83e-60ed-4ef0-8c92-88104d2dfda0" msprop:DbTableName="Time" msprop:FriendlyName="Time" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TimeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="08e42a73-1421-421e-a36b-13ee90300731" msprop:DbColumnName="TimeID" msprop:FriendlyName="TimeID" type="xs:int" />
+                  <xs:element name="Year" msprop:design-time-name="d900e60a-0b13-4aba-80fb-f69852d0cbe5" msprop:DbColumnName="Year" msprop:FriendlyName="Year" type="xs:int" minOccurs="0" />
+                  <xs:element name="Quarter" msprop:design-time-name="938a6ad7-6595-4834-9c47-389b425457b3" msprop:DbColumnName="Quarter" msprop:FriendlyName="Quarter" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:design-time-name="cf790cf5-c9ea-4b38-a552-fe829ef64308" msprop:DbColumnName="Month" msprop:FriendlyName="Month" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Departments" />
+          <xs:field xpath="DepartmentID" />
+        </xs:unique>
+        <xs:unique name="dbo_Employees_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Employees" />
+          <xs:field xpath="EmployeeID" />
+        </xs:unique>
+        <xs:unique name="dbo_EmployeeTurnover_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_EmployeeTurnover" />
+          <xs:field xpath="EmployeeTurnoverID" />
+        </xs:unique>
+        <xs:unique name="dbo_Time_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Time" />
+          <xs:field xpath="TimeID" />
+        </xs:unique>
+        <xs:keyref name="FK__EmployeeT__Depar__3F466844" refer="Constraint1">
+          <xs:selector xpath=".//dbo_EmployeeTurnover" />
+          <xs:field xpath="DepartmentID" />
+        </xs:keyref>
+        <xs:keyref name="FK__EmployeeT__Emplo__3E52440B" refer="dbo_Employees_Constraint1">
+          <xs:selector xpath=".//dbo_EmployeeTurnover" />
+          <xs:field xpath="EmployeeID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Departmen__Depar__398D8EEE" refer="dbo_Employees_Constraint1">
+          <xs:selector xpath=".//dbo_Departments" />
+          <xs:field xpath="DepartmentManager" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Employee_x0020_Turnover_x0020_DB xmlns="" />
+  </Schema>
+</DataSourceView>

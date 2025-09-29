@@ -1,0 +1,11 @@
+html{
+    color: rgb(47, 236, 47);
+}
+figcaption{
+    color: rgb(47, 236, 47);
+}
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}

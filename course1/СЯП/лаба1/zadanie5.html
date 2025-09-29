@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie5</title>
+</head>
+<body>
+    <input type = "button" value ="КНОПКА" onclick = "messageWrite()">
+    <script>
+        var messageWrite=() =>
+        {
+        let chislo1 = prompt("введите первое число");
+        let chislo2 = prompt("введите второе число");
+        if (chislo1>chislo2)
+            document.write("<div style = 'font-fanily:georgia'>первое число больше второго</div>");
+        else if(chislo1<chislo2)
+            document.write("второе число больше первого");
+        else
+            document.write("<div style = 'color:grey'>числа равны</div>");
+        }
+    </script>
+</body>
+</html>

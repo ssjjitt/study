@@ -1,0 +1,380 @@
+@charset "UTF-8";
+/*шрифт*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/*сброс стилей*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+a, a:visited{
+  color: black;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  color: #060029;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  list-style-type: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*навигация горизонтальная*/
+header {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 3px 0 7px rgba(0, 0, 0, 0.3);
+}
+
+.top-menu {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  z-index: 3;
+}
+
+.navbar-logo {
+  display: inline-block;
+  width: 100px;
+}
+
+.navbar-phone {
+  display: inline-block;
+  width: 25px;
+}
+
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-main li {
+  display: inline-block;
+}
+
+ul li:first-child a {
+  font-weight: 600;
+}
+
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #060029;
+  transition: 0.3s linear;
+  position: relative;
+}
+
+.menu-main a:hover {
+  background: rgba(99, 99, 99, 0.336);
+  font-weight: 600;
+}
+
+/*блок с бэкграундом*/
+.background-image {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url(../images/ystanovka2.jpg);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-text-annotation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.background-text-annotation h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.background-text-annotation p {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 100;
+  width: 50%;
+}
+
+/*программы, услуги*/
+.our-programms,
+.services {
+  margin-top: 3%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 60px;
+  font-weight: 300;
+  margin-left: 5%;
+  margin-top: 3%;
+}
+
+.programms-container {
+  display: flex;
+  width: 95%;
+  justify-content: center;
+}
+
+.programms-container div {
+  width: 33.33333%;
+  height: auto;
+  margin: 15px 10px;
+  overflow: hidden;
+}
+
+.programms-container div img {
+  width: 100%;
+  transition: filter 0.3s;
+}
+
+.programms-container a:visited {
+  color: #060029;
+}
+
+.programms-container a:hover img {
+  filter: grayscale(70%);
+}
+
+.programms-container h4 {
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+.programms-container p {
+  text-align: justify;
+}
+
+.services {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  font-size: 20px;
+  padding: 0;
+}
+
+footer ul li:first-child {
+  margin-top: 2%;
+}
+
+footer ul li {
+  margin: 1%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+footer img {
+  width: 50px;
+  margin-top: 2%;
+}
+
+a:visited {
+  color: #060029;
+}
+
+#positive_character {
+  font-size: 20px;
+  margin: 1%;
+  text-align: center;
+}
+
+#menu,
+#menu-bg {
+  display: none;
+}
+
+@media (max-width: 881px) {
+  .top-menu {
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 10vh;
+  }
+  .navbar-logo {
+    width: 45px;
+  }
+  .menu-main,
+  .navbar-phone {
+    display: none;
+  }
+  /*бургер*/
+  #menu {
+    z-index: 2;
+  }
+  #menu,
+  #menu-bg {
+    display: block;
+  }
+  #menu-bar {
+    width: 45px;
+    height: 40px;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;
+  }
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: #060029;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  #bar1 {
+    transform: translateY(-4px);
+  }
+  #bar3 {
+    transform: translateY(4px);
+  }
+  .nav {
+    transition: 0.3s ease;
+    display: none;
+  }
+  .nav ul {
+    padding: 0 22px;
+  }
+  .nav li {
+    list-style: none;
+    padding: 12px 0;
+  }
+  .nav li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .nav li a:hover {
+    font-weight: bold;
+  }
+  .menu-bg,
+  #menu {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  .menu-bg {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, rgb(66, 66, 66), rgb(29, 29, 29));
+    border-radius: 50%;
+  }
+  .change {
+    display: block;
+  }
+  .change .bar {
+    background-color: rgb(255, 255, 255);
+  }
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  .change #bar2 {
+    opacity: 0;
+  }
+  .change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+  .change-bg {
+    width: 550px;
+    height: 520px;
+    transform: translate(-60%, -30%);
+  }
+  .programms-container {
+    flex-wrap: wrap;
+  }
+  .programms-container div {
+    width: 100%;
+  }
+  .programms-container div a p {
+    display: none;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 435px) {
+  .background-text-annotation h1 {
+    font-size: 40px;
+  }
+  .background-text-annotation p {
+    font-size: 22px;
+  }
+  .background-image {
+    background-position: 50% 0%;
+  }
+}

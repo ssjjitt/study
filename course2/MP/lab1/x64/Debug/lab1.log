@@ -1,0 +1,5 @@
+﻿  Factorial.cpp
+  lab1.cpp
+E:\уник\мп\lab1\lab1.cpp(37,19): warning C4244: инициализация: преобразование "long double" в "__int64", возможна потеря данных
+  Создание кода...
+  lab1.vcxproj -> E:\уник\мп\lab1\x64\Debug\lab1.exe

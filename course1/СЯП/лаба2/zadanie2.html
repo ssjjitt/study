@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<input type = "button" value ="КНОПКА" onclick = "myFunction()"> 
+<script>                                                                                     // onclick - событие, которое в данном случае вызывает стрелочную функцию nyFunction
+    var myFunction=() =>                                                                     // myFunction - стрелочная функция, анонимна
+        {                                                                                    // функции - подпрограмма, которую можно вызвать и с которыми можно взаимодействовать
+            let chislo1 = prompt("введите 1 число");                                         // let - способ объявления локальных переменных
+            let chislo2 = prompt("введите 2 число");                                         // вводим числа через модальные окна
+            document.write("<table border = '2px' style = 'border-collapse: collapse'>");    // здесь начинаем делать таблицу с помощью тегов таблиц через document.write
+            for(let i=1; i<=chislo1; i++)                                         // цикл for. работает пока будем получать true. i = 1(инициализация), i <= chislo1(проверка), i++ (инкремент)
+            {
+                document.write("<tr style = 'font-size: 25px'>")
+                document.write("<td style = 'width:50px'>" +i+ "</td>");                     // в ячейки таблицы вписываем числа, которые меньше chislo1
+                for(let j=2; j<=chislo2; j++)                                       
+                {                                                                            // иициализация выполняется только один раз
+                    document.write("<td style = 'width:50px'>" +i*j+ "</td>")                // проверка в цикле for выполняется перед каждой итерацией цикла, 
+                }                                                                            // выражение инеремента вычисляется в конце цикла
+                document.write("</tr>")
+            }                                                                                  //dom -  программный интерфейс, который позволяет браузеру читать документ
+            document.write("</table>")                                                         //bom -  помогает браузеру работать с js
+                                                                                            // prototype - механизм, который оказывает влияние на то, как работают объекты в js 
+        }
+</script>
+</body>
+</html>

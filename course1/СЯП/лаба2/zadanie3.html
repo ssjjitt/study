@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <input type = "button" value ="КНОПКА" onclick = "myFunction()"> 
+    <script>
+        var myFunction=() => {
+            let a; 
+            let b; 
+            let C; 
+            let S; 
+            a = +prompt("Введите a: "); 
+            b = +prompt("Введите b: ");                                 // +prompt - результат команды будет преобразован в число
+            document.write("<table border = '1px'>");                   // создаем таблицу
+            document.write("<tr style = 'background-color: #ac9bd1'><td>Радиус</td> <td>Длина окружности</td> <td>Площадь окружности</td> </tr>"); 
+            do {                                                        // то, что внутри цикла do - инструкция. работает, пока выражение равно true
+                C = Math.round(2 * 3.14 * a);                           // вычисляем длину окружности и округляем с помощью объекта MATH и метода ROUND
+                S = Math.round(3.14 * a * a);                           // вычисляем площадь окружности
+                document.write("<tr style = 'background-color: #d5b1f1'><td>" + a.toFixed(1) + "</td><td>" + C + "</td><td>" + S + "</td></tr>"); // a округляем до одного знака после запятой с помощью метода toFixed  
+                a = a + 0.3;                                            // a изменяется на 0.3 каждую итерацию цикла
+            }
+            while (a <= b);                                             // цикл повторяется до тех пор, пока а меньше или равно b
+            document.write("</table>");
+        }
+    </script>
+</body>
+</html>

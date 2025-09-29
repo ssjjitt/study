@@ -1,0 +1,22 @@
+h1, h2, h3 {
+  color: magenta;
+  font-family: "Monotype Corsiva";
+}
+
+.color4 {
+  color: red;
+  font-family: "Times New Roman";
+  font-size: 18pt;
+}
+
+.color5 {
+  color: yellow;
+  font-family: "Times New Roman";
+  font-size: 20pt;
+}
+
+.color6 {
+  color: green;
+  font-family: "Times New Roman";
+  font-size: 22pt;
+}

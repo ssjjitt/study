@@ -1,0 +1,5 @@
+﻿  client.cpp
+D:\univer\!РИС\lab2\RIS_2_client\client.cpp(240,6): warning C4101: ibuf: неиспользованная локальная переменная
+D:\univer\!РИС\lab2\RIS_2_client\client.cpp(285,6): warning C4101: ibuf: неиспользованная локальная переменная
+D:\univer\!РИС\lab2\RIS_2_client\client.cpp(332,6): warning C4101: ibuf: неиспользованная локальная переменная
+  RIS_2_client.vcxproj -> D:\univer\!РИС\lab2\RIS_2_server\x64\Debug\RIS_2_client.exe

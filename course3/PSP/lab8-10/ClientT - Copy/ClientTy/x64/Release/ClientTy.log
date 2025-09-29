@@ -1,0 +1,8 @@
+﻿  ClientTy.cpp
+D:\univer\!ПСП\lab8-10\ClientT - Copy\ClientTy\ClientTy.cpp(55,63): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  Создание кода
+  0 of 109 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  ClientTy.vcxproj -> D:\univer\!ПСП\lab8-10\ClientT - Copy\x64\Release\ClientTy.exe

@@ -1,0 +1,9 @@
+stroka 1
+stroka 2
+stroka 3
+stroka 4
+stroka 5
+stroka 6
+stroka 7
+stroka 8
+stroka 9

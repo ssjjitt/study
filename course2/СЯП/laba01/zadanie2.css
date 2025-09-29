@@ -1,0 +1,11 @@
+.TableRaw {
+    border: 1px solid black;
+}
+
+.minus {
+    color: red;
+}
+
+.plus {
+    color : green;
+}

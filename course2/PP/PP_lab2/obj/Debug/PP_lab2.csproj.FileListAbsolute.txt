@@ -1,0 +1,7 @@
+E:\уник\c\PP_lab2\bin\Debug\PP_lab2.exe.config
+E:\уник\c\PP_lab2\bin\Debug\PP_lab2.exe
+E:\уник\c\PP_lab2\bin\Debug\PP_lab2.pdb
+E:\уник\c\PP_lab2\obj\Debug\PP_lab2.csproj.AssemblyReference.cache
+E:\уник\c\PP_lab2\obj\Debug\PP_lab2.csproj.CoreCompileInputs.cache
+E:\уник\c\PP_lab2\obj\Debug\PP_lab2.exe
+E:\уник\c\PP_lab2\obj\Debug\PP_lab2.pdb

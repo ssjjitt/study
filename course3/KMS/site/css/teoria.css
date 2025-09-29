@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+main {
+    padding: 4% 14%;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+    font-weight: 600;
+    margin-top: 3%;
+}
+
+.target {
+    margin-top: 3%;
+    border: 4px solid rgb(235, 235, 235);
+    padding: 2% 5%;
+}
+
+.info {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: justify;
+}
+
+.info img {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.image-replace {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.image-replace img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px; 
+    height: auto;
+}
+.image-replace:hover img {
+    display: block;
+}
+
+.zoomable {
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.zoomed {
+    transform: scale(4); 
+}

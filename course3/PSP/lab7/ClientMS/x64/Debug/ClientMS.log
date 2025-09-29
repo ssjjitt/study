@@ -1,0 +1,5 @@
+﻿  ClientMS.cpp
+D:\univer\!ПСП\lab7\ClientMS\ClientMS.cpp(76,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\univer\!ПСП\lab7\ClientMS\ClientMS.cpp(98,57): warning C4267: аргумент: преобразование из "size_t" в "DWORD"; возможна потеря данных
+D:\univer\!ПСП\lab7\ClientMS\ClientMS.cpp(93,8): warning C4101: count: неиспользованная локальная переменная
+  ClientMS.vcxproj -> D:\univer\!ПСП\lab7\x64\Debug\ClientMS.exe

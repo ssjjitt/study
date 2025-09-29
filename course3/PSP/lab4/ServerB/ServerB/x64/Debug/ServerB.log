@@ -1,0 +1,6 @@
+﻿  ServerB.cpp
+D:\univer\!ПСП\lab4\ServerB\ServerB\ServerB.cpp(8,9): warning C4005: INADDR_ANY: изменение макроопределения
+D:\univer\!ПСП\lab4\ServerB\ServerB\ServerB.cpp(10,9): warning C4005: INADDR_BROADCAST: изменение макроопределения
+D:\univer\!ПСП\lab4\ServerB\ServerB\ServerB.cpp(113,48): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab4\ServerB\ServerB\ServerB.cpp(197,48): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  ServerB.vcxproj -> D:\univer\!ПСП\lab4\ServerB\x64\Debug\ServerB.exe

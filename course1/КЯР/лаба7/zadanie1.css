@@ -1,0 +1,49 @@
+body
+{
+    text-align: center;
+}
+figure
+{
+    display: inline-block;
+}
+img
+{
+    height: 200px;
+    width: 200px;
+}
+.img1:hover
+{
+    transform: scale(0.5);
+    transition: transform 1s linear 0.5s;
+}
+.img2:hover
+{
+    transform: rotate(45deg);
+    transition: transform 1s linear 0.5s;
+}
+.img3:hover
+{
+    transform: translate(50px, 0px);
+    transition: transform 1s linear 0.5s;
+}
+.img4:hover
+{
+    transform:rotate(-20deg);
+    transition: transform 1s linear 0.5s;
+}
+h1 {
+    text-align: center;
+    color: blue;
+    animation: name 5s linear infinite;
+}
+@keyframes name {
+    0% {
+    opacity: 0;
+    }
+    50% {
+    opacity: 0.8;
+    }
+    100% {
+    opacity: 0;
+    }
+}

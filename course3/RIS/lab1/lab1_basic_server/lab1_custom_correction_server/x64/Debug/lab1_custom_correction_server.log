@@ -1,0 +1,3 @@
+﻿  custom_server.cpp
+D:\univer\!РИС\lab1\lab1_basic_server\lab1_custom_correction_server\custom_server.cpp(115,42): warning C4244: =: преобразование "time_t" в "long", возможна потеря данных
+  lab1_custom_correction_server.vcxproj -> D:\univer\!РИС\lab1\lab1_basic_server\x64\Debug\lab1_custom_correction_server.exe

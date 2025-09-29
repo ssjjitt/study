@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<?xml-stylesheet type="text/css" href="zadanie1.css"?>
+<companies>
+<header> Companies </header>
+<table>
+        <company>
+            <info> Information: </info>
+            <name> Company: Lenovo </name>
+            <since> Since: 1984 </since>
+            <location> Location: Hong Kong </location>
+        </company>
+        <company>
+            <info> Information: </info>
+            <name> Company: Apple </name>
+            <since> Since: 1976 </since>
+            <location> Location: California </location>
+        </company>
+         <company>
+            <info> Information: </info>
+            <name> Company: Asus </name>
+            <since> Since: 1989 </since>
+            <location> Location: Taipei </location>
+        </company>
+</table>
+</companies>

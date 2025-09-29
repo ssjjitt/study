@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>WASM Loader</title>
+</head>
+
+<body>
+    <h1>WASM</h1>
+
+    <div class="operation">
+        <input type="number" id="num1" value="5">
+        <span>+</span>
+        <input type="number" id="num2" value="3">
+        <span>=</span>
+        <span id="sumResult"></span>
+        <div>
+            <button onclick="runOperation('sum')">Calculate</button>
+        </div>
+    </div>
+
+    <div class="operation">
+        <input type="number" id="num3" value="5">
+        <span>×</span>
+        <input type="number" id="num4" value="3">
+        <span>=</span>
+        <span id="mulResult"></span>
+        <div>
+            <button onclick="runOperation('mul')">Calculate</button>
+        </div>
+    </div>
+
+    <div class="operation">
+        <input type="number" id="num5" value="5">
+        <span>-</span>
+        <input type="number" id="num6" value="3">
+        <span>=</span>
+        <span id="subResult"></span>
+        <div>
+            <button onclick="runOperation('sub')">Calculate</button>
+        </div>
+    </div>
+    <script>
+        let wasmExports = null;
+
+        async function loadWasm() {
+            try {
+                const response = await fetch('/wasm');
+                const buffer = await response.arrayBuffer();
+                const { instance } = await WebAssembly.instantiate(buffer);
+                console.log(Object.keys(instance.exports));
+                return instance.exports;
+            } catch (err) {
+                console.error('Failed to load WASM:', err);
+                throw err;
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', async () => {
+            try {
+                wasmExports = await loadWasm();
+                console.log('WASM module loaded successfully');
+            } catch (err) {
+                alert('Failed to load WASM module. Please check console for details.');
+            }
+        });
+
+        async function runOperation(operation) {
+            if (!wasmExports) {
+                alert('WASM module not loaded yet');
+                return;
+            }
+
+            let a, b;
+            switch (operation) {
+                case 'sum':
+                    a = parseInt(document.getElementById('num1').value);
+                    b = parseInt(document.getElementById('num2').value);
+                    document.getElementById('sumResult').textContent = `${wasmExports.c(a, b)}`;
+                    break;
+                case 'mul':
+                    a = parseInt(document.getElementById('num3').value);
+                    b = parseInt(document.getElementById('num4').value);
+                    document.getElementById('mulResult').textContent = `${wasmExports.d(a, b)}`;
+                    break;
+                case 'sub':
+                    a = parseInt(document.getElementById('num5').value);
+                    b = parseInt(document.getElementById('num6').value);
+                    document.getElementById('subResult').textContent = `${wasmExports.e(a, b)}`;
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

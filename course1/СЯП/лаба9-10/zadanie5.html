@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div>
+        <p>какой цвет предпочитаете?</p>
+        <input type="radio" onclick = "forBlack()">черный
+        <input type="radio" onclick = "forBlue()">синий
+        <input type="radio" onclick = "forRed()">красный
+        <input type="radio" onclick = "forGreen()">зеленый
+    </div>
+    <div>
+        <p>график какой функции хотите?</p>
+        <input type="radio" onclick = "firstFunction()">y=x^2
+        <input type="radio" onclick = "secondFunction()">y=x^3
+        <input type="radio" onclick = "thirdFunction()">y=sin(x)
+        <input type="radio" onclick = "fourthFunction()">y=cos(x)
+    </div>
+
+    
+    <canvas width="400" height="175" id="canvas"></canvas>
+    <script src="zadanie5.js"></script>
+  </body>
+</html>

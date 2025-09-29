@@ -1,0 +1,60 @@
+@font-face
+{
+    font-family:'caveat';
+    src: url('fonts/caveat.woff') format('woff');
+    src: url('fonts/caveat.svg') format('svg');
+}
+@font-face
+{
+    font-family:'exo 2';
+    src: url('fonts/exo.woff') format('woff');
+    src: url('fonts/exo.svg') format('svg');
+}
+@font-face
+{
+    font-family:'comfortaa';
+    src: url('fonts/comfortaa.woff') format('woff');
+    src: url('fonts/comfortaa.svg') format('svg');
+}
+h1
+{   margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'caveat';
+    font-size: 45px;  
+}
+h2 
+{
+    margin-top: 0.2rem; 
+    margin-bottom: 1.2em;
+    text-align: left;
+    font-family: 'exo 2';
+    text-indent: 25px;
+}
+p
+{
+    text-indent: 25px;
+    font-family: 'comfortaa';
+    text-align: justify;
+    line-height: 200%;
+    font-size: 20px;
+}
+p::first-letter
+{
+    font-size: 45px;
+    color: white;
+    background: hsla(275, 100%, 10%, 1);
+    font-style: 'bold';
+}
+ol li 
+{
+    font-family: 'comfortaa';
+    font-size: 20px;
+    list-style-type: none;
+    counter-increment: rim;
+}
+ol li:before
+{
+    content: counter(rim, upper-roman) ".";
+    color: blue;    
+}

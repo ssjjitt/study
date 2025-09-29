@@ -1,0 +1,3 @@
+﻿  ConsoleApplication3.cpp
+E:\уник\оаип\ConsoleApplication3\ConsoleApplication3.cpp(13,6): warning C4101: number: неиспользованная локальная переменная
+  ConsoleApplication3.vcxproj -> E:\уник\оаип\lab04_v02_n01\Debug\ConsoleApplication3.exe

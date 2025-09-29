@@ -1,0 +1,170 @@
+figure
+{
+    margin: 55px;
+    perspective: 800px;
+}
+img 
+{
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 5px;
+}
+.img1
+{
+    animation: name1 5s linear infinite;
+    position: relative;
+}
+@keyframes name1
+{
+0% 
+{  
+    left: 0;
+    top: 0;
+}
+50% 
+{ 
+    left: 200px;
+    top: 0;
+}
+100% 
+{ 
+    left: 0;
+    top: 0;
+}
+}
+.img2
+{
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    top: 0;
+    position: relative;
+    animation: name2 6s linear infinite;
+}
+@keyframes name2
+{
+0% 
+{  
+    left: 0;
+}
+25%
+{
+    transform-style: preserve-3d; 
+    transform: rotate(180deg) skew(15deg);
+    left: 400px;
+}
+50% 
+{ 
+    transform-style: preserve-3d; 
+    transform: rotate(360deg) skew(19deg);
+    left: 800px;
+}
+75%
+{
+    transform-style: preserve-3d; 
+    transform: rotate(180deg) skew(15deg);
+    left: 400px;
+}
+100% 
+{ 
+    left: 0;
+}
+}
+.img3
+{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    animation: name3 6s linear infinite;
+}
+@keyframes name3
+{
+0% 
+{  
+    margin-left: -100%;
+}
+50% 
+{ 
+    margin-left: 0%;
+}
+100% 
+{ 
+    margin-left: 100%;
+}
+}
+.img4
+{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    animation: name4 6s linear infinite;
+}
+@keyframes name4
+{
+0% 
+{  
+   top: 0px;
+}
+50% 
+{ 
+    top: 50px;
+}
+100% 
+{ 
+    top: 0px;
+}
+}
+.img5
+{
+    
+    height: 200px;
+    width: 200px;
+    position: relative;
+    animation: name5 6s linear infinite;
+    top: 0;
+    left: 0;
+}
+@keyframes name5
+{
+    0% {
+        left: 0;
+        top: 0;
+        }
+        
+        25% {
+        left: 200px;
+        top: 0;
+        }
+        
+        50% {
+        left: 200px;
+        top: 200px;
+        }
+        
+        75% {
+        left: 0;
+        top: 200px;
+        }
+        
+        100% {
+        left: 0;
+        top: 0;
+        }
+}
+h1 {
+    text-align: center;
+    color: blue;
+    animation: nameh1 5s linear infinite;
+}
+@keyframes nameh1 {
+    0% {
+    opacity: 0;
+    }
+    50% {
+    opacity: 0.8;
+    }
+    100% {
+    opacity: 0;
+    }
+}

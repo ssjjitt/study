@@ -1,0 +1,7 @@
+﻿  lab05_v14_n02.cpp
+E:\уник\оаип\lab05_v14_n02\lab05_v14_n02.cpp(33,21): warning C4244: =: преобразование "std::streamoff" в "int", возможна потеря данных
+E:\уник\оаип\lab05_v14_n02\lab05_v14_n02.cpp(39,21): warning C4244: =: преобразование "std::streamoff" в "int", возможна потеря данных
+E:\уник\оаип\lab05_v14_n02\lab05_v14_n02.cpp(45,21): warning C4244: =: преобразование "std::streamoff" в "int", возможна потеря данных
+E:\уник\оаип\lab05_v14_n02\lab05_v14_n02.cpp(51,21): warning C4244: =: преобразование "std::streamoff" в "int", возможна потеря данных
+E:\уник\оаип\lab05_v14_n02\lab05_v14_n02.cpp(57,21): warning C4244: =: преобразование "std::streamoff" в "int", возможна потеря данных
+  lab05_v14_n02.vcxproj -> E:\уник\оаип\lab05_v02_n01\Debug\lab05_v14_n02.exe

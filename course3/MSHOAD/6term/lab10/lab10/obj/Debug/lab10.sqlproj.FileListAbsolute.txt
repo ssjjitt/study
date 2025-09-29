@@ -1,0 +1,10 @@
+D:\univer\!МСХОАД\lab10\lab10\bin\Debug\lab10.dacpac
+D:\univer\!МСХОАД\lab10\lab10\bin\Debug\lab10.dll
+D:\univer\!МСХОАД\lab10\lab10\bin\Debug\lab10.pdb
+D:\univer\!МСХОАД\lab10\lab10\obj\Debug\lab10.sqlproj.AssemblyReference.cache
+D:\univer\!МСХОАД\lab10\lab10\obj\Debug\lab10.dll
+D:\univer\!МСХОАД\lab10\lab10\obj\Debug\lab10.pdb
+D:\univer\!МСХОАД\lab10\lab10\obj\Debug\Model.xml
+D:\univer\!МСХОАД\lab10\lab10\obj\Debug\refactor.xml
+D:\univer\!МСХОАД\lab10\lab10\obj\Debug\postdeploy.sql
+D:\univer\!МСХОАД\lab10\lab10\obj\Debug\predeploy.sql

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="zadanie2.xsl"?>
+    <ratelist>
+        <student>
+            <name>Багласов А.А</name>
+            <grade1>7</grade1>
+            <grade2>2</grade2>
+            <grade3>4</grade3>
+            <grade4>4</grade4>
+        </student>
+
+        <student>
+            <name>Глухова Д.В</name>
+            <grade1>9</grade1>
+            <grade2>3</grade2>
+            <grade3>6</grade3>
+            <grade4>8</grade4>
+        </student>
+
+        <student>
+             <name>Дребезов И.В</name>
+            <grade1>8</grade1>
+            <grade2>2</grade2>
+            <grade3>7</grade3>
+            <grade4>5</grade4>
+        </student>
+
+        <student>
+             <name>Клецкий В.И</name>
+            <grade1>9</grade1>
+            <grade2>8</grade2>
+            <grade3>7</grade3>
+            <grade4>10</grade4>
+        </student>
+
+        <student>
+            <name>Козека С.В</name>
+            <grade1>4</grade1>
+            <grade2>2</grade2>
+            <grade3>4</grade3>
+            <grade4>4</grade4>
+        </student>
+
+        <student>
+        <name>Кукалевич Е.Ю</name>
+            <grade1>7</grade1>
+            <grade2>6</grade2>
+            <grade3>2</grade3>
+            <grade4>4</grade4>
+        </student>
+
+        <student>
+            <name>Лях Д.А</name>
+                <grade1>8</grade1>
+                <grade2>7</grade2>
+                <grade3>9</grade3>
+                <grade4>9</grade4>
+        </student>
+    </ratelist>

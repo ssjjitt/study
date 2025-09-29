@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CalcLink")
+
+@using (Html.BeginForm("Sum", "Calc", FormMethod.Post))
+{
+    <p>
+        @await Html.PartialAsync("_Calc")
+        <input type="submit" name="press" value="+" />
+    </p>
+    <p>@((string)ViewBag.Error)</p>
+}

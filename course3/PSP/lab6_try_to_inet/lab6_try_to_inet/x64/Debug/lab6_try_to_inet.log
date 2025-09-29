@@ -1,0 +1,5 @@
+﻿  lab6_try_to_inet.cpp
+D:\univer\!ПСП\lab6_try_to_inet\lab6_try_to_inet\lab6_try_to_inet.cpp(212,61): warning C4267: аргумент: преобразование из "size_t" в "DWORD"; возможна потеря данных
+D:\univer\!ПСП\lab6_try_to_inet\lab6_try_to_inet\lab6_try_to_inet.cpp(177,20): warning C4101: end: неиспользованная локальная переменная
+D:\univer\!ПСП\lab6_try_to_inet\lab6_try_to_inet\lab6_try_to_inet.cpp(177,13): warning C4101: start: неиспользованная локальная переменная
+  lab6_try_to_inet.vcxproj -> D:\univer\!ПСП\lab6_try_to_inet\x64\Debug\lab6_try_to_inet.exe

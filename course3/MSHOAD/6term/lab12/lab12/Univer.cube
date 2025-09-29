@@ -1,0 +1,524 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="360e6109-adcb-4fae-8be0-ba63498af8af" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Univer</ID>
+  <Name>Univer</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="4cb879ca-3e15-432b-a884-edfb8b0a3b48">
+      <ID>STUDENT</ID>
+      <Name>STUDENT</Name>
+      <DimensionID>STUDENT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dcf80012-4104-47ff-99e8-2e822b208304">
+          <AttributeID>IDSTUDENT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="482a4b09-ca9e-42b1-aece-cdd09149a16a">
+          <AttributeID>IDGROUP</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="8606b1cd-56f1-48a0-a899-4274f1f95774">
+      <ID>GROUPS</ID>
+      <Name>GROUPS</Name>
+      <DimensionID>GROUPS</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ad15b938-e7b3-4420-b2dc-9b1b9a02fe02">
+          <AttributeID>IDGROUP</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="59c10a42-ba46-469a-8c36-7ae60d2ee2f3">
+          <AttributeID>FACULTY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c1ba067b-031b-46f5-98d5-f8129fab7829">
+          <AttributeID>PROFESSION</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9f781ff5-4d64-4bf4-8052-3b54d219f23d">
+      <ID>FACULTY</ID>
+      <Name>FACULTY</Name>
+      <DimensionID>FACULTY</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a1f2f660-98bc-4e1a-a328-ad431405b2ec">
+          <AttributeID>FACULTY</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="841bd225-2ac3-4c3c-92d2-0a7eb7ee2cb6">
+      <ID>PROFESSION</ID>
+      <Name>PROFESSION</Name>
+      <DimensionID>PROFESSION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="04b7755c-8ebf-4f3c-b9c1-256d5df0649e">
+          <AttributeID>PROFESSION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dc228a76-4b19-4960-867f-f85b57e53027">
+          <AttributeID>FACULTY</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4959cb5f-cf67-4339-9c4c-5e4e7e64cfe6">
+      <ID>SUBJECT</ID>
+      <Name>SUBJECT</Name>
+      <DimensionID>SUBJECT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3034e38a-026c-4315-b541-25afaffeb57b">
+          <AttributeID>SUBJECT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ca33b288-b263-4bbf-b7bf-153cd705fd34">
+          <AttributeID>TEACHER</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="2962e39c-bed3-436e-ad1f-8527b275947c">
+      <ID>TEACHER</ID>
+      <Name>TEACHER</Name>
+      <DimensionID>TEACHER</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a95b23d4-93d4-4f96-9a41-839eb3ed05b2">
+          <AttributeID>TEACHER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="00a86fcb-ea46-4e63-9982-063193d80a4d">
+          <AttributeID>PULPIT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="799630ee-29b9-4018-9324-1fb14cbaa3c6">
+          <AttributeID>FACULTY</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="592e40ea-b223-436b-8238-0033babe0737">
+      <ID>GROUPS - FACULTY</ID>
+      <Name>GROUPS - FACULTY</Name>
+      <DimensionID>FACULTY</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="991bab8e-523d-4c26-b717-ea49ff6f5136">
+          <AttributeID>FACULTY</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1f83e889-2391-459a-8f40-7b32a0879997">
+      <ID>GROUPS - PROFESSION - FACULTY</ID>
+      <Name>GROUPS - PROFESSION - FACULTY</Name>
+      <DimensionID>FACULTY</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a230edb4-2430-4433-b641-6cbf2dfdbeec">
+          <AttributeID>FACULTY</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="14c81bdc-2945-4255-bdd8-1b8efce36163">
+      <ID>PROFESSION - FACULTY</ID>
+      <Name>PROFESSION - FACULTY</Name>
+      <DimensionID>FACULTY</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2249affb-78e9-40b7-b17e-c1ba119b4556">
+          <AttributeID>FACULTY</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="c76432a8-6835-4920-ac34-e5b040fc1b74">
+      <ID>STUDENT</ID>
+      <Name>STUDENT</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="18087428-0900-4816-903f-6a5a3831f4b3">
+          <ID>STUDENT Count</ID>
+          <Name>STUDENT Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="63cd6a07-e86f-44b4-b1cc-7bf63cae5253">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="105bc82a-d71e-4ac5-b039-f218caf35701">
+              <TableID>dbo_STUDENT</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="e3db7946-a04f-4191-8d7b-1d584a82f31d">
+          <CubeDimensionID>STUDENT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3c53ed95-c995-48d5-baf0-2dd66f4bb7bf">
+              <AttributeID>IDSTUDENT</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="826ebdcb-62c8-44c1-8e4d-8dc099b8dd23">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="00a99d8d-29ee-4c36-83fb-b69d44317b72">
+                    <TableID>dbo_STUDENT</TableID>
+                    <ColumnID>IDSTUDENT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3d195e68-2e43-478b-aeb7-097ed60204ff">
+          <CubeDimensionID>GROUPS</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="97cca088-39c8-47df-b895-76db4a4fe973">
+              <AttributeID>IDGROUP</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9a92f8bd-7011-46f7-bf3c-12f41c7c01b6">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="38da3caa-291e-40b2-b592-1f3a3d952aea">
+                    <TableID>dbo_STUDENT</TableID>
+                    <ColumnID>IDGROUP</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="78601a18-000d-49bc-974b-9e08a0f35a42">
+          <CubeDimensionID>GROUPS - FACULTY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b98ef24c-b538-4d14-8a11-8848774f2066">
+              <AttributeID>FACULTY</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>GROUPS</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>FACULTY</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="3994186b-4237-433a-b3d2-ff3d4fa57ab1">
+          <CubeDimensionID>PROFESSION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cd5c46e7-d1d2-4903-bec2-558415838b13">
+              <AttributeID>PROFESSION</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>GROUPS</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>PROFESSION</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="72298c0a-e171-412a-9821-9d9a225a956e">
+          <CubeDimensionID>GROUPS - PROFESSION - FACULTY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="823519d4-eb86-438e-9214-f8779d58af19">
+              <AttributeID>FACULTY</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>PROFESSION</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>FACULTY</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="e9106bf6-fbf6-4179-9750-6d20f8be3510">
+      <ID>GROUPS</ID>
+      <Name>GROUPS</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="4dd964ae-3150-4563-af76-8c27cdf34cc7">
+          <ID>YEAR FIRST</ID>
+          <Name>YEAR FIRST</Name>
+          <Source dwd:design-time-name="11eb2a0f-f16d-457d-bed4-6d5a19c45679">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="57177db7-18b6-454e-9f1c-d591c8087756">
+              <TableID>dbo_GROUPS</TableID>
+              <ColumnID>YEAR_FIRST</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7dadfcb2-3f46-4fbe-8734-31d2a9c4ba5c">
+          <ID>GROUPS Count</ID>
+          <Name>GROUPS Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="305999a3-fb14-4d53-adde-bd1a09d94231">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="b1feeb79-ba5b-4708-827c-76aaf670836e">
+              <TableID>dbo_GROUPS</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="39cd6e8c-cd56-4f66-9585-e4424e1fdc9d">
+          <CubeDimensionID>GROUPS</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b6c517cb-c489-44ea-a9e7-56b6018e5c05">
+              <AttributeID>IDGROUP</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0fc7b5f2-e37e-4e86-b420-f61721910f0a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e9a1652e-6ceb-4533-b26f-8b39df5b9ab0">
+                    <TableID>dbo_GROUPS</TableID>
+                    <ColumnID>IDGROUP</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="acba8d49-d392-4fbe-a185-5055b64a5c4d">
+          <CubeDimensionID>FACULTY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b5b27d6f-69d0-4b28-bd86-ea83f9385ca2">
+              <AttributeID>FACULTY</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="523c391c-fa5a-4003-870c-e7c703e8199a">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7c7ddd7f-0d0c-4686-a5c6-7b989ba9993c">
+                    <TableID>dbo_GROUPS</TableID>
+                    <ColumnID>FACULTY</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3977d909-8af7-4f97-9dea-ab075cc60c62">
+          <CubeDimensionID>PROFESSION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b70223c3-4692-42c4-b5e2-557678502971">
+              <AttributeID>PROFESSION</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d6c347f5-9ca1-4b7c-838e-689f85163de9">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="faebd8f3-3de9-4dae-babe-b8049dca5a72">
+                    <TableID>dbo_GROUPS</TableID>
+                    <ColumnID>PROFESSION</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="036f8bca-40a6-48f0-a987-f9dda42a7997">
+          <CubeDimensionID>STUDENT</CubeDimensionID>
+          <MeasureGroupID>STUDENT</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="4c1ba3f1-9181-4b39-8c5b-ad01e79b7bbb">
+          <CubeDimensionID>PROFESSION - FACULTY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="24a0b453-e3b2-4080-890a-d6b45cb2091b">
+              <AttributeID>FACULTY</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>PROFESSION</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>FACULTY</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="67a0cc5a-30a5-4eb6-b2da-dd8fb2622313">
+      <ID>PROFESSION</ID>
+      <Name>PROFESSION</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7aabc48b-49fe-4a2c-b024-e36beedc4b74">
+          <ID>PROFESSION Count</ID>
+          <Name>PROFESSION Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="2183c369-542b-4ace-bb19-d4db5722608c">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="188297d4-b44e-4d6a-8adf-c6f62fea395f">
+              <TableID>dbo_PROFESSION</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="d8ce25f8-ab57-4830-bbe9-ec50d28350b4">
+          <CubeDimensionID>PROFESSION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1dad0d8c-f3e6-4e89-a96f-b38195042d88">
+              <AttributeID>PROFESSION</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ada90f41-f063-4ad5-9a4a-a8cb46b3f941">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="111b728d-02d8-4b33-b035-464fea62c29d">
+                    <TableID>dbo_PROFESSION</TableID>
+                    <ColumnID>PROFESSION</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6932dce0-6ac7-42bd-ae6f-b9217245f248">
+          <CubeDimensionID>FACULTY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2dd772cb-9155-40bf-8652-84b72bfca910">
+              <AttributeID>FACULTY</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="10f4c8a1-5858-465a-b3b6-df92c02860f2">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="666dd10a-6d35-411b-8446-608a86e8b290">
+                    <TableID>dbo_PROFESSION</TableID>
+                    <ColumnID>FACULTY</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="106dfbda-5333-47e0-80d6-d744f5529667">
+      <ID>SUBJECT</ID>
+      <Name>SUBJECT</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7bc886ed-40e2-45d7-8dbd-4dbe09e7466d">
+          <ID>SUBJECT Count</ID>
+          <Name>SUBJECT Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="8508bab6-d7ec-42fe-aa21-bee42b0ef07e">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="5b5d4ccf-a35b-4203-b29d-fd6418a504e1">
+              <TableID>dbo_SUBJECT</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="007627f0-f760-4850-ae5e-67be8425fece">
+          <CubeDimensionID>SUBJECT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6fcbe56e-1564-422a-a17c-19c6f5fd9627">
+              <AttributeID>SUBJECT</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="12a34880-376d-4370-a7fc-5cca74c79a0a">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7fe191f9-eaca-48ee-b5d7-309a01eb0908">
+                    <TableID>dbo_SUBJECT</TableID>
+                    <ColumnID>SUBJECT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c8e8204e-557f-4f29-a232-e2c0f17ff3ff">
+          <CubeDimensionID>TEACHER</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="de3a18f3-a674-427f-ba2d-329911edbd24">
+              <AttributeID>TEACHER</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9ee0597d-59ee-45e4-a48a-45c7c961514b">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7e8fab0e-8f99-4d93-bf7a-970c83863c30">
+                    <TableID>dbo_SUBJECT</TableID>
+                    <ColumnID>TEACHER</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="0b8f048d-c03d-4229-a70f-de1168b2fca5">
+          <CubeDimensionID>FACULTY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4a0f65b8-d548-4674-9010-e0e42a52afab">
+              <AttributeID>FACULTY</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>TEACHER</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>FACULTY</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="36cbbfaf-9026-4e48-8c38-2be25269f1a7">
+    <DataSourceViewID>Univer</DataSourceViewID>
+  </Source>
+</Cube>

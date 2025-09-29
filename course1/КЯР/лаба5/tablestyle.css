@@ -1,0 +1,32 @@
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+    empty-cells: hide;
+}
+caption
+{
+    font-size: 1.2em;
+}
+th:nth-child(n+2)
+{
+    background-color: darkblue;
+    color: white;
+}
+td:nth-child(0n+2)
+{
+    background-color: #0BFF;
+    color:white;
+}
+td:nth-child(0n+3)
+{
+    background-color: purple;
+    color:white;
+}
+td:nth-child(0n+4)
+{
+    background-color: green;
+    color: white;
+}

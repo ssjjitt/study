@@ -1,0 +1,192 @@
+﻿<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        font-size: 22px;
+    }
+
+    h1, h2, h3, h4 {
+        color: #2c3e50;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: calc(100% - 22px);
+        margin-right: 10px;
+        font-size: 22px;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 22px;
+    }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    .comment-section {
+        margin-top: 10px;
+        padding: 10px;
+        background: #f1f1f1;
+        border-left: 4px solid #3498db;
+    }
+
+        .comment-section h4 {
+            margin-top: 0;
+        }
+
+    .inline-form {
+        display: inline;
+        margin-right: 10px;
+    }
+</style>
+
+<h1>Режим: @ViewBag.Mode</h1>
+
+@if (ViewBag.Mode == "guest")
+{
+    <p>Вы находитесь в режиме гостя. Для доступа к функции владельца введите секретный ключ:</p>
+    <form method="post" action="/Home/SwitchMode">
+        <input type="text" name="accessKey" placeholder="Введите ключ" required />
+        <button type="submit">Переключить режим</button>
+    </form>
+
+    <!-- Форма для фильтрации по ключевым словам -->
+    <form method="get" action="/Home/Index">
+        <input type="text" name="filterKeyword" value="@ViewBag.FilterKeyword" placeholder="Введите ключевое слово для фильтрации" />
+        <button type="submit">Фильтровать</button>
+    </form>
+}
+else
+{
+    <p>Вы в режиме владельца. Добро пожаловать!</p>
+
+    <!-- Кнопка для возврата в режим гостя -->
+    <form method="post" action="/Home/SwitchMode" style="display: inline;">
+        <input type="hidden" name="accessKey" value="guest" />
+        <button type="submit">Переключить в режим гостя</button>
+    </form>
+
+    <!-- Форма для фильтрации по ключевым словам -->
+    <form method="get" action="/Home/Index">
+        <input type="text" name="filterKeyword" value="@ViewBag.FilterKeyword" placeholder="Введите ключевое слово для фильтрации" />
+        <button type="submit">Фильтровать</button>
+    </form>
+
+    <!-- Форма для добавления новой ссылки -->
+    <h3>Добавить новую ссылку</h3>
+    <form method="post" action="/Home/AddLink">
+        <input type="text" name="url" placeholder="http://url-useful-website-reference" required />
+        <input type="text" name="keywords" placeholder="key-word, key-word, ..." required />
+        <button type="submit">Добавить ссылку</button>
+    </form>
+}
+
+<h2>Список ссылок:</h2>
+<ul>
+    @foreach (var link in ViewBag.Links)
+    {
+        <li>
+            <div>
+                <!-- Ссылка -->
+                <a href="@link.Url" target="_blank">@link.Url</a> - @link.Keywords
+            </div>
+
+            @if (ViewBag.Mode == "owner")
+            {
+                <!-- Кнопки для голосования по полезности -->
+                <div>
+                    <form method="post" action="/Home/Vote" style="display: inline;">
+                        <input type="hidden" name="id" value="@link.Id" />
+                        <button type="submit" name="isUseful" value="true">Полезно</button>
+                        <button type="submit" name="isUseful" value="false">Бесполезно</button>
+                    </form>
+
+                    <!-- Счетчики полезных и бесполезных голосов -->
+                    <p>Полезно: @link.UsefulCount</p>
+                    <p>Бесполезно: @link.UselessCount</p>
+                </div>
+
+                <!-- Форма для удаления ссылки -->
+                <form method="post" action="/Home/DeleteLink" style="display: inline;">
+                    <input type="hidden" name="id" value="@link.Id" />
+                    <button type="submit">Удалить</button>
+                </form>
+
+                <!-- Форма для редактирования ссылки -->
+                <form method="post" action="/Home/EditLink" style="display: inline;">
+                    <input type="hidden" name="id" value="@link.Id" />
+                    <input type="text" name="url" value="@link.Url" required />
+                    <input type="text" name="keywords" value="@link.Keywords" required />
+                    <button type="submit">Изменить</button>
+                </form>
+            }
+
+            <!-- Форма для добавления комментария -->
+            <div>
+                <form method="post" action="/Home/AddComment" style="display: inline;">
+                    <input type="hidden" name="linkId" value="@link.Id" />
+                    <input type="text" name="commentText" placeholder="Добавить комментарий" />
+                    <button type="submit">Добавить</button>
+                </form>
+            </div>
+
+            <!-- Отображение комментариев -->
+            <div>
+                <h4>Комментарии:</h4>
+                @foreach (var comment in link.Comments)
+                {
+                    <p>
+                        @comment.Text - <i>@comment.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")</i>
+                    </p>
+
+                    <!-- Форма для редактирования комментария (доступно всем) -->
+                    <form method="post" action="/Home/EditComment" style="display: inline;">
+                        <input type="hidden" name="commentId" value="@comment.Id" />
+                        <input type="text" name="newText" value="@comment.Text" required />
+                        <button type="submit">Изменить</button>
+                    </form>
+
+                    <!-- Форма для удаления комментария (доступно всем) -->
+                    <form method="post" action="/Home/DeleteComment" style="display: inline;">
+                        <input type="hidden" name="commentId" value="@comment.Id" />
+                        <button type="submit">Удалить</button>
+                    </form>
+                }
+            </div>
+        </li>
+    }
+</ul>

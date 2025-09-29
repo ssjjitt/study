@@ -1,0 +1,3 @@
+﻿  lab08_dop2.cpp
+E:\уник\оаип\lab08_dop2\lab08_dop2.cpp(117,18): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  lab08_dop2.vcxproj -> E:\уник\оаип\lab08_v02\Debug\lab08_dop2.exe

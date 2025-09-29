@@ -1,0 +1,6 @@
+LIBRARY GDVDLib
+
+EXPORTS
+    binary_search_iterative @1
+    search = binary_search_recursive @2
+    m_array @3 NONAME

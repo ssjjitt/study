@@ -1,0 +1,9 @@
+﻿  lab12_dop1.cpp
+E:\уник\оаип\lab12_dop1\lab12_dop1.cpp(27,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+E:\уник\оаип\lab12_dop1\lab12_dop1.cpp(32,24): warning C4101: letter: неиспользованная локальная переменная
+E:\уник\оаип\lab12_dop1\lab12_dop1.cpp(31,32): warning C4101: n: неиспользованная локальная переменная
+E:\уник\оаип\lab12_dop1\lab12_dop1.cpp(85,9): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+E:\уник\оаип\lab12_dop1\lab12_dop1.cpp(86,23): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+E:\уник\оаип\lab12_dop1\lab12_dop1.cpp(95,9): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+E:\уник\оаип\lab12_dop1\lab12_dop1.cpp(96,28): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  lab12_dop1.vcxproj -> E:\уник\оаип\lab12_v02\Debug\lab12_dop1.exe

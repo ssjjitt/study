@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\strwp-6.props" />
+</Project>

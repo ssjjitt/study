@@ -1,0 +1,3 @@
+﻿  lab07_dop1.cpp
+E:\уник\оаип\lab07_dop1\lab07_dop1.cpp(31,27): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+  lab07_dop1.vcxproj -> E:\уник\оаип\lab07_v02\Debug\lab07_dop1.exe

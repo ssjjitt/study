@@ -1,0 +1,7 @@
+﻿  Hash_Table.cpp
+  Lists.cpp
+  lab15_dop2.cpp
+E:\уник\оаип\lab15_dop2\lab15_dop2.cpp(51,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+E:\уник\оаип\lab15_dop2\Hash_Table.cpp(43): warning C4715: hashTC::Object::deleteByData: значение возвращается не при всех путях выполнения
+  lab15_dop2.vcxproj -> E:\уник\оаип\lab15_v02\Debug\lab15_dop2.exe

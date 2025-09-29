@@ -1,0 +1,5 @@
+﻿  func.cpp
+E:\уник\оаип\lab14_v06\func.cpp(11,14): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+  lab14_v06.cpp
+  Создание кода...
+  lab14_v06.vcxproj -> E:\уник\оаип\lab14_v02\Debug\lab14_v06.exe

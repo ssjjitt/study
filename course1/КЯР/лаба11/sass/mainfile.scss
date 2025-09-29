@@ -1,0 +1,107 @@
+@import "variables";
+html {
+  font-family: $font;
+  .img {
+    width: 450px;
+    height: 250px;
+  }
+  .img1 {
+    width: 380px;
+    height: 150px;
+  }
+}
+
+.headercontainer {
+  padding: 1%;
+  .nav ul li {
+    display: inline;
+    a {
+      display: inline-block;
+      margin: 10px;
+      font-size: 25px;
+      text-decoration: none;
+      color: $acolor;
+    }
+    :visited {
+      color: $avisited;
+    }
+    :hover {
+      color: $ahover;
+    }
+  }
+  .logo {
+    width: 240px;
+    height: (240px / 3);
+    margin-right: 120px;
+  }
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+}
+
+@mixin fortablecell {
+  display: table-cell;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+%forform {
+  background-color: $white;
+  box-shadow: $boxshadow;
+}
+
+.bodycontainer {
+  .text {
+    display: inline-block;
+    margin: 5px;
+  }
+  .text2 {
+    display: inline-block;
+    margin-top: 45px;
+  }
+  .form {
+    label {
+      @include fortablecell();
+    }
+    input {
+      @include fortablecell();
+      @extend %forform;
+    }
+    input[type="submit"] {
+      @include fortablecell();
+      background-color: $bgsubmit;
+      box-shadow: $boxshadowsubmit;
+      color: $white;
+      margin: 5px 2px 5px 2px;
+      width: 105px;
+      height: 100px / 4;
+    }
+    display: table-row;
+  }
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.containertext {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+@function fortext() {
+  $textsize: 0px;
+  @if (($h > 20px) && ($h < 30px)) {
+    $textsize: $h - 10px;
+  } @else if($h < 20px) {
+    $textsize: $h - 5px;
+  } @else {
+    $textsize: 0.5 * $h;
+  }
+  @return $textsize;
+}
+
+.text {
+  font-size: fortext();
+}
+
+h2 {
+  font-size: $h;
+}

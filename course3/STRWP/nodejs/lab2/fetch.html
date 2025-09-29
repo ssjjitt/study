@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+<h2>fetch</h2>
+<div id="userInfo">
+    <p>подождите пжпжппжпж...</p>
+</div>
+
+<body>
+
+</body>
+
+<script>
+    async function fetchdata() {
+        const response = await fetch('http://localhost:5001/api/name?name=gluhova', {
+            method: 'GET'
+        });
+        const data = await response.text();
+        document.getElementById('userInfo').innerHTML = `<p>Имя: ${data}</p>`;
+    }
+    fetchdata();
+</script>
+
+</html>

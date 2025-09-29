@@ -1,0 +1,10 @@
+﻿  ServerNP.cpp
+D:\BSTU\5_semestr\PSP\lab06\ServerNP\ServerNP\ServerNP.cpp(8,9): warning C4005: INADDR_ANY: изменение макроопределения
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(600,9):
+      см. предыдущее определение "INADDR_ANY"
+  
+D:\BSTU\5_semestr\PSP\lab06\ServerNP\ServerNP\ServerNP.cpp(10,9): warning C4005: INADDR_BROADCAST: изменение макроопределения
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(602,9):
+      см. предыдущее определение "INADDR_BROADCAST"
+  
+  ServerNP.vcxproj -> D:\BSTU\5_semestr\PSP\lab06\ServerNP\x64\Debug\ServerNP.exe

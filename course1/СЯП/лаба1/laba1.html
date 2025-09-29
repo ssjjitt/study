@@ -1,0 +1,39 @@
+<!DOCTYPE HTML> 
+<html>
+  <head>
+    <meta charset="UTF-8">  
+    <title>zadanie1</title>
+    <style>
+        body
+            {
+                background-color: antiquewhite;
+                text-align:center;
+            }
+        input
+            {
+                align-items: center;
+                color: brown;
+                border-color: brown;
+                background-color: burlywood;
+                border-radius: 5px;
+                font-family:'Times New Roman';
+            }
+
+    </style>
+  </head>
+<body>
+    <input type="button" value="КНОПКА" onclick="messageWrite()" />
+    <script>                                                                          // onclick - событие, которое в данном случае вызывает стрелочную функцию nyFunction
+    var messageWrite=() => 
+    {
+    alert("вас приветствует учебный центр"); // окно оповещения, диалоговое
+    let name = prompt("введите имя?"); // окно запроса, 
+    alert("добро пожаловать на наши курсы, " +name);
+    if (confirm("хотите стать веб-дизайнером?") == true) // окно подтверждения
+      alert("учите стили css и javascript");
+    else
+      alert("упускаете время");
+    }
+    </script>
+</body>
+</html>

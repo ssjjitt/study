@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box-3">
+        <div class="button btn btn-three" id="rand">
+          <span>Сгенерировать случайное число</span>
+        </div>
+      </div>
+      <div class="form">
+        <input
+          class="message"
+          type="text"
+          id="hashMessage"
+          placeholder="Сообщение"
+        />
+        <div class="button btn btn-three" id="hash">
+          <span>Хешировать сообщение</span>
+        </div>
+      </div>
+      <div class="form">
+        <input
+          class="message"
+          type="text"
+          id="codeMessage"
+          placeholder="Сообщение"
+        />
+        <div class="button btn btn-three" id="encode">
+          <span>Зашифровать сообщение</span>
+        </div>
+        <div class="button btn btn-three" id="decode">
+          <span>Дешифровать сообщение</span>
+        </div>
+        <div class="button btn btn-three" id="pack">
+          <span>Запаковать\распаковать ключ</span>
+        </div>
+        <div class="button btn btn-three" id="signa">
+          <span>Выполнить подпись и проверку подлинности (ECDSA)</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./index.js"></script>
+</html>

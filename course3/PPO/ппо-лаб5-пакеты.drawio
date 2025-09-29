@@ -1,0 +1,71 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 OPR/114.0.0.0" version="24.8.6">
+  <diagram name="Страница — 1" id="-oSeMhTCia-Ojk3NSs4r">
+    <mxGraphModel dx="1163" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-1" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="450" width="200" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-2" value="Animations" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="500" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-3" value="Media" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-610" y="500" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-4" value="Utilities" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="562" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-5" value="Logging" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-610" y="562" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-7" value="Additional" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="470" width="60" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-11" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="650" width="200" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-13" value="Data Repositories" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="700" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-14" value="Data" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="675" width="30" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-15" value="DB Entities" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="760" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-16" value="DB Connection" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-610" y="700" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-17" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="860" width="200" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-18" value="Teacher" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="910" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-19" value="Entities" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="885" width="40" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-20" value="Lesson" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="970" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-21" value="Student" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-610" y="910" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-22" value="Material" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-610" y="970" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=120;entryDy=14;entryPerimeter=0;" edge="1" parent="1" source="dSTEEdmW6dCPb6Gi1nYO-1" target="dSTEEdmW6dCPb6Gi1nYO-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-600" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dSTEEdmW6dCPb6Gi1nYO-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.499;entryY=0.075;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="dSTEEdmW6dCPb6Gi1nYO-11" target="dSTEEdmW6dCPb6Gi1nYO-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

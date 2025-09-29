@@ -1,0 +1,4 @@
+﻿  LevenshteinMain.cpp
+E:\уник\мп\MP_Lab4\MP_Lab4\LevenshteinMain.cpp(25,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+E:\уник\мп\MP_Lab4\MP_Lab4\LevenshteinMain.cpp(39,19): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  MP_Lab4.vcxproj -> E:\уник\мп\MP_Lab4\x64\Debug\Levenshtein.exe

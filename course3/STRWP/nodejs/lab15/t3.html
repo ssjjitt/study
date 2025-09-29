@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WASM</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="operation">
+        <h3>Сложение (x + y)</h3>
+        <input type="number" id="sumX">
+        +
+        <input type="number" id="sumY">
+        =
+        <span id="sumResult"></span>
+
+        <button onclick="runWasm('sum')">Посчитать</button>
+    </div>
+
+    <div class="operation">
+        <h3>Умножение (x * y)</h3>
+        <input type="number" id="mulX">
+        *
+        <input type="number" id="mulY">
+        =
+        <span id="mulResult"></span>
+
+        <button onclick="runWasm('mul')">Посчитать</button>
+    </div>
+
+    <div class="operation">
+        <h3>Вычитание (x - y)</h3>
+        <input type="number" id="subX">
+        -
+        <input type="number" id="subY">
+        =
+        <span id="subResult"></span>
+
+        <button onclick="runWasm('sub')">Посчитать</button>
+    </div>
+
+    <script src="lab15.js"></script>
+    <script>
+        let Module
+
+        MathModule().then((module) => {
+            Module = module
+        })
+
+        function runWasm(operation) {
+
+            const x = parseInt(document.getElementById(operation + "X").value);
+            const y = parseInt(document.getElementById(operation + "Y").value);
+
+            let result;
+            if (operation === "sum") result = Module._sum(x, y);
+            else if (operation === "mul") result = Module._mul(x, y);
+            else if (operation === "sub") result = Module._sub(x, y);
+
+            document.getElementById(operation + "Result").textContent = result;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PP__Lab4/1.0.0": {
+        "dependencies": {
+          "Lec04LibN": "1.0.0"
+        },
+        "runtime": {
+          "PP__Lab4.dll": {}
+        }
+      },
+      "Lec04LibN/1.0.0": {
+        "runtime": {
+          "Lec04LibN.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PP__Lab4/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lec04LibN/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

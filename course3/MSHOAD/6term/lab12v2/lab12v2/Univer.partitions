@@ -1,0 +1,65 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="050aa7ff-9091-4564-bd71-ce020895b888" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Univer</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>FACT PROGRESS</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d18f1dfd-bd89-4262-a92f-5983b677dd63">
+          <ID>FACT PROGRESS</ID>
+          <Name>FACT PROGRESS</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a5e20e93-99f4-400d-bbd3-86ff5dad7107">
+            <DataSourceViewID>Univer</DataSourceViewID>
+            <TableID>dbo_FACT_PROGRESS</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>SUBJECT DIM</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="fc645af8-4f86-4be7-a544-5a47a1544855">
+          <ID>SUBJECT DIM</ID>
+          <Name>SUBJECT DIM</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2d21736e-d46b-423f-ad9f-20bc52c2fb69">
+            <DataSourceViewID>Univer</DataSourceViewID>
+            <TableID>dbo_SUBJECT_DIM</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>STUDENT DIM</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="2c9b4a26-7e78-467a-b515-5c5157dcd08c">
+          <ID>STUDENT DIM</ID>
+          <Name>STUDENT DIM</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="87fdfdb2-4fa5-448a-8948-db4b82164897">
+            <DataSourceViewID>Univer</DataSourceViewID>
+            <TableID>dbo_STUDENT_DIM</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

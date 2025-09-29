@@ -1,0 +1,41 @@
+html{
+    color: #f5f5f5;
+    font-size: 25px;
+    text-align: justify;
+}
+.grid{
+    display: grid;
+    grid-gap: 10px;
+    grid-row: auto;
+    grid-template-areas: "header header header header"
+                         "nav article article aside"   
+                         "nav article article aside"
+                         "footer footer footer footer";
+}
+header{
+    background-color: #a1c1c5;
+    grid-area: header;
+}
+footer{
+    background-color: #a1c1c5;
+    grid-area: footer;
+}
+aside{
+    background-color: #a1c1c5;
+    grid-area: aside;
+}
+article{
+    background-color: #a1c1c5;
+    grid-area: article;
+}
+nav{
+    background-color: #a1c1c5;
+    grid-area: nav;
+}
+a{
+    text-decoration: none;
+    color: #f5f5f5;
+}
+p{
+    margin: 5px 25px 5px 25px;
+}

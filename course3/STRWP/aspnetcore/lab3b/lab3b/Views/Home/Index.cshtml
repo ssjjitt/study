@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    Layout = "_Layout";
+}
+
+<h1>Home/Index</h1>
+@if (SignInManager.IsSignedIn(User))
+{
+    <p>Hi, @User.Identity?.Name: @string.Join(", ", ViewBag.roles as IList<string> ?? [])</p>
+    <ul>
+        <li><a href="/Admin/SignOut">Sign out</a></li>
+        <li><a href="/Admin/ChangePassword">Change password</a></li>
+        @if (!User.IsInRole("Administrator"))
+        {
+            <li><a href="/Admin/DeleteAccount">Delete account</a></li>
+            <li><a href="/Calc/Index">Go to calculator page</a></li>
+        }
+        @if (User.IsInRole("Administrator"))
+        {
+            <li><a href="/Admin/Index">Go to administrator page</a></li>
+        }
+    </ul>
+}
+else
+{
+    <p>Hi, guest!</p>
+    <ul>
+        <li><a href="/Admin/Register">Register</a></li>
+        <li><a href="/Admin/SignIn">Sign in</a></li>
+    </ul>
+}

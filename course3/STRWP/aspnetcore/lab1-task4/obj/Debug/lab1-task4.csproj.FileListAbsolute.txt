@@ -1,0 +1,13 @@
+D:\univer\!СТРWП\lab1-task4\bin\Debug\lab1-task4.exe.config
+D:\univer\!СТРWП\lab1-task4\bin\Debug\lab1-task4.exe
+D:\univer\!СТРWП\lab1-task4\bin\Debug\lab1-task4.pdb
+D:\univer\!СТРWП\lab1-task4\bin\Debug\Newtonsoft.Json.dll
+D:\univer\!СТРWП\lab1-task4\bin\Debug\Newtonsoft.Json.xml
+D:\univer\!СТРWП\lab1-task4\obj\Debug\lab1-task4.csproj.AssemblyReference.cache
+D:\univer\!СТРWП\lab1-task4\obj\Debug\lab1_task4.Form1.resources
+D:\univer\!СТРWП\lab1-task4\obj\Debug\lab1_task4.Properties.Resources.resources
+D:\univer\!СТРWП\lab1-task4\obj\Debug\lab1-task4.csproj.GenerateResource.cache
+D:\univer\!СТРWП\lab1-task4\obj\Debug\lab1-task4.csproj.CoreCompileInputs.cache
+D:\univer\!СТРWП\lab1-task4\obj\Debug\lab1-task4.csproj.Up2Date
+D:\univer\!СТРWП\lab1-task4\obj\Debug\lab1-task4.exe
+D:\univer\!СТРWП\lab1-task4\obj\Debug\lab1-task4.pdb

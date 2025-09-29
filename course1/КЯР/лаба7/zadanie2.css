@@ -1,0 +1,52 @@
+body
+{
+    text-align: center;
+}
+figure
+{
+    display: inline-block;
+    text-align: center;
+    perspective: 800px;
+}
+img
+{
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+}
+.img1
+{
+    transform: rotateX(50deg);
+    transform-origin: bottom top;
+}
+.img2
+{
+    transform: rotateY(30deg); 
+    transform-origin: center left;
+}
+.img3
+{
+    transform: rotateX(-50deg);
+    transform-origin: bottom top;
+}
+.img4
+{
+    transform: rotateY(-30deg); 
+    transform-origin: right center;
+}
+h1 {
+    text-align: center;
+    color: blue;
+    animation: name 5s linear infinite;
+}
+@keyframes name {
+    0% {
+    opacity: 0;
+    }
+    50% {
+    opacity: 0.8;
+    }
+    100% {
+    opacity: 0;
+    }
+}

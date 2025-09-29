@@ -1,0 +1,22 @@
+.grid
+{
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(4, 200px);
+    grid-gap: 25px;
+}
+img
+{
+    width: 200px;
+    height: 200px;
+}
+.img9
+{
+    width: 410px;
+    height: 410px;
+}
+.fig9
+{
+    grid-column: span 2;
+    grid-row: span 2;
+}

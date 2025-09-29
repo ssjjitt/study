@@ -1,0 +1,57 @@
+ul.nav
+{
+    list-style-type: none;
+}
+ul.nav a
+{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+ul.nav a:visited
+{
+    color: #8B0000;
+}
+ul.nav a:hover
+{
+    color: green;
+}
+ul.nav a:active
+{
+    color: rgb(184, 134, 11);
+}
+aside
+{
+    background-color:darkgray;
+    width: 170px;
+    border: 2px black solid;
+    color: white;
+    font-family: "Comfortaa Regular"; 
+    position: fixed;
+    font-size: 15px;
+}
+section
+{
+    position:relative;
+    margin-right: 250px;
+}
+div
+{
+    display: flex;
+    flex-flow:row-reverse;
+}
+h3
+{
+    text-align: center;
+}
+body 
+{
+    font-family: "Calibri";
+}
+h2
+{
+    background-color: darkgray;
+    color: white;
+    border: 2px black solid;
+    width: 200px;
+}

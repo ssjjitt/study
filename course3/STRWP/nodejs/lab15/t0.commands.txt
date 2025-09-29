@@ -1,0 +1,13 @@
+powershell
+.\emsdk update
+.\emsdk install latest
+.\emsdk activate latest
+
+emcc lab15.c -Os -s WASM=1 -s "EXPORTED_FUNCTIONS=['_sum','_mul','_sub']" -s MODULARIZE=1 -s EXPORT_NAME="Module" -o lab15.js
+emcc lab15.c -Os -s WASM=1 -s "EXPORTED_FUNCTIONS=['_sum','_mul','_sub']" -o lab15.js
+[Convert]::ToBase64String([IO.File]::ReadAllBytes("D:\emsdk-main\lab15.wasm")) > lab15.wasm.base64.txt
+emcc lab15.c -Os -s WASM=1 -s "EXPORTED_FUNCTIONS=['_sum','_mul','_sub']" -o lab15.js
+
+смысла от того что пропишутся экспортируемые функции буквально нет, у меня всё равно из-за name mangling они назывались c d e
+можно добавить в .c-файл #include <emscripten.h> и к каждой функции приписать EMSCRIPTEN_KEEPALIVE, но это тоже не помогло
+лаба говно удачи
