@@ -1,4 +1,0 @@
-Circle
-5 10
-Square 
-3 3 3
