@@ -1,0 +1,17 @@
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\OIB_lab5.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\OIB_lab5.AssemblyInfoInputs.cache
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\OIB_lab5.AssemblyInfo.cs
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\OIB_lab5.csproj.CoreCompileInputs.cache
+E:\уник\c\OIB_lab5\bin\Debug\net7.0\OIB_lab5.exe
+E:\уник\c\OIB_lab5\bin\Debug\net7.0\OIB_lab5.deps.json
+E:\уник\c\OIB_lab5\bin\Debug\net7.0\OIB_lab5.runtimeconfig.json
+E:\уник\c\OIB_lab5\bin\Debug\net7.0\OIB_lab5.dll
+E:\уник\c\OIB_lab5\bin\Debug\net7.0\OIB_lab5.pdb
+E:\уник\c\OIB_lab5\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\OIB_lab5.csproj.AssemblyReference.cache
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\OIB_lab5.csproj.CopyComplete
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\OIB_lab5.dll
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\refint\OIB_lab5.dll
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\OIB_lab5.pdb
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\OIB_lab5.genruntimeconfig.cache
+E:\уник\c\OIB_lab5\obj\Debug\net7.0\ref\OIB_lab5.dll

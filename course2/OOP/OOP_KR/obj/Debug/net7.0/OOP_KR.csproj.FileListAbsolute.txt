@@ -1,0 +1,14 @@
+E:\уник\c\OOP_KR\bin\Debug\net7.0\OOP_KR.exe
+E:\уник\c\OOP_KR\bin\Debug\net7.0\OOP_KR.deps.json
+E:\уник\c\OOP_KR\bin\Debug\net7.0\OOP_KR.runtimeconfig.json
+E:\уник\c\OOP_KR\bin\Debug\net7.0\OOP_KR.dll
+E:\уник\c\OOP_KR\bin\Debug\net7.0\OOP_KR.pdb
+E:\уник\c\OOP_KR\obj\Debug\net7.0\OOP_KR.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\c\OOP_KR\obj\Debug\net7.0\OOP_KR.AssemblyInfoInputs.cache
+E:\уник\c\OOP_KR\obj\Debug\net7.0\OOP_KR.AssemblyInfo.cs
+E:\уник\c\OOP_KR\obj\Debug\net7.0\OOP_KR.csproj.CoreCompileInputs.cache
+E:\уник\c\OOP_KR\obj\Debug\net7.0\OOP_KR.dll
+E:\уник\c\OOP_KR\obj\Debug\net7.0\refint\OOP_KR.dll
+E:\уник\c\OOP_KR\obj\Debug\net7.0\OOP_KR.pdb
+E:\уник\c\OOP_KR\obj\Debug\net7.0\OOP_KR.genruntimeconfig.cache
+E:\уник\c\OOP_KR\obj\Debug\net7.0\ref\OOP_KR.dll

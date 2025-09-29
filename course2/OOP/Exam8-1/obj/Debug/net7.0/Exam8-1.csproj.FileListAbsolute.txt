@@ -1,0 +1,14 @@
+E:\уник\c\Exam8-1\bin\Debug\net7.0\Exam8-1.exe
+E:\уник\c\Exam8-1\bin\Debug\net7.0\Exam8-1.deps.json
+E:\уник\c\Exam8-1\bin\Debug\net7.0\Exam8-1.runtimeconfig.json
+E:\уник\c\Exam8-1\bin\Debug\net7.0\Exam8-1.dll
+E:\уник\c\Exam8-1\bin\Debug\net7.0\Exam8-1.pdb
+E:\уник\c\Exam8-1\obj\Debug\net7.0\Exam8-1.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\c\Exam8-1\obj\Debug\net7.0\Exam8-1.AssemblyInfoInputs.cache
+E:\уник\c\Exam8-1\obj\Debug\net7.0\Exam8-1.AssemblyInfo.cs
+E:\уник\c\Exam8-1\obj\Debug\net7.0\Exam8-1.csproj.CoreCompileInputs.cache
+E:\уник\c\Exam8-1\obj\Debug\net7.0\Exam8-1.dll
+E:\уник\c\Exam8-1\obj\Debug\net7.0\refint\Exam8-1.dll
+E:\уник\c\Exam8-1\obj\Debug\net7.0\Exam8-1.pdb
+E:\уник\c\Exam8-1\obj\Debug\net7.0\Exam8-1.genruntimeconfig.cache
+E:\уник\c\Exam8-1\obj\Debug\net7.0\ref\Exam8-1.dll

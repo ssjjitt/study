@@ -1,0 +1,15 @@
+16.11.2023 14:54:14 - Action: logWrite, Info: Файл: GDVlog.txt, Путь: e:/уник/c/OOP_lab12/GDVlog.txt
+16.11.2023 14:54:14 - Action: freeDisk, Info: File: GDVlog.txt, Path: e:/уник/c/OOP_lab12/GDVlog.txt
+16.11.2023 14:54:14 - Action: fileSystem, Info: File: GDVlog.txt, Path: e:/уник/c/OOP_lab12/GDVlog.txt
+16.11.2023 14:54:14 - Action: driveInfo, Info: File: GDVlog.txt, Path: e:/уник/c/OOP_lab12/GDVlog.txt
+16.11.2023 14:54:14 - Action: fullPath, Info: Path: e:\уник\c\OOP_lab12\GDVlog.txt
+16.11.2023 14:54:14 - Action: fileInfo, Info: Path: e:\уник\c\OOP_lab12\GDVlog.txt
+16.11.2023 14:54:14 - Action: fileDates, Info: Path: e:\уник\c\OOP_lab12\GDVlog.txt
+16.11.2023 14:54:14 - Action: fileCount, Info: Path: e:\уник\c
+16.11.2023 14:54:14 - Action: createTime, Info: Path: e:\уник\c
+16.11.2023 14:54:14 - Action: subdirectoryCount, Info: Path: e:\уник\c
+16.11.2023 14:54:14 - Action: parentDirectories, Info: Path: e:\уник\c
+16.11.2023 14:54:14 - Action: GetDiskContents, Info: Disk Name: e:\уник\c\OOP_lab12
+16.11.2023 14:54:14 - Action: CopyFilesByExtension, Info: Source Directory: e:\уник\c\OOP_lab12, Target Directory: e:\уник\c\OOP_lab12\GDVInspect, Extension: txt
+16.11.2023 14:54:14 - Action: CreateArchive, Info: Source Directory: e:\уник\c\OOP_lab12\GDVInspect\GDVFiles, Archive Path: e:\уник\c\OOP_lab12\GDVInspect\archive.zip
+16.11.2023 14:54:14 - Action: ExtractArchive, Info: Archive Path: e:\уник\c\OOP_lab12\GDVInspect\archive.zip, Target Directory: e:\уник\c\OOP_lab12\GDVInspect\ExtractedFiles

@@ -1,0 +1,17 @@
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\OOP_lab13.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\OOP_lab13.AssemblyInfoInputs.cache
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\OOP_lab13.AssemblyInfo.cs
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\OOP_lab13.csproj.CoreCompileInputs.cache
+E:\уник\c\OOP_lab13\bin\Debug\net7.0\OOP_lab13.exe
+E:\уник\c\OOP_lab13\bin\Debug\net7.0\OOP_lab13.deps.json
+E:\уник\c\OOP_lab13\bin\Debug\net7.0\OOP_lab13.runtimeconfig.json
+E:\уник\c\OOP_lab13\bin\Debug\net7.0\OOP_lab13.dll
+E:\уник\c\OOP_lab13\bin\Debug\net7.0\OOP_lab13.pdb
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\OOP_lab13.dll
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\refint\OOP_lab13.dll
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\OOP_lab13.pdb
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\OOP_lab13.genruntimeconfig.cache
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\ref\OOP_lab13.dll
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\OOP_lab13.csproj.AssemblyReference.cache
+E:\уник\c\OOP_lab13\bin\Debug\net7.0\Newtonsoft.Json.dll
+E:\уник\c\OOP_lab13\obj\Debug\net7.0\OOP_lab13.csproj.CopyComplete

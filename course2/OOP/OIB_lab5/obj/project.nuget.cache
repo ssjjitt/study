@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "m5uLimwg6cYStNEw1lnvlurm5+qmCL/7ZO2MhJKtedKqFBBWEOLOV912qubuhgLBzMPeiWYbp5GfRGXTK1+amw==",
+  "success": true,
+  "projectFilePath": "E:\\уник\\c\\OIB_lab5\\OIB_lab5.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+E:\уник\c\DiffieHellmanEncryption\bin\Debug\net7.0\DiffieHellmanEncryption.exe
+E:\уник\c\DiffieHellmanEncryption\bin\Debug\net7.0\DiffieHellmanEncryption.deps.json
+E:\уник\c\DiffieHellmanEncryption\bin\Debug\net7.0\DiffieHellmanEncryption.runtimeconfig.json
+E:\уник\c\DiffieHellmanEncryption\bin\Debug\net7.0\DiffieHellmanEncryption.dll
+E:\уник\c\DiffieHellmanEncryption\bin\Debug\net7.0\DiffieHellmanEncryption.pdb
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\DiffieHellmanEncryption.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\DiffieHellmanEncryption.AssemblyInfoInputs.cache
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\DiffieHellmanEncryption.AssemblyInfo.cs
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\DiffieHellmanEncryption.csproj.CoreCompileInputs.cache
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\DiffieHellmanEncryption.dll
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\refint\DiffieHellmanEncryption.dll
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\DiffieHellmanEncryption.pdb
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\DiffieHellmanEncryption.genruntimeconfig.cache
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\ref\DiffieHellmanEncryption.dll
+E:\уник\c\DiffieHellmanEncryption\bin\Debug\net7.0\SshNet.Security.Cryptography.dll
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\DiffieHellmanEncryption.csproj.AssemblyReference.cache
+E:\уник\c\DiffieHellmanEncryption\obj\Debug\net7.0\DiffieHellmanEncryption.csproj.CopyComplete

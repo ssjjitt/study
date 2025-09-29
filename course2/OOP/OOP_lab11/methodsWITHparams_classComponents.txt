@@ -1,0 +1,6 @@
+>>>>>>>>>>>>Информация о классе OOP_lab11.Program+Airline
+Количество методов с параметром типа String: 3
+>>>>>>>>>>>>
+public  Void set_Airplane (String value)
+public  Void set_Day_of_week (String value)
+public static  Void sort_by_day (Airline[] arr, String dep_day)

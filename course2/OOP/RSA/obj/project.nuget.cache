@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ds8NOX4uADFEQcGvkxvBq9qxvfRdHTgkPRsWbNRU6p5DjXBHA5Lg38V2bexy8zJZX/yk1mQccxQ3TkBkl1yQRw==",
+  "success": true,
+  "projectFilePath": "E:\\уник\\c\\RSA\\RSA.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"BouncyCastle 1.8.9\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+>>>>>>>>>>>>Информация о классе OOP_lab11.Program+Airline
+Количество свойств: 5
+Количество полей: 2
+>>>>>>>>>>>>
+
+Поля:
+Тип: Field	 Имя: id
+Тип: Field	 Имя: NumOfFlights
+
+Свойства:
+Тип: Property	 Имя: Destination
+Тип: Property	 Имя: Flight
+Тип: Property	 Имя: Airplane
+Тип: Property	 Имя: Flight_Time
+Тип: Property	 Имя: Day_of_week

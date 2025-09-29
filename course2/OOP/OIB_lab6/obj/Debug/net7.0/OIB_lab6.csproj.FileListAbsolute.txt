@@ -1,0 +1,14 @@
+E:\уник\c\OIB_lab6\bin\Debug\net7.0\OIB_lab6.exe
+E:\уник\c\OIB_lab6\bin\Debug\net7.0\OIB_lab6.deps.json
+E:\уник\c\OIB_lab6\bin\Debug\net7.0\OIB_lab6.runtimeconfig.json
+E:\уник\c\OIB_lab6\bin\Debug\net7.0\OIB_lab6.dll
+E:\уник\c\OIB_lab6\bin\Debug\net7.0\OIB_lab6.pdb
+E:\уник\c\OIB_lab6\obj\Debug\net7.0\OIB_lab6.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\c\OIB_lab6\obj\Debug\net7.0\OIB_lab6.AssemblyInfoInputs.cache
+E:\уник\c\OIB_lab6\obj\Debug\net7.0\OIB_lab6.AssemblyInfo.cs
+E:\уник\c\OIB_lab6\obj\Debug\net7.0\OIB_lab6.csproj.CoreCompileInputs.cache
+E:\уник\c\OIB_lab6\obj\Debug\net7.0\OIB_lab6.dll
+E:\уник\c\OIB_lab6\obj\Debug\net7.0\refint\OIB_lab6.dll
+E:\уник\c\OIB_lab6\obj\Debug\net7.0\OIB_lab6.pdb
+E:\уник\c\OIB_lab6\obj\Debug\net7.0\OIB_lab6.genruntimeconfig.cache
+E:\уник\c\OIB_lab6\obj\Debug\net7.0\ref\OIB_lab6.dll

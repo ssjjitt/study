@@ -1,0 +1,14 @@
+E:\уник\c\OOP_lab15\bin\Debug\net7.0\OOP_lab15.exe
+E:\уник\c\OOP_lab15\bin\Debug\net7.0\OOP_lab15.deps.json
+E:\уник\c\OOP_lab15\bin\Debug\net7.0\OOP_lab15.runtimeconfig.json
+E:\уник\c\OOP_lab15\bin\Debug\net7.0\OOP_lab15.dll
+E:\уник\c\OOP_lab15\bin\Debug\net7.0\OOP_lab15.pdb
+E:\уник\c\OOP_lab15\obj\Debug\net7.0\OOP_lab15.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\c\OOP_lab15\obj\Debug\net7.0\OOP_lab15.AssemblyInfoInputs.cache
+E:\уник\c\OOP_lab15\obj\Debug\net7.0\OOP_lab15.AssemblyInfo.cs
+E:\уник\c\OOP_lab15\obj\Debug\net7.0\OOP_lab15.csproj.CoreCompileInputs.cache
+E:\уник\c\OOP_lab15\obj\Debug\net7.0\OOP_lab15.dll
+E:\уник\c\OOP_lab15\obj\Debug\net7.0\refint\OOP_lab15.dll
+E:\уник\c\OOP_lab15\obj\Debug\net7.0\OOP_lab15.pdb
+E:\уник\c\OOP_lab15\obj\Debug\net7.0\OOP_lab15.genruntimeconfig.cache
+E:\уник\c\OOP_lab15\obj\Debug\net7.0\ref\OOP_lab15.dll

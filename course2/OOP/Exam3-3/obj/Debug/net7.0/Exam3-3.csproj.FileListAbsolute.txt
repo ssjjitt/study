@@ -1,0 +1,14 @@
+E:\уник\c\Exam3-3\bin\Debug\net7.0\Exam3-3.exe
+E:\уник\c\Exam3-3\bin\Debug\net7.0\Exam3-3.deps.json
+E:\уник\c\Exam3-3\bin\Debug\net7.0\Exam3-3.runtimeconfig.json
+E:\уник\c\Exam3-3\bin\Debug\net7.0\Exam3-3.dll
+E:\уник\c\Exam3-3\bin\Debug\net7.0\Exam3-3.pdb
+E:\уник\c\Exam3-3\obj\Debug\net7.0\Exam3-3.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\c\Exam3-3\obj\Debug\net7.0\Exam3-3.AssemblyInfoInputs.cache
+E:\уник\c\Exam3-3\obj\Debug\net7.0\Exam3-3.AssemblyInfo.cs
+E:\уник\c\Exam3-3\obj\Debug\net7.0\Exam3-3.csproj.CoreCompileInputs.cache
+E:\уник\c\Exam3-3\obj\Debug\net7.0\Exam3-3.dll
+E:\уник\c\Exam3-3\obj\Debug\net7.0\refint\Exam3-3.dll
+E:\уник\c\Exam3-3\obj\Debug\net7.0\Exam3-3.pdb
+E:\уник\c\Exam3-3\obj\Debug\net7.0\Exam3-3.genruntimeconfig.cache
+E:\уник\c\Exam3-3\obj\Debug\net7.0\ref\Exam3-3.dll

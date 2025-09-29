@@ -1,0 +1,14 @@
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\bin\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.exe
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\bin\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.deps.json
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\bin\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.runtimeconfig.json
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\bin\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.dll
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\bin\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.pdb
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\obj\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\obj\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.AssemblyInfoInputs.cache
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\obj\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.AssemblyInfo.cs
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\obj\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.csproj.CoreCompileInputs.cache
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\obj\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.dll
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\obj\Debug\net7.0\refint\ExamPizdaZalypaXo4yAvtomatRatatatata.dll
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\obj\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.pdb
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\obj\Debug\net7.0\ExamPizdaZalypaXo4yAvtomatRatatatata.genruntimeconfig.cache
+E:\уник\c\ExamPizdaZalypaXo4yAvtomatRatatatata\obj\Debug\net7.0\ref\ExamPizdaZalypaXo4yAvtomatRatatatata.dll

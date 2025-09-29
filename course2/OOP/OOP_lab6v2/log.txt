@@ -1,0 +1,10 @@
+Time: 20.10.2023 21:36:23
+Info: OOP_lab5.RectangleException - Ошибка вызвана попыткой ввести отрицательное число
+Time: 20.10.2023 21:37:34
+Info: OOP_lab5.RectangleException - Ошибка вызвана попыткой ввести отрицательное число
+Time: 20.10.2023 21:37:49
+Info: OOP_lab5.RectangleException - Ошибка вызвана попыткой ввести отрицательное число
+Time: 26.10.2023 16:58:25
+Info: OOP_lab5.RectangleException - Ошибка вызвана попыткой ввести отрицательное число
+Time: 26.10.2023 17:09:55
+Info: OOP_lab5.RectangleException - Ошибка вызвана попыткой ввести отрицательное число

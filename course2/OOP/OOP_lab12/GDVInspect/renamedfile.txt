@@ -1,0 +1,17 @@
+Files:
+e:\уник\c\OOP_lab12\GDVdirInfo.cs
+e:\уник\c\OOP_lab12\GDVdiskInfo.cs
+e:\уник\c\OOP_lab12\GDVfileInfo.cs
+e:\уник\c\OOP_lab12\GDVfileManager.cs
+e:\уник\c\OOP_lab12\GDVlog.cs
+e:\уник\c\OOP_lab12\GDVlog.txt
+e:\уник\c\OOP_lab12\OOP_lab12.csproj
+e:\уник\c\OOP_lab12\OOP_lab12.sln
+e:\уник\c\OOP_lab12\Program.cs
+e:\уник\c\OOP_lab12\SearchInFile.cs
+
+Directories:
+e:\уник\c\OOP_lab12\.vs
+e:\уник\c\OOP_lab12\bin
+e:\уник\c\OOP_lab12\GDVInspect
+e:\уник\c\OOP_lab12\obj
