@@ -1,0 +1,6 @@
+@lab5_SignalR_HostAddress = http://localhost:5215
+
+GET {{lab5_SignalR_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

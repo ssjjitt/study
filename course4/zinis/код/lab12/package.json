@@ -1,0 +1,19 @@
+{
+  "name": "lab12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "express": "^5.2.1",
+    "jimp": "^1.6.0",
+    "multer": "^2.0.2",
+    "seedrandom": "^3.0.5"
+  }
+}

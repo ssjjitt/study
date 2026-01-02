@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DES Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 16px;
+            line-height: 1.4;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 16px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 12px;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        textarea,
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-top: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+            border: none;
+            background: #1976d2;
+            color: white;
+        }
+
+        button.secondary {
+            background: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+        }
+
+        th,
+        td {
+            border: 1px solid #eee;
+            padding: 6px;
+            text-align: left;
+        }
+
+        .small {
+            font-size: 13px;
+            color: #555;
+        }
+
+        .outputs {
+            max-height: 260px;
+            overflow: auto;
+            background: #fafafa;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DES — лабораторная</h1>
+    <div class="grid">
+        <div>
+            <div class="card">
+                <h3>1. Ввод / ключи</h3>
+                <label>Входной текст (plaintext):</label>
+                <textarea id="plaintext" rows="3">Gluhova Daria</textarea>
+
+                <label>Ключ (используются первые 8 символов; если короче — дополняется нулями):</label>
+                <input id="keyInput" type="text" value="Gluhova" />
+
+                <div>
+                    <button id="encryptBtn">Зашифровать (DES ECB PKCS7)</button>
+                    <button id="decryptBtn" class="secondary">Дешифровать</button>
+                </div>
+                <div style="margin-top:10px;">
+                    <strong>Шифротекст (base64):</strong>
+                    <div id="cipherText" class="outputs small"></div>
+                    <strong>Дешифрованный текст:</strong>
+                    <div id="decryptedText" class="outputs small"></div>
+                    <div style="display:flex;gap:8px;margin-top:8px;">
+                        <div><strong>Время шифрования:</strong> <span id="encryptTime">—</span></div>
+                        <div><strong>Время дешифрования:</strong> <span id="decryptTime">—</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top:12px;">
+                <h3>2. Лавинный эффект</h3>
+                <p class="small">Запустите для одного 8-байтового блока (первый блок сообщения). Будут проверены
+                    инверсии по 64 битам plaintext и 64 битам ключа.</p>
+                <button id="avalancheBtn">Запустить Avalanche Test</button>
+                <div id="avalancheResult" class="outputs small"></div>
+            </div>
+
+            <div class="card" style="margin-top:12px;">
+                <h3>3. Сжатие (gzip)</h3>
+                <p class="small">Показывает размеры исходного текста и зашифрованного (base64) после gzip.</p>
+                <button id="compressBtn">Оценить сжатие</button>
+                <div id="compressResult" class="outputs small"></div>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="card">
+                <h3>Инструменты для weak keys</h3>
+                <p class="small">Проверка — является ли ключ слабым или полу-слабым (стандартный набор).</p>
+                <button id="checkWeakBtn">Проверить ключ на слабость</button>
+                <div id="weakResult" class="outputs small"></div>
+                <hr>
+                <h4>Дополнительно</h4>
+                <p class="small">Таблица результатов лавины (первые 16 результатов выводится сразу).</p>
+                <table id="avalancheTable">
+                    <thead>
+                        <tr>
+                            <th>Тип</th>
+                            <th>Бит</th>
+                            <th>Изменённых бит</th>
+                            <th>%</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="card" style="margin-top:12px;">
+                <h3>Логи / ошибки</h3>
+                <div id="logOutput" class="outputs small"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>

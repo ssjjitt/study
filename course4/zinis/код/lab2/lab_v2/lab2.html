@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <title>Шифр Виженера 💖</title>
+  <link rel="stylesheet" href="lab.css">
+</head>
+<body>
+  <div class="input-area">
+    <h1>Шифр Виженера</h1>
+
+    <label>Открытый текст</label>
+    <textarea class="form-control" id="openText" rows="8" placeholder="Вставь сюда текст"></textarea>
+    <div class="toolbar">
+      <input type="file" id="openFile" accept=".txt">
+      <button type="button" id="loadOpen" class="btn-pink">Загрузить</button>
+      <span id="openCount" class="counter">0 символов</span>
+    </div>
+
+    <label>Ключ</label>
+    <input class="form-control" id="key" type="text" required placeholder="Ключ">
+
+    <div class="radio">
+      <label>
+        <input type="radio" name="optradio" id="ruRadio" checked>
+        <span class="custom-radio"></span>
+        Русский
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optradio" id="belRadio">
+        <span class="custom-radio"></span>
+        Беларуская мова
+      </label>
+    </div>
+
+    <div class="actions">
+      <button type="button" id="encryptBtn" class="btn-pink">Зашифровать →</button>
+      <button type="button" id="decryptBtn" class="btn-outline">← Расшифровать</button>
+    </div>
+
+    <label>Шифротекст</label>
+    <textarea class="form-control" id="cipherText" rows="8" placeholder="Результат здесь"></textarea>
+    <div class="toolbar">
+      <input type="file" id="cipherFile" accept=".txt">
+      <button type="button" id="loadCipher" class="btn-pink">Загрузить</button>
+      <button type="button" id="downloadResult" class="btn-pink">Скачать результат .txt</button>
+      <span id="cipherCount" class="counter">0 символов</span>
+    </div>
+  </div>
+
+
+  <script src="emoji.js"></script>
+  <script src="vizhener.js"></script>
+  <script src="interface.js"></script>
+</body>
+
+</html>

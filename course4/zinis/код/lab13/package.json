@@ -1,0 +1,23 @@
+{
+  "name": "text-steganography",
+  "version": "1.0.0",
+  "description": "Приложение для текстовой стеганографии на основе модификации пространственно-геометрических параметров",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "encode": "node index.js encode",
+    "decode": "node index.js decode"
+  },
+  "keywords": [
+    "steganography",
+    "text",
+    "encoding"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "^23.0.1"
+  }
+}
+

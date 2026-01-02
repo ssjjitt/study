@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<body>
+  <h3>SSE client</h3>
+  <pre id="log"></pre>
+  <script>
+    const es = new EventSource("https://localhost:7122/events");
+
+    es.onopen = () => console.log("SSE connected");
+    es.onerror = (e) => console.log("SSE error", e);
+
+    console.log(es);
+
+    es.addEventListener("SUM", e => {
+      console.log("SUM event:", JSON.parse(e.data));
+    });
+    es.addEventListener("DIV", e => {
+      console.log("DIV event:", JSON.parse(e.data));
+    });
+     es.addEventListener("MUL", e => {
+      console.log("MUL event:", JSON.parse(e.data));
+    });
+    es.onmessage = e => {
+      console.log("default event: ", e.data);
+    };
+  </script>
+
+</body>
+</html>

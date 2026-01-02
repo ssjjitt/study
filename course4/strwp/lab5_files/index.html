@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SignalR Calculator Demo</title>
+  </head>
+  <body>
+    <h1>SignalR Calculator</h1>
+
+    <div>
+      <label>x: <input id="x" type="number" value="6" /></label>
+      <label>y: <input id="y" type="number" value="3" /></label>
+    </div>
+
+    <div>
+      <button id="btnSum">SUM</button>
+      <button id="btnSub">SUB</button>
+      <button id="btnMul">MUL</button>
+      <button id="btnDiv">DIV</button>
+    </div>
+
+    <div>
+      <label>fact n: <input id="n" type="number" value="5" /></label>
+      <button id="btnFact">FACT</button>
+    </div>
+
+    <h2>Результат</h2>
+    <pre id="log"></pre>
+
+    <script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@7.0.5/dist/browser/signalr.min.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

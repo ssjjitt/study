@@ -1,0 +1,21 @@
+@Lab1_HostAddress = http://localhost:5286
+@TestUrl = pikmi.GDV
+
+###
+GET {{Lab1_HostAddress}}/{{TestUrl}}
+Accept: application/json
+
+###
+POST {{Lab1_HostAddress}}/{{TestUrl}}?RESULT=5
+
+###
+PUT {{Lab1_HostAddress}}/{{TestUrl}}?ADD=10
+
+###
+PUT {{Lab1_HostAddress}}/{{TestUrl}}?ADD=20
+
+###
+DELETE {{Lab1_HostAddress}}/{{TestUrl}}
+
+###
+GET {{Lab1_HostAddress}}/{{TestUrl}}

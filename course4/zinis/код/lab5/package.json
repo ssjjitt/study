@@ -1,0 +1,16 @@
+{
+  "name": "des-lab-app",
+  "version": "1.0.0",
+  "description": "DES lab: block splitting, DES encrypt/decrypt, avalanche test, weak keys, compression",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "pako": "^2.1.0"
+  },
+  "devDependencies": {
+    "electron": "^26.0.0"
+  }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>StegoLab Client-Side</title>
+    <style>
+        /* --- Тот же Киберпанк Дизайн --- */
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        :root { --bg: #050a0e; --panel: #0d1218; --accent: #00ff41; --warn: #ff0055; }
+        body { background: var(--bg); color: #a8b2d1; font-family: 'Share Tech Mono', monospace; padding: 20px; background-image: radial-gradient(rgba(0,50,0,0.1) 2px, transparent 2px); background-size: 30px 30px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { color: var(--accent); text-align: center; border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
+        .panel { background: var(--panel); border: 1px solid #1e2d3d; padding: 20px; margin-bottom: 20px; box-shadow: 0 0 15px rgba(0,255,65,0.05); }
+        label { display: block; color: var(--accent); margin-top: 10px; }
+        input, textarea, select { width: 100%; background: #000; color: var(--accent); border: 1px solid #333; padding: 10px; box-sizing: border-box; font-family: inherit; margin-top: 5px; }
+        button { width: 100%; background: transparent; border: 2px solid var(--accent); color: var(--accent); padding: 15px; margin-top: 15px; cursor: pointer; font-weight: bold; font-family: inherit; text-transform: uppercase; transition: 0.2s; }
+        button:hover { background: var(--accent); color: #000; box-shadow: 0 0 15px var(--accent); }
+        .btn-warn { border-color: var(--warn); color: var(--warn); }
+        .btn-warn:hover { background: var(--warn); }
+        img { max-width: 100%; border: 1px solid #333; margin-top: 10px; display: block; }
+        .hidden { display: none; }
+        #log { white-space: pre-wrap; word-break: break-all; margin-top: 10px; color: #fff; }
+        .vis-row { display: flex; gap: 10px; }
+        .vis-row div { flex: 1; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>STEGO_LAB_CLIENT :: <span style="animation: blink 1s infinite">ONLINE</span></h1>
+
+    <div class="panel">
+        <h2>// 1. ENCODE (Спрятать)</h2>
+        <input type="file" id="uploadEnc" accept="image/*">
+        <label>Secret Message:</label>
+        <textarea id="msgInput" rows="3" placeholder="Enter text..."></textarea>
+        <button onclick="encodeLSB()">EXECUTE INJECTION</button>
+        <div id="resEnc" class="hidden">
+            <p style="color: var(--accent)">Done! Save image below:</p>
+            <img id="imgEnc" alt="Result">
+            <a id="dlLink" download="stego_result.png" style="display:block; text-align:center; color:#fff; margin-top:10px; text-decoration:none; border:1px solid #fff; padding:10px;">[ DOWNLOAD PNG ]</a>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2>// 2. DECODE (Найти)</h2>
+        <input type="file" id="uploadDec" accept="image/*">
+        <button onclick="decodeLSB()" class="btn-warn">EXTRACT DATA</button>
+        <div id="log"></div>
+    </div>
+
+    <div class="panel">
+        <h2>// 3. VISUAL ANALYSIS (Bit Planes)</h2>
+        <input type="file" id="uploadVis" accept="image/*">
+        <button onclick="visualize()" class="btn-warn">SCAN LAYERS</button>
+        <div id="visRes" class="vis-row hidden" style="margin-top:15px;">
+            <div><span style="color:red">R-Plane</span><img id="vR"></div>
+            <div><span style="color:green">G-Plane</span><img id="vG"></div>
+            <div><span style="color:blue">B-Plane</span><img id="vB"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const TERMINATOR = "||END||";
+
+    // --- Утилиты ---
+    function textToBin(text) {
+        return text.split('').map(c => c.charCodeAt(0).toString(2).padStart(8, '0')).join('');
+    }
+    function binToText(bin) {
+        let text = "";
+        for (let i = 0; i < bin.length; i += 8) 
+            text += String.fromCharCode(parseInt(bin.substr(i, 8), 2));
+        return text;
+    }
+    
+    // Функция загрузки картинки в Canvas
+    function loadImage(file) {
+        return new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+    }
+
+    // --- 1. ЛОГИКА ВСТРАИВАНИЯ ---
+    async function encodeLSB() {
+        const file = document.getElementById('uploadEnc').files[0];
+        const text = document.getElementById('msgInput').value + TERMINATOR;
+        if (!file || !text) return alert("Select file and enter text!");
+
+        const img = await loadImage(file);
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width; canvas.height = img.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const data = imgData.data; // Массив пикселей [r, g, b, a, r, g, b, a...]
+        const binMsg = textToBin(text);
+
+        if (binMsg.length > data.length * 0.75) return alert("Text too long!");
+
+        let binIdx = 0;
+        // Проходим по каждому байту данных (включая R, G, B, но пропускаем Alpha если нужно)
+        for (let i = 0; i < data.length; i++) {
+            if ((i + 1) % 4 === 0) continue; // Пропускаем Alpha канал (каждый 4-й байт)
+            if (binIdx < binMsg.length) {
+                // Обнуляем младший бит и ставим бит сообщения
+                data[i] = (data[i] & 0xFE) | parseInt(binMsg[binIdx]);
+                binIdx++;
+            } else {
+                break;
+            }
+        }
+
+        ctx.putImageData(imgData, 0, 0);
+        
+        const resUrl = canvas.toDataURL("image/png");
+        document.getElementById('imgEnc').src = resUrl;
+        document.getElementById('dlLink').href = resUrl;
+        document.getElementById('resEnc').classList.remove('hidden');
+    }
+
+    // --- 2. ЛОГИКА ИЗВЛЕЧЕНИЯ ---
+    async function decodeLSB() {
+        const file = document.getElementById('uploadDec').files[0];
+        if (!file) return alert("Select file!");
+
+        const img = await loadImage(file);
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width; canvas.height = img.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+        let binStr = "";
+
+        for (let i = 0; i < data.length; i++) {
+            if ((i + 1) % 4 === 0) continue; // Skip Alpha
+            binStr += (data[i] & 1).toString();
+        }
+
+        // Ищем терминатор
+        const rawText = binToText(binStr.substring(0, 100000)); // Читаем первые N байт для скорости
+        if (rawText.includes(TERMINATOR)) {
+            document.getElementById('log').innerText = "SUCCESS:\n" + rawText.split(TERMINATOR)[0];
+        } else {
+            // Если не нашли сразу, пробуем полный перебор (осторожно, может быть долго для 4k)
+            document.getElementById('log').innerText = "Analyzing full stream...\n(Can't find marker, image might be clean or corrupted)";
+        }
+    }
+
+    // --- 3. ВИЗУАЛИЗАЦИЯ (Матрицы шума) ---
+    async function visualize() {
+        const file = document.getElementById('uploadVis').files[0];
+        if (!file) return alert("Select file!");
+
+        const img = await loadImage(file);
+        const w = img.width; const h = img.height;
+        
+        const cR = document.createElement('canvas'); cR.width = w; cR.height = h;
+        const cG = document.createElement('canvas'); cG.width = w; cG.height = h;
+        const cB = document.createElement('canvas'); cB.width = w; cB.height = h;
+
+        const ctxSrc = document.createElement('canvas'); 
+        ctxSrc.width = w; ctxSrc.height = h;
+        const ctxS = ctxSrc.getContext('2d');
+        ctxS.drawImage(img, 0, 0);
+        const srcData = ctxS.getImageData(0, 0, w, h).data;
+
+        const dR = cR.getContext('2d').createImageData(w, h);
+        const dG = cG.getContext('2d').createImageData(w, h);
+        const dB = cB.getContext('2d').createImageData(w, h);
+
+        for (let i = 0; i < srcData.length; i += 4) {
+            // Если бит 1 -> 255 (Яркий цвет), иначе 0 (Черный)
+            const rBit = srcData[i] & 1;
+            const gBit = srcData[i+1] & 1;
+            const bBit = srcData[i+2] & 1;
+
+            // R-Map
+            dR.data[i] = rBit * 255; dR.data[i+1] = 0; dR.data[i+2] = 0; dR.data[i+3] = 255;
+            // G-Map
+            dG.data[i] = 0; dG.data[i+1] = gBit * 255; dG.data[i+2] = 0; dG.data[i+3] = 255;
+            // B-Map
+            dB.data[i] = 0; dB.data[i+1] = 0; dB.data[i+2] = bBit * 255; dB.data[i+3] = 255;
+        }
+
+        cR.getContext('2d').putImageData(dR, 0, 0);
+        cG.getContext('2d').putImageData(dG, 0, 0);
+        cB.getContext('2d').putImageData(dB, 0, 0);
+
+        document.getElementById('vR').src = cR.toDataURL();
+        document.getElementById('vG').src = cG.toDataURL();
+        document.getElementById('vB').src = cB.toDataURL();
+        document.getElementById('visRes').classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>

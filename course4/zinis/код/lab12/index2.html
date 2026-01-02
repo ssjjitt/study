@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Stego Lab 12: Two Methods</title>
+    <style>
+        /* Cyberpunk Design */
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        :root { --bg: #050a0e; --panel: #0d1218; --accent: #00ff41; --warn: #ff0055; --text: #a8b2d1; }
+        body { background: var(--bg); color: var(--text); font-family: 'Share Tech Mono', monospace; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 10px; text-align: center; }
+        .panel { background: var(--panel); border: 1px solid #1e2d3d; padding: 20px; margin-bottom: 20px; box-shadow: 0 0 10px rgba(0,255,65,0.05); }
+        label { display: block; color: var(--accent); margin-top: 15px; margin-bottom: 5px; }
+        input, textarea, select, button { width: 100%; box-sizing: border-box; background: #000; color: var(--accent); border: 1px solid #333; padding: 10px; font-family: inherit; }
+        button { margin-top: 20px; cursor: pointer; font-weight: bold; border: 2px solid var(--accent); text-transform: uppercase; transition: 0.2s; }
+        button:hover { background: var(--accent); color: #000; box-shadow: 0 0 15px var(--accent); }
+        .btn-warn { border-color: var(--warn); color: var(--warn); }
+        .btn-warn:hover { background: var(--warn); color: #fff; }
+        .hidden { display: none; }
+        img { max-width: 100%; border: 1px solid #333; margin-top: 10px; }
+        .matrix-grid { display: flex; gap: 10px; margin-top: 10px; }
+        .matrix-grid div { flex: 1; text-align: center; }
+        .matrix-grid img { width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>LAB 12: LSB METHODS</h1>
+
+    <div class="panel">
+        <h2>// 1. ENCODE (Встраивание)</h2>
+        
+        <label>1. Выбери файл-контейнер:</label>
+        <input type="file" id="encFile" accept="image/*">
+
+        <label>2. Сообщение (ФИО или Отчет):</label>
+        <textarea id="encMsg" rows="3" placeholder="Введите текст..."></textarea>
+        <div style="text-align: right; margin-top: 5px;">
+            <small style="cursor:pointer; text-decoration:underline;" onclick="fillFIO()">[Вставить ФИО]</small> 
+            <small style="cursor:pointer; text-decoration:underline; margin-left:10px;" onclick="fillReport()">[Вставить Отчет]</small>
+        </div>
+
+        <label>3. Метод размещения битов:</label>
+        <select id="encMethod">
+            <option value="seq">Метод 1: Линейный (Sequential)</option>
+            <option value="rand">Метод 2: Псевдослучайный (Random)</option>
+        </select>
+
+        <button onclick="processEncode()">EXECUTE INJECTION</button>
+
+        <div id="encResult" class="hidden">
+            <p style="color: white; margin-top: 15px;">Результат готов:</p>
+            <img id="encImgRes">
+            <a id="dlBtn" download="stego_result.png" style="display:block; text-align:center; background:#222; color:#fff; padding:15px; margin-top:10px; text-decoration:none; border: 1px dashed white;">[ СКАЧАТЬ PNG ]</a>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2>// 2. DECODE (Извлечение)</h2>
+        <label>Загрузи стеганоконтейнер:</label>
+        <input type="file" id="decFile" accept="image/*">
+        
+        <label>Метод (должен совпадать с тем, чем шифровали):</label>
+        <select id="decMethod">
+            <option value="seq">Метод 1: Линейный</option>
+            <option value="rand">Метод 2: Псевдослучайный</option>
+        </select>
+
+        <button onclick="processDecode()" class="btn-warn">EXTRACT DATA</button>
+        <pre id="decOutput" style="white-space: pre-wrap; color: white; margin-top: 15px; border: 1px dashed #333; padding: 10px;"></pre>
+    </div>
+
+    <div class="panel">
+        <h2>// 3. ANALYSIS (Матрицы битов)</h2>
+        <p>Формирование цветовых матриц для младших бит (как на рис 12.7)</p>
+        <input type="file" id="visFile" accept="image/*">
+        <button onclick="processVisuals()" class="btn-warn">GENERATE MATRICES</button>
+        
+        <div id="visResult" class="matrix-grid hidden">
+            <div>
+                <span style="color:red">RED CHANNEL LSB</span>
+                <img id="visR">
+            </div>
+            <div>
+                <span style="color:green">GREEN CHANNEL LSB</span>
+                <img id="visG">
+            </div>
+            <div>
+                <span style="color:cyan">BLUE CHANNEL LSB</span>
+                <img id="visB">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // --- КОНФИГУРАЦИЯ ---
+    const TERMINATOR = "||END||"; // Маркер конца сообщения
+    const SEED_KEY = 12345;       // Ключ для псевдослучайного генератора
+
+    // --- УТИЛИТЫ ---
+    // Простой генератор случайных чисел с seed (Mulberry32)
+    function mulberry32(a) {
+        return function() {
+          var t = a += 0x6D2B79F5;
+          t = Math.imul(t ^ t >>> 15, t | 1);
+          t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+          return ((t ^ t >>> 14) >>> 0) / 4294967296;
+        }
+    }
+
+    // Генерация массива индексов пикселей (Линейный или Случайный)
+    function getPixelIndices(totalPixels, method) {
+        // Создаем массив [0, 1, 2, ... N]
+        let indices = new Int32Array(totalPixels);
+        for(let i=0; i<totalPixels; i++) indices[i] = i;
+
+        if (method === 'rand') {
+            // Перемешивание Фишера-Йетса с фиксированным seed
+            const rng = mulberry32(SEED_KEY);
+            for (let i = indices.length - 1; i > 0; i--) {
+                const j = Math.floor(rng() * (i + 1));
+                [indices[i], indices[j]] = [indices[j], indices[i]];
+            }
+        }
+        return indices;
+    }
+
+    function textToBin(text) {
+        return text.split('').map(c => c.charCodeAt(0).toString(2).padStart(8, '0')).join('');
+    }
+
+    function binToText(bin) {
+        let text = "";
+        for (let i = 0; i < bin.length; i += 8) 
+            text += String.fromCharCode(parseInt(bin.substr(i, 8), 2));
+        return text;
+    }
+
+    function loadImage(file) {
+        return new Promise(r => {
+            const reader = new FileReader();
+            reader.onload = e => {
+                const img = new Image();
+                img.onload = () => r(img);
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+    }
+
+    // --- 1. ЛОГИКА ВСТРАИВАНИЯ ---
+    async function processEncode() {
+        const file = document.getElementById('encFile').files[0];
+        const text = document.getElementById('encMsg').value + TERMINATOR;
+        const method = document.getElementById('encMethod').value;
+        
+        if(!file || !text) return alert("Выберите файл и введите текст!");
+
+        const img = await loadImage(file);
+        const cvs = document.createElement('canvas');
+        cvs.width = img.width; cvs.height = img.height;
+        const ctx = cvs.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        const imgData = ctx.getImageData(0,0, cvs.width, cvs.height);
+        const data = imgData.data;
+        const totalPixels = cvs.width * cvs.height;
+        
+        const binMsg = textToBin(text);
+        
+        // Получаем порядок пикселей (seq или rand)
+        const indices = getPixelIndices(totalPixels, method);
+        
+        let bitsWritten = 0;
+
+        for (let i = 0; i < indices.length; i++) {
+            if (bitsWritten >= binMsg.length) break;
+
+            const pixelIdx = indices[i];
+            const dataIdx = pixelIdx * 4; // RGBA структура
+
+            // Пишем в R, G, B каналы этого пикселя
+            for (let c = 0; c < 3; c++) {
+                if (bitsWritten < binMsg.length) {
+                    const bit = parseInt(binMsg[bitsWritten]);
+                    data[dataIdx + c] = (data[dataIdx + c] & 0xFE) | bit;
+                    bitsWritten++;
+                }
+            }
+        }
+
+        ctx.putImageData(imgData, 0, 0);
+        const resUrl = cvs.toDataURL('image/png');
+        
+        document.getElementById('encImgRes').src = resUrl;
+        document.getElementById('dlBtn').href = resUrl;
+        document.getElementById('encResult').classList.remove('hidden');
+    }
+
+    // --- 2. ЛОГИКА ИЗВЛЕЧЕНИЯ ---
+    async function processDecode() {
+        const file = document.getElementById('decFile').files[0];
+        const method = document.getElementById('decMethod').value;
+        if(!file) return alert("Файл не выбран!");
+
+        const img = await loadImage(file);
+        const cvs = document.createElement('canvas');
+        cvs.width = img.width; cvs.height = img.height;
+        const ctx = cvs.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        const data = ctx.getImageData(0,0, cvs.width, cvs.height).data;
+        const totalPixels = cvs.width * cvs.height;
+        const indices = getPixelIndices(totalPixels, method);
+
+        let binStr = "";
+        let found = false;
+
+        // Читаем биты в том же порядке
+        for (let i = 0; i < indices.length; i++) {
+            const pixelIdx = indices[i];
+            const dataIdx = pixelIdx * 4;
+
+            for (let c = 0; c < 3; c++) {
+                binStr += (data[dataIdx + c] & 1).toString();
+            }
+
+            // Оптимизация: проверяем каждые 100 символов
+            if (binStr.length % 80 === 0) {
+                const tempText = binToText(binStr);
+                if (tempText.includes(TERMINATOR)) {
+                    document.getElementById('decOutput').innerText = "СООБЩЕНИЕ НАЙДЕНО:\n" + tempText.split(TERMINATOR)[0];
+                    found = true;
+                    break;
+                }
+            }
+        }
+        
+        if (!found) {
+             document.getElementById('decOutput').innerText = "Терминатор не найден. Возможно, неверный метод или пустой контейнер.\nСырой текст:\n" + binToText(binStr.substring(0, 500)) + "...";
+        }
+    }
+
+    // --- 3. ЛОГИКА ВИЗУАЛИЗАЦИИ ---
+    async function processVisuals() {
+        const file = document.getElementById('visFile').files[0];
+        if(!file) return alert("Файл не выбран!");
+
+        const img = await loadImage(file);
+        const w = img.width, h = img.height;
+        
+        const cR = document.createElement('canvas'); cR.width=w; cR.height=h;
+        const cG = document.createElement('canvas'); cG.width=w; cG.height=h;
+        const cB = document.createElement('canvas'); cB.width=w; cB.height=h;
+
+        const ctxSrc = document.createElement('canvas'); ctxSrc.width=w; ctxSrc.height=h;
+        const ctxS = ctxSrc.getContext('2d'); ctxS.drawImage(img,0,0);
+        const src = ctxS.getImageData(0,0,w,h).data;
+
+        const dR = cR.getContext('2d').createImageData(w,h);
+        const dG = cG.getContext('2d').createImageData(w,h);
+        const dB = cB.getContext('2d').createImageData(w,h);
+
+        for(let i=0; i<src.length; i+=4) {
+            // Если бит = 1, делаем пиксель максимально ярким (255), иначе черным
+            const r = (src[i] & 1) * 255;
+            const g = (src[i+1] & 1) * 255;
+            const b = (src[i+2] & 1) * 255;
+
+            // Красная матрица
+            dR.data[i]=r; dR.data[i+1]=0; dR.data[i+2]=0; dR.data[i+3]=255;
+            // Зеленая матрица
+            dG.data[i]=0; dG.data[i+1]=g; dG.data[i+2]=0; dG.data[i+3]=255;
+            // Синяя матрица
+            dB.data[i]=0; dB.data[i+1]=0; dB.data[i+2]=b; dB.data[i+3]=255;
+        }
+
+        cR.getContext('2d').putImageData(dR,0,0);
+        cG.getContext('2d').putImageData(dG,0,0);
+        cB.getContext('2d').putImageData(dB,0,0);
+
+        document.getElementById('visR').src = cR.toDataURL();
+        document.getElementById('visG').src = cG.toDataURL();
+        document.getElementById('visB').src = cB.toDataURL();
+        document.getElementById('visResult').classList.remove('hidden');
+    }
+
+    // Хелперы для заполнения текста
+    function fillFIO() { document.getElementById('encMsg').value = "Иванов Иван Иванович"; }
+    function fillReport() { document.getElementById('encMsg').value = "Цель работы: изучение стеганографических методов...\n[Здесь много текста отчета]"; }
+</script>
+
+</body>
+</html>

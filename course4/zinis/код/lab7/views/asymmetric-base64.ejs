@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Асимметричное шифрование</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.5;
+            color: #333;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Асимметричное шифрование</h1>
+    
+    <div class="tabs">
+        <a href="/ascii" class="tab active">ASCII</a>
+        <a href="/base64" class="tab">Base64</a>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Оригинальное сообщение:</div>
+        <div><%= originalText %></div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Приватный ключ</div>
+        <div class="data"><%= privateKey %></div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Параметры публичного ключа</div>
+        <div>n: <%= n %>, a: <%= a %></div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Публичный ключ</div>
+        <div class="data"><%= publicKey %></div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">
+            Зашифрованное сообщение 
+            <span class="time">(<%= encodingTime %> мс)</span>
+        </div>
+        <div class="data"><%= encrypted %></div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">
+            Расшифрованное сообщение 
+            <span class="time">(<%= decodingTime %> мс)</span>
+        </div>
+        <div><%= decrypted %></div>
+    </div>
+</body>
+</html>

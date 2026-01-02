@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServer";
+
+package greet;
+
+service Calculator {
+  rpc SUM (TwoDoubleRequest) returns (DoubleResponse);
+  rpc SUB (TwoDoubleRequest) returns (DoubleResponse);
+  rpc MUL (TwoDoubleRequest) returns (DoubleResponse);
+  rpc DIV (TwoDoubleRequest) returns (DoubleResponse);
+  rpc FACT (IntRequest) returns (IntResponse);
+}
+
+message TwoDoubleRequest {
+  double x = 1;
+  double y = 2;
+}
+
+message DoubleResponse {
+  double result = 1;
+}
+
+message IntRequest {
+  int32 x = 1;
+}
+
+message IntResponse {
+  int32 result = 1;
+}
