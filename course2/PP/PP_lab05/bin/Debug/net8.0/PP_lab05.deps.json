@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PP_lab05/1.0.0": {
+        "dependencies": {
+          "Lab5Lib": "1.0.0"
+        },
+        "runtime": {
+          "PP_lab05.dll": {}
+        }
+      },
+      "Lab5Lib/1.0.0": {
+        "runtime": {
+          "Lab5Lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PP_lab05/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lab5Lib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

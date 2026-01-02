@@ -1,0 +1,5 @@
+﻿  ServiceLibrary.cpp
+D:\Study\university\5semester\PSP\lab8-10\ConcurrentServer\ServiceLibrary\PrototypeService.h(167,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file '/ServiceLibrary.cpp')
+  
+  ServiceLibrary.vcxproj -> D:\Study\university\5semester\PSP\lab8-10\ConcurrentServer\x64\Debug\ServiceLibrary.dll

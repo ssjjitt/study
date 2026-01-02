@@ -1,0 +1,54 @@
+div
+{
+    border: 5px solid black;
+    width: 300px;
+    height: 300px;
+    color: red;
+    animation: name 5s linear infinite forwards;
+    text-align: center;
+    font-size: 120px;
+    line-height: 100px;
+}
+@keyframes name
+{
+0% 
+{  
+    color: red;
+}
+25%
+{
+    color: yellow;
+}
+50% 
+{ 
+    color: green;
+}
+75% 
+{
+    color: dodgerblue;
+}
+90%
+{
+    color: purple;
+}
+100% 
+{ 
+   color: red;
+}
+}
+h1 {
+    text-align: center;
+    color: blue;
+    animation: name2 5s linear infinite;
+}
+@keyframes name2 {
+    0% {
+    opacity: 0;
+    }
+    50% {
+    opacity: 0.8;
+    }
+    100% {
+    opacity: 0;
+    }
+}

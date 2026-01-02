@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправка Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-wrapper {
+            background-color: #ffe6f2;
+            /* Светло-розовый цвет фона */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: #d5006d;
+            /* Темно-розовый цвет заголовка */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #d5006d;
+            /* Темно-розовый цвет текста */
+        }
+
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #d5006d;
+            /* Темно-розовая рамка */
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .submit-btn {
+            background-color: #d5006d;
+            /* Темно-розовая кнопка */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #a4004f;
+            /* Темно-розовый цвет при наведении */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-wrapper">
+        <h2>Отправить email</h2>
+        <form action="/" method="post">
+            <label for="from">Отправитель:</label>
+            <input type="email" id="from" name="from" placeholder="Введите ваш email" required>
+
+            <label for="to">Получатель:</label>
+            <input type="email" id="to" name="to" placeholder="Введите email получателя" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" placeholder="Введите текст сообщения" required></textarea>
+
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

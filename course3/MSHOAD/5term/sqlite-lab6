@@ -1,0 +1,197 @@
+--------------создание таблиц--------------
+------------------------------
+CREATE TABLE FACULTY (
+    FACULTY TEXT PRIMARY KEY,
+    FACULTY_NAME TEXT DEFAULT '???'
+);
+------------------------------
+CREATE TABLE PROFESSION (
+    PROFESSION TEXT PRIMARY KEY,
+    FACULTY TEXT,
+    PROFESSION_NAME TEXT,
+    QUALIFICATION TEXT,
+    FOREIGN KEY (FACULTY) REFERENCES FACULTY(FACULTY)
+);
+------------------------------
+CREATE TABLE PULPIT (
+    PULPIT TEXT PRIMARY KEY,
+    PULPIT_NAME TEXT,
+    FACULTY TEXT,
+    FOREIGN KEY (FACULTY) REFERENCES FACULTY(FACULTY)
+);
+------------------------------
+CREATE TABLE TEACHER (
+    TEACHER TEXT PRIMARY KEY,
+    TEACHER_NAME TEXT,
+    TEACHER_SURNAME TEXT,
+    TEACHER_PATRONYMIC TEXT,
+    GENDER TEXT CHECK (GENDER IN ('м', 'ж')),
+    START_DATE DATE NOT NULL,
+    WORK_TIME REAL NOT NULL,
+    PULPIT TEXT,
+    FOREIGN KEY (PULPIT) REFERENCES PULPIT(PULPIT)
+);
+------------------------------
+CREATE TABLE SUBJECT (
+    SUBJECT TEXT PRIMARY KEY,
+    SUBJECT_NAME TEXT UNIQUE,
+    TEACHER TEXT,
+    FOREIGN KEY (TEACHER) REFERENCES TEACHER(TEACHER)
+);
+------------------------------
+CREATE TABLE GROUPS (
+    IDGROUP INTEGER PRIMARY KEY AUTOINCREMENT,
+    FACULTY TEXT,
+    PROFESSION TEXT,
+    YEAR_FIRST SMALLINT CHECK (YEAR_FIRST <= 9999),
+    FOREIGN KEY (FACULTY) REFERENCES FACULTY(FACULTY),
+    FOREIGN KEY (PROFESSION) REFERENCES PROFESSION(PROFESSION)
+);
+------------------------------
+CREATE TABLE STUDENT (
+    IDSTUDENT INTEGER PRIMARY KEY AUTOINCREMENT,
+    IDGROUP INTEGER,
+    STUDENT_NAME TEXT,
+    STUDENT_SURNAME TEXT,
+    STUDENT_PATRONYMIC TEXT,
+    BDAY DATE,
+    FOREIGN KEY (IDGROUP) REFERENCES GROUPS(IDGROUP)
+);
+------------------------------
+CREATE TABLE PROGRESS (
+    SUBJECT TEXT,
+    IDSTUDENT INTEGER,
+    PDATE DATE,
+    ESTIMATION INTEGER CHECK (ESTIMATION BETWEEN 1 AND 10),
+    PRIMARY KEY (SUBJECT, IDSTUDENT, PDATE),
+    FOREIGN KEY (SUBJECT) REFERENCES SUBJECT(SUBJECT),
+    FOREIGN KEY (IDSTUDENT) REFERENCES STUDENT(IDSTUDENT)
+);
+
+----------ДОБАВЛЕНИЕ ДАННЫХ--------------
+------------------------------
+INSERT INTO FACULTY (FACULTY, FACULTY_NAME) VALUES 
+('F001', 'Факультет информатики'),
+('F002', 'Факультет математики');
+------------------------------
+INSERT INTO PROFESSION (PROFESSION, FACULTY, PROFESSION_NAME, QUALIFICATION) VALUES 
+('PR001', 'F001', 'Программная инженерия', 'Бакалавр'),
+('PR002', 'F002', 'Прикладная математика', 'Бакалавр');
+------------------------------
+INSERT INTO PULPIT (PULPIT, PULPIT_NAME, FACULTY) VALUES 
+('P001', 'Кафедра программирования', 'F001'),
+('P002', 'Кафедра математики', 'F002');
+------------------------------
+INSERT INTO TEACHER (TEACHER, TEACHER_NAME, TEACHER_SURNAME, TEACHER_PATRONYMIC, GENDER, START_DATE, WORK_TIME, PULPIT) VALUES 
+('T001', 'Иван', 'Иванов', 'Иванович', 'м', '2020-01-15', 40.0, 'P001'),
+('T002', 'Мария', 'Петрова', 'Сергеевна', 'ж', '2019-09-01', 30.0, 'P002');
+------------------------------
+INSERT INTO SUBJECT (SUBJECT, SUBJECT_NAME, TEACHER) VALUES 
+('SUB001', 'Программирование 1', 'T001'),
+('SUB002', 'Математика 1', 'T002');
+------------------------------
+INSERT INTO GROUPS (FACULTY, PROFESSION, YEAR_FIRST) VALUES 
+('F001', 'PR001', 2021),
+('F002', 'PR002', 2021);
+------------------------------
+INSERT INTO STUDENT (IDGROUP, STUDENT_NAME, STUDENT_SURNAME, STUDENT_PATRONYMIC, BDAY) VALUES 
+(1, 'Алексей', 'Сидоров', 'Александрович', '2000-05-12'),
+(2, 'Ольга', 'Смирнова', 'Петровна', '2001-03-20');
+------------------------------
+INSERT INTO PROGRESS (SUBJECT, IDSTUDENT, PDATE, ESTIMATION) VALUES 
+('SUB001', 1, '2024-01-15', 8),
+('SUB001', 1, '2024-02-15', 9),
+('SUB001', 2, '2024-01-15', 7),
+('SUB002', 2, '2024-02-15', 6),
+('SUB002', 1, '2024-03-01', 10);
+
+--операции вставки удаления обновления 
+SELECT * FROM STUDENT;
+------------------------------
+BEGIN TRANSACTION;
+UPDATE STUDENT 
+SET STUDENT_NAME = 'Александр' 
+WHERE IDSTUDENT = 1;
+COMMIT;
+------------------------------
+BEGIN TRANSACTION;
+INSERT INTO STUDENT (IDGROUP, STUDENT_NAME, STUDENT_SURNAME, STUDENT_PATRONYMIC, BDAY) VALUES 
+(1, 'Наталья', 'Федорова', 'Викторовна', '2000-09-15');
+COMMIT;
+------------------------------
+BEGIN TRANSACTION;
+DELETE FROM STUDENT 
+WHERE IDSTUDENT = 4;
+DELETE FROM FACULTY 
+WHERE FACULTY = 'F001';
+COMMIT;
+------------------------------
+-----VIEWS-----
+CREATE VIEW vw_SubjectsWithTeachers AS
+SELECT 
+    SUB.SUBJECT,
+    SUB.SUBJECT_NAME,
+    T.TEACHER_NAME,
+    T.TEACHER_SURNAME,
+    P.PULPIT_NAME
+FROM 
+    SUBJECT SUB
+LEFT JOIN 
+    TEACHER T ON SUB.TEACHER = T.TEACHER
+LEFT JOIN 
+    PULPIT P ON T.PULPIT = P.PULPIT;
+------------------------------
+CREATE VIEW vw_StudentProgress AS
+SELECT 
+    S.IDSTUDENT,
+    S.STUDENT_NAME,
+    S.STUDENT_SURNAME,
+    P.SUBJECT,
+    P.ESTIMATION
+FROM 
+    PROGRESS P
+JOIN 
+    STUDENT S ON P.IDSTUDENT = S.IDSTUDENT;
+------------------------------
+CREATE VIEW vw_SubjectEstimation AS
+SELECT 
+    SUB.SUBJECT,
+    SUB.SUBJECT_NAME,
+    AVG(P.ESTIMATION) AS AverageEstimation
+FROM 
+    PROGRESS P
+JOIN 
+    SUBJECT SUB ON P.SUBJECT = SUB.SUBJECT
+GROUP BY 
+    SUB.SUBJECT, SUB.SUBJECT_NAME;
+------------------------------
+-- Запрос к представлению
+SELECT * FROM vw_SubjectsWithTeachers;
+SELECT * FROM vw_StudentProgress;
+SELECT * FROM vw_SubjectEstimation;
+------------------------------
+--ИНДЕКСЫ--
+
+CREATE INDEX IF NOT EXISTS IX_Teacher_Surname ON TEACHER (TEACHER_SURNAME);
+CREATE INDEX IF NOT EXISTS IX_Student_Surname ON STUDENT (STUDENT_SURNAME);
+CREATE INDEX IF NOT EXISTS IX_Profession_Name ON PROFESSION (PROFESSION_NAME);
+SELECT name FROM sqlite_master WHERE type='index';
+------------------------------
+--ТРИГГЕР--
+ALTER TABLE STUDENT ADD COLUMN LOW_PERFORMANCE BOOLEAN DEFAULT 0;
+
+CREATE TRIGGER trg_UpdateLowPerformanceInsert
+AFTER INSERT ON PROGRESS
+FOR EACH ROW
+BEGIN
+    UPDATE STUDENT
+    SET LOW_PERFORMANCE = CASE
+        WHEN NEW.ESTIMATION < 4 THEN 1
+        ELSE 0
+    END
+    WHERE IDSTUDENT = NEW.IDSTUDENT;
+END;
+
+
+SELECT * FROM STUDENT;
+INSERT INTO PROGRESS (SUBJECT, IDSTUDENT, PDATE, ESTIMATION) VALUES ('SUB001', 1, '2024-11-15', 3);

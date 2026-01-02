@@ -1,0 +1,266 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c56ace9a-239e-4ce2-b950-83f10534de7f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Univer</ID>
+  <Name>Univer</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="b323a961-75a4-404d-bb16-f6e311322324">
+      <ID>TIME DIM</ID>
+      <Name>TIME DIM</Name>
+      <DimensionID>TIME DIM</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7dc9e774-0eb5-4bfc-986a-b14aaa391282">
+          <AttributeID>PDATE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="91b5e367-6ff3-4e6a-a3f5-bd8484147a3b">
+      <ID>SUBJECT DIM</ID>
+      <Name>SUBJECT DIM</Name>
+      <DimensionID>SUBJECT DIM</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0aed91f4-b715-46c9-9f0b-a13a97b0ad3b">
+          <AttributeID>SUBJECT</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="79d120ee-a12f-408f-add2-5f2d6baceeb3">
+      <ID>STUDENT DIM</ID>
+      <Name>STUDENT DIM</Name>
+      <DimensionID>STUDENT DIM</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bd470278-5b90-4177-86b4-5e99aee0c242">
+          <AttributeID>IDSTUDENT</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="a895b0db-4192-4aa6-9d2a-b0d359c076e3">
+      <ID>FACT PROGRESS</ID>
+      <Name>FACT PROGRESS</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="f870a2e0-a6c8-4c7f-9f0a-6e5e044610a3">
+          <ID>ESTIMATION</ID>
+          <Name>ESTIMATION</Name>
+          <Source dwd:design-time-name="a11105db-9340-473a-84ed-4fba19485abf">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a2c2f72f-92cb-4d0d-92b6-f7185a51d60c">
+              <TableID>dbo_FACT_PROGRESS</TableID>
+              <ColumnID>ESTIMATION</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="26db9146-1055-4305-9cbc-d28e7cf80bb2">
+          <ID>FACT PROGRESS Count</ID>
+          <Name>FACT PROGRESS Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="d67e65c3-c6b1-45f0-b21d-b0e587d25990">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="ddb09ebe-6e98-4ce6-9d07-fcc9a2868ca4">
+              <TableID>dbo_FACT_PROGRESS</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="45f1b4a6-9d30-4e36-a8fc-c994faf45bd0">
+          <CubeDimensionID>TIME DIM</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0bfa4643-f13a-416f-821d-a3680c087bbb">
+              <AttributeID>PDATE</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8e0546de-0b05-49bf-8abb-c9d97ec2369b">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c9670bc1-d749-44f2-b00c-0c01b5a13992">
+                    <TableID>dbo_FACT_PROGRESS</TableID>
+                    <ColumnID>PDATE</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bf9c7fa9-33fd-4632-b54a-bb8694360896">
+          <CubeDimensionID>SUBJECT DIM</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="35709334-b30b-4384-8907-976287ecf203">
+              <AttributeID>SUBJECT</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fee12ede-9590-4680-9be9-905915ddfbef">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7350ba0e-9413-49ca-9613-79164c603999">
+                    <TableID>dbo_FACT_PROGRESS</TableID>
+                    <ColumnID>SUBJECT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4bdd6ad0-bc9e-4fdb-b359-a73b76abaea6">
+          <CubeDimensionID>STUDENT DIM</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="28e4a38c-7b2c-44b0-818a-0932cedd0b44">
+              <AttributeID>IDSTUDENT</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6ff4ea3b-e74d-41f6-a1fa-cc8cef785e92">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="46e63cf1-5e8d-4c26-bcb4-0077b1e65001">
+                    <TableID>dbo_FACT_PROGRESS</TableID>
+                    <ColumnID>IDSTUDENT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="8ada1600-fcfd-494d-9ec1-ca896d4e55a5">
+      <ID>SUBJECT DIM</ID>
+      <Name>SUBJECT DIM</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="eace88b2-9aa6-4c37-8f6a-a4a7916973a2">
+          <ID>SUBJECT DIM Count</ID>
+          <Name>SUBJECT DIM Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="d4758bfb-8e52-4d67-b411-dd41e5aadf2b">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="f95a9bc1-da88-4f47-921a-df7a6ceb654a">
+              <TableID>dbo_SUBJECT_DIM</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="9a3d4fb7-4c96-45a0-89dc-b18d7b43cfed">
+          <CubeDimensionID>SUBJECT DIM</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4ec7a761-085f-4121-acec-be2570b90453">
+              <AttributeID>SUBJECT</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8430fdbf-cc7d-4e4b-a995-1a653d442b09">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="debb869e-5a5b-44a0-ad75-0a5da107a4e8">
+                    <TableID>dbo_SUBJECT_DIM</TableID>
+                    <ColumnID>SUBJECT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="b27c2fcb-fdf4-4fdf-bd8c-c57c16533923">
+      <ID>STUDENT DIM</ID>
+      <Name>STUDENT DIM</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="11254799-364d-4ef7-a8f8-4176fa33cb8d">
+          <ID>STUDENT DIM Count</ID>
+          <Name>STUDENT DIM Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="96ed57c2-7291-463b-9e1c-1076fb801cb1">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="bd44d690-f989-45e9-bdb5-d0cc29e21b15">
+              <TableID>dbo_STUDENT_DIM</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="21244910-35e1-4912-b622-39891c2309f5">
+          <CubeDimensionID>STUDENT DIM</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ef7ab76e-fc0c-440e-b0bc-a9af8627d77b">
+              <AttributeID>IDSTUDENT</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="27616ffd-2dab-4d6e-bc03-948cc8d040b2">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c634b615-0859-4646-a465-d77b03e08f39">
+                    <TableID>dbo_STUDENT_DIM</TableID>
+                    <ColumnID>IDSTUDENT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="741bafff-9c09-4197-8ed0-9f51397ca2e3">
+    <DataSourceViewID>Univer</DataSourceViewID>
+  </Source>
+</Cube>

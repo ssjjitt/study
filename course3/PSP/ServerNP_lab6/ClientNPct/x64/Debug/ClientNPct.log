@@ -1,0 +1,3 @@
+﻿  ClientNPct.cpp
+D:\univer\!ПСП\ServerNP_lab6\ClientNPct\ClientNPct.cpp(171,12): warning C4101: hPipe: неиспользованная локальная переменная
+  ClientNPct.vcxproj -> D:\univer\!ПСП\ServerNP_lab6\x64\Debug\ClientNPct.exe

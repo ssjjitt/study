@@ -1,0 +1,3 @@
+﻿  ntp_client.cpp
+D:\univer\!РИС\lab1\lab1_basic_server\lab1_ntp_client\ntp_client.cpp(97,24): warning C4244: инициализация: преобразование "uint64_t" в "int", возможна потеря данных
+  lab1_ntp_client.vcxproj -> D:\univer\!РИС\lab1\lab1_basic_server\x64\Debug\lab1_ntp_client.exe

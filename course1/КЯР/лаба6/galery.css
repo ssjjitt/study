@@ -1,0 +1,20 @@
+figure 
+{
+    display: inline-block;
+    background-color:darkslategrey;
+    border-radius: 5px;
+}
+figcaption {
+    color: #fff;
+    text-align: center;
+}
+img
+{
+    height: 190px;
+    width: 290px;
+    border-radius: 5px;
+}
+div
+{
+    text-align: center;
+}

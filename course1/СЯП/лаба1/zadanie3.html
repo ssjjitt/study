@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>zadanie3</title>
+    <style>
+        body
+            {
+                background-color: bisque;
+            }
+            input
+            {
+                color: rgb(4, 56, 15);
+                background-color: rgb(153, 169, 172);
+                font-family: "Arial";
+                font-size: 50px;
+            }
+    </style>
+  </head>
+    <body>
+        <input type="button" value="КНОПКА" onclick="messageWrite()" />
+        <script>
+        var messageWrite=() =>
+        {
+          let chislo1 = 2;
+          let chislo2 = 1;
+          let rez1 = (35*chislo2-25*chislo1)/5+232;
+          let rez2 = 8*chislo2/chislo1+(5*chislo1/chislo2-43)*6;
+          document.write("<div style = 'font-family: Arial'> значение первого выражения: " +rez1, "</div>");
+          document.write("<div style = 'color: brown'> значение второго выражения: " +rez2, "</div>");
+          let ost = rez1 % rez2;
+          document.write("<div style = 'font-size: 25px;'> остаток от деления:" +ost, "</div>");
+          alert("остаток от деления: " +ost);
+        }
+        </script>
+    </body>
+</html>

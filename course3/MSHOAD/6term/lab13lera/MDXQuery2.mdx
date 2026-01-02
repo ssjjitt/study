@@ -1,0 +1,50 @@
+--Показывает общее количество перевозок (Fact Shipments Count) и количество транспортных средств
+--(Dim Transport Count) по каждому виду транспорта. Используются числовые меры и агрегация по строкам.
+SELECT 
+    { [Measures].[Fact Shipments Count], 
+      [Measures].[Dim Transport Count] } ON COLUMNS,
+    { [Dim Transport].[Transport Id].MEMBERS } ON ROWS
+FROM [Lab13]
+
+--Создаёт вычисляемый столбец [Client Initial], который показывает первые 3 буквы имени клиента
+--(например, из "РОСНЕФТЬ" получится "РОС"). Это демонстрирует работу с текстовыми значениями.
+WITH 
+MEMBER [Client Initial] AS
+    LEFT([Dim Client].[Client Id].CURRENTMEMBER.Name, 3)
+SELECT 
+    [Client Initial] ON COLUMNS,
+    [Dim Client].[Client Id].MEMBERS ON ROWS
+FROM [Lab13]
+
+--Показывает ТОП-3 маршрута с наибольшим количеством перевозок. Используется TOPCOUNT,
+--который работает с наборами элементов и сортирует их по убыванию меры.
+SELECT 
+    {[Measures].[Fact Shipments Count]} ON COLUMNS,
+    TOPCOUNT(
+        [Dim Route].[Route Id].MEMBERS,
+        3,
+        [Measures].[Fact Shipments Count]
+    ) ON ROWS
+FROM [Lab13]
+
+--Создаёт вычисляемый столбец, в котором отображается имя клиента и уровень иерархии,
+--на котором он находится. Используются CURRENTMEMBER.NAME и .LEVEL.ORDINAL.
+WITH 
+MEMBER [Client Info] AS 
+    [Dim Client].[Client Id].CURRENTMEMBER.NAME + 
+    " - Level: " + 
+    CSTR([Dim Client].[Client Id].CURRENTMEMBER.LEVEL.ORDINAL)
+SELECT 
+    {[Client Info]} ON COLUMNS,
+    [Dim Client].[Client Id].MEMBERS ON ROWS
+FROM [Lab13]
+
+--Показывает количество перевозок по определённому уровню иерархии времени — например,
+--все месяца или кварталы. Используется функция DESCENDANTS для выбора всех подуровней от "всех дат".
+SELECT 
+    {[Measures].[Fact Shipments Count]} ON COLUMNS,
+    DESCENDANTS(
+        [Dim Date].[Date Id].[All], 
+        [Dim Date].[Date Id].LEVELS(1)  -- например, месяц
+    ) ON ROWS
+FROM [Lab13]

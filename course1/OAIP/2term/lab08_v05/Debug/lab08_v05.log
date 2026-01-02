@@ -1,0 +1,4 @@
+﻿  lab08_v05.cpp
+E:\уник\оаип\lab08_v05\lab08_v05.cpp(8,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+E:\уник\оаип\lab08_v05\lab08_v05.cpp(14,39): warning C4101: sizeQueue: неиспользованная локальная переменная
+  lab08_v05.vcxproj -> E:\уник\оаип\lab08_v02\Debug\lab08_v05.exe

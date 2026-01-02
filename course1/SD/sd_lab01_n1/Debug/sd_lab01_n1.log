@@ -1,0 +1,4 @@
+﻿  lab01_n1.cpp
+E:\уник\сд\sd_lab01_n1\lab01_n1.cpp(41,31): warning C4018: <: несоответствие типов со знаком и без знака
+E:\уник\сд\sd_lab01_n1\lab01_n1.cpp(57,31): warning C4018: <: несоответствие типов со знаком и без знака
+  sd_lab01_n1.vcxproj -> E:\уник\сд\sd_lab01_n1\Debug\sd_lab01_n1.exe

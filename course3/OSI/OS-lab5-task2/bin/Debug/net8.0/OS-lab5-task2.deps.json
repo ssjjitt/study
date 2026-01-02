@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "OS-lab5-task2/1.0.0": {
+        "runtime": {
+          "OS-lab5-task2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OS-lab5-task2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

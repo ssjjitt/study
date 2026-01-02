@@ -1,0 +1,678 @@
+#include <iostream>
+#include <list>        
+#include <stdio.h>
+#include <tchar.h>
+#include "Winsock2.h"
+
+#pragma comment(lib, "WS2_32.lib")
+#pragma warning(disable : 4996)
+
+using namespace std;
+
+#define INADDR_ANY        (u_long)0x00000000 //любой адрес        
+#define INADDR_LOOPBACK    0x7f000001        // внутренняя петля 
+#define INADDR_BROADCAST  (u_long)0xffffffff // широковещание      
+#define INADDR_NONE        0xffffffff        // нет адреса  
+#define ADDR_ANY           INADDR_ANY        // любой адрес       
+#define AS_SQ 10 // макс колво подкл
+
+typedef struct sockaddr_in SOCKADDR_IN;
+typedef struct sockaddr_in* PSOCKADDR_IN;
+typedef struct sockaddr_in FAR* LPSOCKADDR_IN;
+
+string GetErrorMsgText(int code)
+{
+    string msgText;
+    switch (code) {
+    case WSAEINTR:                 msgText = "Работа функции прервана";                           break;
+    case WSAEACCES:                msgText = "Разрешение отвергнуто";                             break;
+    case WSAEFAULT:                msgText = "Ошибочный адрес";                                   break;
+    case WSAEINVAL:                msgText = "Ошибка в аргументе ";                               break;
+    case WSAEMFILE:                msgText = "Слишком много файлов открыто";                      break;
+    case WSAEWOULDBLOCK:           msgText = "Ресурс временно недоступен";                        break;
+    case WSAEINPROGRESS:           msgText = "Операция в процессе развития";                      break;
+    case WSAEALREADY:              msgText = "Операция уже выполняется ";                         break;
+    case WSAENOTSOCK:              msgText = "Сокет задан неправильно   ";                        break;
+    case WSAEDESTADDRREQ:          msgText = "Требуется адрес расположения ";                     break;
+    case WSAEMSGSIZE:              msgText = "Сообщение слишком длинное ";                        break;
+    case WSAEPROTOTYPE:            msgText = "Неправильный тип протокола для сокета ";            break;
+    case WSAENOPROTOOPT:           msgText = "Ошибка в опции протокола";                          break;
+    case WSAEPROTONOSUPPORT:       msgText = "Протокол не поддерживается ";                       break;
+    case WSAESOCKTNOSUPPORT:       msgText = "Тип сокета не поддерживается ";                     break;
+    case WSAEOPNOTSUPP:            msgText = "Операция не поддерживается ";                       break;
+    case WSAEPFNOSUPPORT:          msgText = "Тип протоколов не поддерживается ";                 break;
+    case WSAEAFNOSUPPORT:          msgText = "Тип адресов не поддерживается протоколом";          break;
+    case WSAEADDRINUSE:            msgText = "Адрес уже используется ";                           break;
+    case WSAEADDRNOTAVAIL:         msgText = "Запрошенный адрес не может быть использован";       break;
+    case WSAENETDOWN:              msgText = "Сеть отключена ";                                   break;
+    case WSAENETUNREACH:           msgText = "Сеть не достижима";                                 break;
+    case WSAENETRESET:             msgText = "Сеть разорвала соединение";                         break;
+    case WSAECONNABORTED:          msgText = "Программный отказ связи ";                          break;
+    case WSAECONNRESET:            msgText = "Связь восстановлена ";                              break;
+    case WSAENOBUFS:               msgText = "Не хватает памяти для буферов";                     break;
+    case WSAEISCONN:               msgText = "Сокет уже подключен";                               break;
+    case WSAENOTCONN:              msgText = "Сокет не подключен";                                break;
+    case WSAESHUTDOWN:             msgText = "Нельзя выполнить send: сокет завершил работу";      break;
+    case WSAETIMEDOUT:             msgText = "Закончился отведенный интервал  времени";           break;
+    case WSAECONNREFUSED:          msgText = "Соединение отклонено  ";                            break;
+    case WSAEHOSTDOWN:             msgText = "Хост в неработоспособном состоянии";                break;
+    case WSAEHOSTUNREACH:          msgText = "Нет маршрута для хоста ";                           break;
+    case WSAEPROCLIM:              msgText = "Слишком много процессов ";                          break;
+    case WSASYSNOTREADY:           msgText = "Сеть не доступна ";                                 break;
+    case WSAVERNOTSUPPORTED:       msgText = "Данная версия недоступна ";                         break;
+    case WSANOTINITIALISED:        msgText = "Не выполнена инициализация WS2_32.DLL";             break;
+    case WSAEDISCON:               msgText = "Выполняется отключение";                            break;
+    case WSATYPE_NOT_FOUND:        msgText = "Класс не найден ";                                  break;
+    case WSAHOST_NOT_FOUND:        msgText = "Хост не найден";                                    break;
+    case WSATRY_AGAIN:             msgText = "Неавторизированный хост не найден";                 break;
+    case WSANO_RECOVERY:           msgText = "Неопределенная  ошибка";                            break;
+    case WSANO_DATA:               msgText = "Нет записи запрошенного типа";                      break;
+    case WSA_INVALID_HANDLE:       msgText = "Указанный дескриптор события  с ошибкой";           break;
+    case WSA_INVALID_PARAMETER:    msgText = "Один или более параметров с ошибкой";               break;
+    case WSA_IO_INCOMPLETE:        msgText = "Объект ввода-вывода не в сигнальном состоянии";     break;
+    case WSA_IO_PENDING:           msgText = "Операция завершится позже  ";                       break;
+    case WSA_NOT_ENOUGH_MEMORY:    msgText = "Не достаточно памяти ";                             break;
+    case WSA_OPERATION_ABORTED:    msgText = "Операция отвергнута ";                              break;
+        //case WSAINVALIDPROCTABLE:      msgText = "Ошибочный сервис ";                                 break;
+        //case WSAINVALIDPROVIDER:       msgText = "Ошибка в версии сервиса  ";                         break;
+        //case WSAPROVIDERFAILEDINIT:    msgText = "Невозможно инициализировать сервис ";               break;
+    case WSASYSCALLFAILURE:        msgText = "Аварийное завершение системного вызова ";           break;
+    case WSAEINVALIDPROCTABLE:         msgText = "WSAEINVALIDPROCTABLE";        break;
+    case WSAEINVALIDPROVIDER:          msgText = "WSAEINVALIDPROVIDER";         break;
+    case WSAEPROVIDERFAILEDINIT:         msgText = "WSAEPROVIDERFAILEDINIT";        break;
+    default:                       msgText = "***ERROR***";                                       break;
+    }
+    return msgText;
+}
+
+string SetErrorMsgText(string msgText, int code)
+{
+    return msgText + GetErrorMsgText(code);
+}
+
+string  SetPipeError(string msgText, int code)
+{
+    return  msgText + GetErrorMsgText(code);
+};
+
+SOCKET sS;
+int serverPort;
+char dllName[50];
+char namedPipeName[10];
+
+volatile long connectionCount = 0; // колво подкл
+volatile long sayNoCount = 0; // колво отказов
+volatile long successConnections = 0; // успешынх
+volatile long currentActiveConnections = 0; // текущие активные подкл
+
+HANDLE hAcceptServer, hConsolePipe, hGarbageCleaner, hDispatchServer, hResponseServer;
+// событие для подкл клиента
+HANDLE hClientConnectedEvent = CreateEvent(NULL,
+    FALSE,
+    FALSE,
+    L"ClientConnected");
+
+// функции потоков
+DWORD WINAPI AcceptServer(LPVOID pPrm);
+DWORD WINAPI ConsolePipe(LPVOID pPrm);
+DWORD WINAPI GarbageCleaner(LPVOID pPrm);
+DWORD WINAPI DispatchServer(LPVOID pPrm);
+DWORD WINAPI ResponseServer(LPVOID pPrm);
+
+// потокобезопасность
+CRITICAL_SECTION scListContact;
+
+// СПИСОК ДОСТУПНЫХ КОМАНД
+enum TalkersCommand
+{
+    START, STOP, EXIT, STATISTICS, WAIT, SHUTDOWN, GETCOMMAND, LOAD_LIB, UNLOAD_LIB
+};
+
+volatile TalkersCommand  previousCommand = GETCOMMAND;
+
+// СТРУКТУРА ДЛЯ ПРЕДСТАВЛЕНИЯ КОНТАКТА
+struct Contact         // элемент списка подключений       
+{
+    enum TE {               // состояние  сервера подключения  
+        EMPTY,              // пустой элемент списка подключений 
+        ACCEPT,             // подключен (accept), но не обслуживается
+        CONTACT             // передан обслуживающему серверу  
+    }type;     // тип элемента списка подключений
+
+    enum ST {               // состояние обслуживающего сервера  
+        WORK,               // идет обмен данными с клиентом
+        ABORT,              // обслуживающий сервер завершился не нормально 
+        TIMEOUT,            // обслуживающий сервер завершился по времени 
+        FINISH              // обслуживающий сервер завершился  нормально 
+    }sthread; // состояние  обслуживающего сервера (потока)
+
+    SOCKET      s;         // сокет для обмена данными с клиентом
+    SOCKADDR_IN prms;      // параметры  сокета 
+    int         lprms;     // длина prms 
+    HANDLE      hthread;   // handle потока (или процесса) 
+    HANDLE      htimer;    // handle таймера
+    HANDLE      serverHThread;
+
+    char msg[50];           // сообщение 
+    char srvname[15];       //  наименование обслуживающего сервера 
+
+    // ПО УМОЛЧАНИЮ
+    Contact(TE t = EMPTY, const char* namesrv = "")
+    {
+        memset(&prms, 0, sizeof(SOCKADDR_IN));
+        lprms = sizeof(SOCKADDR_IN);
+        type = t;
+        strcpy(srvname, namesrv);
+        msg[0] = 0;
+    };
+
+    // УСТАНОВКА СОСТОЯНИЯ ПОТОКОВ
+    void SetST(ST sth, const char* m = "")
+    {
+        sthread = sth;
+        strcpy(msg, m);
+    }
+};
+
+// СПИСОК КОНТАКТОВ
+typedef list<Contact> ListContact;
+ListContact contacts;
+
+// ОБРАБОТКА ПОДКЛЮЧЕНИЙ
+bool AcceptCycle(int sq)
+{
+    bool rc = false; // успех/не успех
+    Contact c(Contact::ACCEPT, "EchoServer"); // новый контакт
+    while (sq-- > 0 && !rc)
+    {
+        if ((c.s = accept(sS, (sockaddr*)&c.prms, &c.lprms)) == INVALID_SOCKET)
+        {
+            if (WSAGetLastError() != WSAEWOULDBLOCK)
+                throw  SetErrorMsgText("accept:", WSAGetLastError());
+        }
+        else
+        {
+            rc = true;
+            EnterCriticalSection(&scListContact); // потокобезопасность
+            contacts.push_front(c); // пушим в список
+            LeaveCriticalSection(&scListContact); 
+            puts("contact connected");
+            InterlockedIncrement(&connectionCount); // подкл++
+        }
+    }
+    return rc;
+};
+
+void openSocket()
+{
+    SOCKADDR_IN serv;
+    sockaddr_in clnt;
+    u_long nonblk = 1; // установка неблокирующего режима
+
+    if ((sS = socket(AF_INET, SOCK_STREAM, NULL)) == INVALID_SOCKET)
+        throw  SetErrorMsgText("socket:", WSAGetLastError());
+
+    int lclnt = sizeof(clnt);
+    serv.sin_family = AF_INET;
+    serv.sin_port = htons(serverPort);
+    serv.sin_addr.s_addr = INADDR_ANY;
+
+    if (bind(sS, (LPSOCKADDR)&serv, sizeof(serv)) == SOCKET_ERROR)
+        throw  SetErrorMsgText("bind:", WSAGetLastError());
+    if (listen(sS, SOMAXCONN) == SOCKET_ERROR)
+        throw  SetErrorMsgText("listen:", WSAGetLastError());
+    if (ioctlsocket(sS, FIONBIO, &nonblk) == SOCKET_ERROR) // неблок режим
+        throw SetErrorMsgText("ioctlsocket:", WSAGetLastError());
+}
+
+void closeSocket()
+{
+    if (closesocket(sS) == SOCKET_ERROR)
+        throw  SetErrorMsgText("closesocket:", WSAGetLastError());
+}
+
+void CommandsCycle(TalkersCommand& cmd)
+{
+    int  sq = 0; // колво подкл
+    while (cmd != EXIT)
+    {
+        switch (cmd)
+        {
+        case START: cmd = GETCOMMAND;
+            if (previousCommand != START)
+            {
+                sq = AS_SQ;
+                puts("Start command");
+                openSocket(); 
+                previousCommand = START;
+            }
+            else puts("start already in use");
+            break;
+        case STOP:  cmd = GETCOMMAND;
+            if (previousCommand != STOP)
+            {
+                sq = 0;
+                puts("Stop command");
+                closeSocket();
+                previousCommand = STOP;
+            }
+            else puts("stop already in use");
+
+            break;
+        case WAIT:  cmd = GETCOMMAND;
+            sq = 0;
+            puts("Wait command\n" \
+                "socket closed for waiting other clients");
+            closeSocket();
+            while (contacts.size() != 0); // ждемс 
+            printf("size of contacts %d\n", contacts.size());
+            cmd = START;
+            previousCommand = WAIT;
+            puts("socket is open");
+
+            break;
+        case SHUTDOWN:
+            sq = 0;
+            puts("SHUTDOWN command\n" \
+                "........shutting down...........");
+            closeSocket();
+            while (contacts.size() != 0);
+            printf("size of contacts %d\n", contacts.size());
+            cmd = EXIT;
+            break;
+        case GETCOMMAND:  cmd = GETCOMMAND;
+
+            break;
+        };
+        if (cmd != STOP)
+        {
+
+            if (AcceptCycle(sq))
+            {
+                cmd = GETCOMMAND;
+                SetEvent(hClientConnectedEvent);
+            }
+            else SleepEx(5000, TRUE);
+        }
+    };
+};
+
+DWORD WINAPI AcceptServer(LPVOID pPrm)
+{
+    DWORD rc = 0;
+    WSADATA wsaData;
+    try
+    {
+        if (WSAStartup(MAKEWORD(2, 0), &wsaData) != 0)
+            throw  SetErrorMsgText("Startup:", WSAGetLastError());
+
+        CommandsCycle(*((TalkersCommand*)pPrm)); // !!!!!!!!!!!!!!!!
+
+        if (WSACleanup() == SOCKET_ERROR)
+            throw SetErrorMsgText("Cleanup:", WSAGetLastError());
+    }
+    catch (string errorMsgText)
+    {
+        printf("\n%s\n", errorMsgText.c_str());
+    }
+    puts("shutdown acceptServer");
+    ExitThread(rc);
+}
+
+TalkersCommand set_param(char* param)
+{
+    if (!strcmp(param, "START")) return START;
+    if (!strcmp(param, "STOP")) return STOP;
+    if (!strcmp(param, "EXIT")) return EXIT;
+    if (!strcmp(param, "WAIT")) return WAIT;
+    if (!strcmp(param, "SHUTDOWN")) return SHUTDOWN;
+    if (!strcmp(param, "STATISTICS")) return STATISTICS;
+    if (!strcmp(param, "GETCOMMAND")) return GETCOMMAND;
+    if (strstr(param, "UNLOAD_LIB")) return UNLOAD_LIB;
+    if (strstr(param, "LOAD_LIB")) return LOAD_LIB;
+}
+
+typedef void* (*FUNCTION)(char*, LPVOID);
+FUNCTION ts;
+
+HMODULE st;
+SOCKET sSUDP;
+
+// ОБРАТНЫЙ ВЫЗОВ ТАЙМЕРА - ЛОГИКА ЗАВЕРШЕНИЯ КЛИЕНТА С СЕРВЕРОМ
+void CALLBACK ASWTimer(LPVOID Prm, DWORD, DWORD)
+{
+    Contact* contact = (Contact*)(Prm);
+    cout << ("Connection was terminated by timer") << endl;
+    TerminateThread(contact->serverHThread, NULL); // завершаем поток
+    send(contact->s, "TimeOUT", strlen("TimeOUT") + 1, NULL);
+    EnterCriticalSection(&scListContact);
+    CancelWaitableTimer(contact->htimer);
+    contact->type = contact->EMPTY;
+    contact->sthread = contact->TIMEOUT;
+    LeaveCriticalSection(&scListContact);
+}
+
+// ОБРАБОТКА КОМАНД И УПРАВДЕНИЕ СОСТОЯНИЕМ
+DWORD WINAPI DispatchServer(LPVOID pPrm)
+{
+    DWORD rc = 0;
+    TalkersCommand& command = *(TalkersCommand*)pPrm;
+    while (command != EXIT)
+    {
+        if (command == STOP) continue;
+        WaitForSingleObject(hClientConnectedEvent, INFINITE);
+        ResetEvent(hClientConnectedEvent);
+        while (true)
+        {
+            EnterCriticalSection(&scListContact);
+            for (auto client = contacts.begin(); client != contacts.end(); client++) // перебор клиетов
+            {
+                if (client->type == client->ACCEPT) // подключен
+                {
+                    char serviceType[10];
+                    if (recv(client->s, serviceType, sizeof(serviceType), NULL) < 1) // получили
+                        continue;
+
+                    cout << "New command - " << serviceType << endl;
+
+                    strcpy(client->msg, serviceType); // отправили в сообщение
+
+                    if (!strcmp(client->msg, "close"))
+                    {
+                        if ((send(client->s, "echo: close", strlen("echo: close") + 1, NULL)) == SOCKET_ERROR)
+                            throw  SetErrorMsgText("send:", WSAGetLastError());
+                        client->sthread = client->FINISH;
+                        client->type = client->EMPTY;
+                        continue;
+                    }
+                    if (strcmp(client->msg, "Echo") && strcmp(client->msg, "Time") && strcmp(client->msg, "Random"))
+                    {
+                        if ((send(client->s, "ErrorInquiry", strlen("ErrorInquiry") + 1, NULL)) == SOCKET_ERROR)
+                            throw  SetErrorMsgText("send:", WSAGetLastError());
+                        client->sthread = client->ABORT;
+                        client->type = client->EMPTY;
+                        if (closesocket(client->s) == SOCKET_ERROR)
+                            throw  SetErrorMsgText("closesocket:", WSAGetLastError());
+                    }
+                    else
+                    {
+                        client->type = client->CONTACT;
+                        client->hthread = hAcceptServer;
+                        client->htimer = CreateWaitableTimer(0, FALSE, 0);
+                        __int64         qwDueTime;
+                        LARGE_INTEGER   liDueTime;
+                        qwDueTime = -2 * 10000000;
+                        liDueTime.LowPart = (DWORD)(qwDueTime & 0xFFFFFFFF);
+                        liDueTime.HighPart = (LONG)(qwDueTime >> 32);
+                        
+                        SetWaitableTimer(client->htimer, &liDueTime, 0, ASWTimer, (LPVOID) & (*client), FALSE);
+                        client->serverHThread = ts(serviceType, (LPVOID) & (*client));
+                    }
+                }
+            }
+            LeaveCriticalSection(&scListContact);
+            SleepEx(0, TRUE);
+        }
+    }
+    puts("shutdown dispatchServer");
+    ExitThread(rc);
+}
+
+// ОЧИСТКА НЕАКТИВНЫХ
+DWORD WINAPI GarbageCleaner(LPVOID pPrm)
+{
+    DWORD rc = 0;
+    while (*((TalkersCommand*)pPrm) != EXIT)
+    {
+        int listSize = 0;
+        int howMuchClean = 0;
+        if (contacts.size() != 0)
+        {
+            for (auto i = contacts.begin(); i != contacts.end();) // ПЕРЕБИРАЕМ
+            {
+                if (i->type == i->EMPTY)
+                {
+                    EnterCriticalSection(&scListContact);
+                    if (i->sthread == i->FINISH)
+                        InterlockedIncrement(&successConnections);
+                    if (i->sthread == i->ABORT || i->sthread == i->TIMEOUT)
+                        InterlockedIncrement(&sayNoCount);
+                    i = contacts.erase(i);
+                    howMuchClean++;
+                    listSize = contacts.size();
+                    cout << "Garbage" << endl;
+                    LeaveCriticalSection(&scListContact);
+                }
+                else ++i;
+            }
+        }
+    }
+    puts("shutdown garbageCleaner");
+    ExitThread(rc);
+}
+
+DWORD WINAPI ConsolePipe(LPVOID pPrm)
+{
+    DWORD rc = 0;
+    char rbuf[100];
+    DWORD dwRead, dwWrite;
+    HANDLE hPipe;
+    try
+    {
+        char namedPipeConnectionString[50];
+        sprintf(namedPipeConnectionString, "\\\\.\\pipe\\%s", namedPipeName);
+        if ((hPipe = CreateNamedPipeA(namedPipeConnectionString,
+            PIPE_ACCESS_DUPLEX,
+            PIPE_TYPE_MESSAGE | PIPE_WAIT,
+            1, NULL, NULL,
+            INFINITE, NULL)) == INVALID_HANDLE_VALUE)
+            throw SetPipeError("create:", GetLastError());
+        if (!ConnectNamedPipe(hPipe, NULL))
+            throw SetPipeError("connect:", GetLastError());
+        TalkersCommand& param = *((TalkersCommand*)pPrm);
+
+        while (param != EXIT)
+        {
+            puts("Connecting to Named Pipe Client ...");
+            ConnectNamedPipe(hPipe, NULL);
+            while (ReadFile(hPipe, rbuf, sizeof(rbuf), &dwRead, NULL))
+            {
+                printf("remote console message:  %s\n", rbuf);
+                param = set_param(rbuf);
+
+                if (param == STATISTICS)
+                {
+                    char sendStastistics[200];
+                    sprintf(sendStastistics, "\nStatistics\n"\
+                        "count of connectings :    %d\n" \
+                        "count of denides:        %d\n" \
+                        "success end:             %d\n" \
+                        "count of active connections : %d\n" \
+                        "", connectionCount, sayNoCount, successConnections, contacts.size());
+                    WriteFile(hPipe, sendStastistics, sizeof(sendStastistics), &dwWrite, NULL);
+                }
+
+                if (param != STATISTICS)
+                    WriteFile(hPipe, rbuf, strlen(rbuf) + 1, &dwWrite, NULL);
+                if (param == EXIT || param == SHUTDOWN)
+                {
+                    break;
+                }
+            }
+            DisconnectNamedPipe(hPipe);
+            if (param == EXIT || param == SHUTDOWN)
+            {
+                break;
+            }
+        }
+    }
+    catch (string ErrorPipeText)
+    {
+        printf("\n%s\n", ErrorPipeText.c_str());
+        return -1;
+    }
+    CloseHandle(hPipe);
+    puts("shutdown ConsolePipe");
+    ExitThread(rc);
+}
+
+
+
+bool GetRequestFromClient(char* name, short port, SOCKADDR_IN* from, int* flen)
+{
+    SOCKADDR_IN clnt;
+    int lc = sizeof(clnt);
+    ZeroMemory(&clnt, lc);
+    char ibuf[500];
+    int  lb = 0;
+    int optval = 1;
+    int TimeOut = 10;
+    setsockopt(sSUDP, SOL_SOCKET, SO_BROADCAST, (char*)&optval, sizeof(int));
+    setsockopt(sSUDP, SOL_SOCKET, SO_RCVTIMEO, (char*)&TimeOut, sizeof(TimeOut));
+    while (true)
+    {
+        if ((lb = recvfrom(sSUDP, ibuf, sizeof(ibuf), NULL, (sockaddr*)&clnt, &lc)) == SOCKET_ERROR) return false;
+        ibuf[lb] = '\0';
+        cout << endl << ibuf << endl;
+        if (!strcmp(name, ibuf))
+        {
+            *from = clnt;
+            *flen = lc;
+            return true;
+        }
+        puts("\nbad name");
+    }
+
+}
+
+bool PutAnswerToClient(char* name, sockaddr* to, int* lto)
+{
+
+    char msg[] = "You can connect to server ";
+    if ((sendto(sSUDP, msg, sizeof(msg) + 1, NULL, to, *lto)) == SOCKET_ERROR)
+        throw  SetErrorMsgText("sendto:", WSAGetLastError());
+    return false;
+}
+
+DWORD WINAPI ResponseServer(LPVOID pPrm)
+{
+    DWORD rc = 0;
+    WSADATA wsaData;
+    SOCKADDR_IN serv;
+    if (WSAStartup(MAKEWORD(2, 0), &wsaData) != 0)
+        throw  SetErrorMsgText("Startup:", WSAGetLastError());
+    if ((sSUDP = socket(AF_INET, SOCK_DGRAM, NULL)) == INVALID_SOCKET)
+        throw  SetErrorMsgText("socket:", WSAGetLastError());
+    serv.sin_family = AF_INET;
+    serv.sin_port = htons(serverPort);
+    serv.sin_addr.s_addr = INADDR_ANY;
+
+    if (bind(sSUDP, (LPSOCKADDR)&serv, sizeof(serv)) == SOCKET_ERROR)
+        throw  SetErrorMsgText("bind:", WSAGetLastError());
+
+
+    SOCKADDR_IN some_server;
+    int serverSize = sizeof(some_server);
+
+    SOCKADDR_IN from;
+    int lc = sizeof(from);
+    ZeroMemory(&from, lc);
+    int numberOfClients = 0;
+    while (*(TalkersCommand*)pPrm != EXIT)
+    {
+        try
+        {
+            if (GetRequestFromClient((char*)"myConcServer", serverPort, &from, &lc))
+            {
+                printf("Connected Client: %d, port: %d, address: %s\n", ++numberOfClients, htons(from.sin_port), inet_ntoa(from.sin_addr));
+                PutAnswerToClient((char*)"myConcServer", (sockaddr*)&from, &lc);
+            }
+        }
+        catch (string errorMsgText)
+        {
+            printf("\n%s", errorMsgText.c_str());
+        }
+    }
+    if (closesocket(sSUDP) == SOCKET_ERROR)
+        throw  SetErrorMsgText("closesocket:", WSAGetLastError());
+    if (WSACleanup() == SOCKET_ERROR)
+        throw  SetErrorMsgText("Cleanup:", WSAGetLastError());
+    ExitThread(rc);
+}
+
+
+int main(int argc, char* argv[])
+{
+    setlocale(LC_ALL, "Russian");
+
+    // устанавливаем параметры по аргументам
+    if (argc == 2)
+    {
+        serverPort = atoi(argv[1]);
+        strcpy(dllName, "ServiceLibrary.dll");
+        strcpy(namedPipeName, "Tube");
+    }
+    else if (argc == 3)
+    {
+        serverPort = atoi(argv[1]);
+        strcpy(dllName, argv[2]);
+        strcpy(namedPipeName, "Tube");
+    }
+    else if (argc == 4)
+    {
+        serverPort = atoi(argv[1]);
+        strcpy(dllName, argv[2]);
+        strcpy(namedPipeName, argv[3]);
+    }
+    else {
+        serverPort = 2000;
+        strcpy(dllName, "ServiceLibrary.dll");
+        strcpy(namedPipeName, "Tube");
+    }
+    printf("Server port %d\n", serverPort);
+
+    st = LoadLibraryA(dllName);
+    ts = (HANDLE(*)(char*, LPVOID))GetProcAddress(st, "SSS");
+
+    volatile TalkersCommand  cmd = START;
+
+    InitializeCriticalSection(&scListContact);
+
+    // потоки для задач
+    hAcceptServer = CreateThread(NULL, NULL, AcceptServer,
+        (LPVOID)&cmd, NULL, NULL);
+    hDispatchServer = CreateThread(NULL, NULL, DispatchServer,
+        (LPVOID)&cmd, NULL, NULL);
+    hGarbageCleaner = CreateThread(NULL, NULL, GarbageCleaner,
+        (LPVOID)&cmd, NULL, NULL);
+    hConsolePipe = CreateThread(NULL, NULL, ConsolePipe,
+        (LPVOID)&cmd, NULL, NULL);
+    hResponseServer = CreateThread(NULL, NULL, ResponseServer,
+        (LPVOID)&cmd, NULL, NULL);
+
+    SetThreadPriority(hGarbageCleaner, THREAD_PRIORITY_IDLE);
+    SetThreadPriority(hDispatchServer, THREAD_PRIORITY_NORMAL);
+    SetThreadPriority(hAcceptServer, THREAD_PRIORITY_HIGHEST);
+
+
+    WaitForSingleObject(hAcceptServer, INFINITE);
+    CloseHandle(hAcceptServer);
+    WaitForSingleObject(hGarbageCleaner, INFINITE);
+    CloseHandle(hGarbageCleaner);
+    WaitForSingleObject(hConsolePipe, INFINITE);
+    CloseHandle(hConsolePipe);
+
+    TerminateThread(hDispatchServer, 0);
+    puts("shutdown dispatchServer");
+    CloseHandle(hDispatchServer);
+    TerminateThread(hResponseServer, 0);
+    puts("shutdown responseServer");
+    CloseHandle(hResponseServer);
+    
+
+
+    DeleteCriticalSection(&scListContact);
+    FreeLibrary(st);
+
+    return 0;
+}

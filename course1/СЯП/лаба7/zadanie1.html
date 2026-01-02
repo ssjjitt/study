@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <form name = "form">
+        <textarea>Факультет информационных технологий</textarea>
+        <p><input type="text" name="lastname" value = "Фамилия"></p>
+        <p><input type="text" name="firstname" value = "Имя"></p>
+        <p><label>Специальность</label>
+            <select name = "select">
+                <option value = "ПОИТ">ПОИТ</option>
+                <option value = "ИСИТ">ИСИТ</optiond>
+                <option value = "ДЭЙВИ">ДЭЙВИ</option>
+                <option value = "ПОИБМС">ПОИБМС</option>
+            </select>
+        </p>
+        <p>Курс</p>
+        <input type="radio" name = "kyrs" value = "1"> 1
+        <input type="radio" name = "kyrs" value = "2"> 2
+        <input type="radio" name = "kyrs" value = "3"> 3
+        <input type="radio" name = "kyrs" value = "4"> 4
+        <p>Предметы</p>
+        <input type="checkbox" name = "predmet" value = "ОИТ">
+        ОИТ
+        <input type="checkbox" name = "predmet" value = "ОАП">
+        ОАП
+        <input type="checkbox" name = "predmet" value = "История">
+        История
+        <input type="checkbox" name = "predmet" value = "Физика">
+        Физика
+        <input type="checkbox" name = "predmet" value = "Математика">
+        Математика
+        <p>
+            <input type="submit" value = "submit">
+            <input type="submit" value = "reset">
+        </p>
+        <input type="submit" value = "Напечатать" onclick = "MyFunction()">
+        </form>
+    <script src = "zadanie1.js">
+    </script>
+</body>
+</html>

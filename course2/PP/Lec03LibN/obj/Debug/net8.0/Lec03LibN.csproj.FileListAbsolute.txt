@@ -1,0 +1,12 @@
+E:\уник\пп\Lec03LibN\bin\Debug\net8.0\Lec03LibN.deps.json
+E:\уник\пп\Lec03LibN\bin\Debug\net8.0\Lec03LibN.dll
+E:\уник\пп\Lec03LibN\bin\Debug\net8.0\Lec03LibN.pdb
+E:\уник\пп\Lec03LibN\obj\Debug\net8.0\Lec03LibN.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\пп\Lec03LibN\obj\Debug\net8.0\Lec03LibN.AssemblyInfoInputs.cache
+E:\уник\пп\Lec03LibN\obj\Debug\net8.0\Lec03LibN.AssemblyInfo.cs
+E:\уник\пп\Lec03LibN\obj\Debug\net8.0\Lec03LibN.csproj.CoreCompileInputs.cache
+E:\уник\пп\Lec03LibN\obj\Debug\net8.0\Lec03LibN.sourcelink.json
+E:\уник\пп\Lec03LibN\obj\Debug\net8.0\Lec03LibN.dll
+E:\уник\пп\Lec03LibN\obj\Debug\net8.0\refint\Lec03LibN.dll
+E:\уник\пп\Lec03LibN\obj\Debug\net8.0\Lec03LibN.pdb
+E:\уник\пп\Lec03LibN\obj\Debug\net8.0\ref\Lec03LibN.dll

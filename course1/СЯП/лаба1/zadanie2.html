@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie2</title>
+    <style>
+        input
+            {
+                color: darkblue;
+                background-color: grey;
+                font-family: "Georgia";
+                font-size: 50px;
+            }
+        body
+            {
+                text-align: center;
+                margin: 100px;
+            }
+    </style>
+</head>
+<body>
+    <input type="button" value="КНОПКА" onclick="messageWrite()" />
+    <script>
+        var messageWrite=() =>
+        {
+        let chislo1 = 10;
+        let chislo2 = 5;
+        let rez1 = chislo1 + chislo2;
+        console.log("результат сложения двух чисел:"); //вывод в консоль 
+        console.log(rez1); // log - метод, console - объект
+        let stroka1 = "10";
+        let stroka2 = "5";
+        let rez2 = stroka1 + stroka2;
+        console.log("результат сложения двух строк:");
+        console.log(rez2);
+        let chislo3 = 22;
+        let stroka3 = "5";
+        let rez3 = chislo3 + stroka3;
+        document.write("<div style = 'color: darkblue'> результат сложения числа 22 и строки '5':" +rez3, "</div>"); //вывод на веб-страницу
+        let stroka4 = "22";
+        let chislo4 = 5;
+        let rez4 = stroka4 + chislo4;
+        document.write("<div style = 'color: darkgrey'> результат сложения строки '22' и числа 5:" +rez4, "</div>");
+        alert("результатом сложения числа и строки всегда будет новая строка, состоящая из введенных строки и числа ");
+        }
+    </script>
+</body>
+</html>

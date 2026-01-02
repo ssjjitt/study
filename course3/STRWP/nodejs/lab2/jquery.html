@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="userInfo">
+        <p>подождите пжпжппжпж...</p>
+    </div>
+</body>
+<script>
+    $.ajax({
+        url: 'http://localhost:5001/api/name?name=gluhova',
+        type: 'GET',
+        success: function (data) {
+            $('#userInfo').html(`<p>Имя: ${data}</p>`);
+        },
+        error: function (xhr, status, error) {
+            $('#userInfo').html(`<p>Ошибка при загрузке данных: ${error}</p>`);
+        }
+    });
+</script>
+
+</html>

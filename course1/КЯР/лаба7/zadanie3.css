@@ -1,0 +1,62 @@
+body
+{
+    text-align: center;
+    margin: 10px;
+}
+input
+{
+    background-color:grey;
+    width:250px;
+    height:75px;
+    color:yellow;
+}
+.button1:hover 
+{
+    background-color: black;
+    color: white;
+}
+.button2:hover
+{
+    background-color: white;
+    color: black;
+    border: 5px solid red;
+    outline: 5px solid yellow;
+}
+.button3:hover 
+{
+    color: black;
+    background-color: white;
+    border-style: solid none solid none;
+    border-color: green;
+    border-width: 5px;
+}
+.button4:hover 
+{
+    color: black;
+    background-color: white;
+    border-style: none solid none solid;
+    border-color: blue;
+    border-width: 5px;
+}
+.button5:hover 
+{
+    color: black;
+    background-image: radial-gradient(circle at 50% 50%, yellow, magenta 40px, aqua);
+   
+}
+h1 {
+    text-align: center;
+    color: blue;
+    animation: name 5s linear infinite;
+}
+@keyframes name {
+    0% {
+    opacity: 0;
+    }
+    50% {
+    opacity: 0.8;
+    }
+    100% {
+    opacity: 0;
+    }
+}

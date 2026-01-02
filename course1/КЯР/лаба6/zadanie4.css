@@ -1,0 +1,52 @@
+div
+{
+    display: inline-block;
+}
+.class1
+{
+    background:  linear-gradient(to bottom, blue, red);
+    border-style: solid;
+    border-color: black;
+    width: 150px;
+    height: 150px;
+}
+.class2
+{
+    background: repeating-linear-gradient(45deg, red,  red 10px, blue 10px, blue 20px);
+    border-style: solid;
+    border-color: black;
+    width: 150px;
+    height: 150px;
+}
+.class3
+{
+    background: radial-gradient(circle at 50% 50%, yellow, green);
+    border-style: solid;
+    border-color: black;
+    width: 150px;
+    height: 150px;
+}
+.class4
+{
+    background: repeating-radial-gradient(green 0px, green 10px, yellow 10px, yellow 20px);
+    border-style: solid;
+    border-color: black;
+    width: 150px;
+    height: 150px;
+}
+.class5
+{
+    background: radial-gradient(circle at 50% 50%, yellow, green, transparent), repeating-linear-gradient(to bottom,blue, magenta);
+    border-style: solid;
+    border-color: black;
+    width: 150px;
+    height: 150px;
+}
+.class6
+{
+    background: repeating-linear-gradient(to right, yellow, green, transparent), repeating-linear-gradient(to bottom, black, black, black 15px, white, white, white, blue, magenta);
+    border-style: solid;
+    border-color: black;
+    width: 150px;
+    height: 150px;
+}

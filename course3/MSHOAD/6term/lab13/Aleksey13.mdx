@@ -1,0 +1,39 @@
+SELECT 
+    {[Employees].[Employee ID]} ON COLUMNS,
+    [Departments].[Department ID].MEMBERS ON ROWS
+FROM [Employee Turnover DB]
+
+SELECT 
+    {[Employees].[Employee ID]} ON COLUMNS,
+    FILTER(
+        [Departments].[Department ID].MEMBERS,
+        [Employees].[Employee ID] < 3 AND 
+        NOT IsEmpty([Employees].[Employee ID])
+    ) ON ROWS
+FROM [Employee Turnover DB]
+
+
+
+SELECT 
+    {[Employees].[Employee ID]} ON COLUMNS,
+    [Employee Turnover].[Employee Turnover ID].MEMBERS ON ROWS
+FROM [Employee Turnover DB]
+
+
+-- Иерархия по отделам и должностям
+SELECT
+    {[Employees].[Employee ID]} ON COLUMNS,
+    FILTER(
+        GENERATE(
+            {[Departments].[IT]},  
+            {[Positions].[Engineer]}
+        ),
+        NOT IsEmpty([Employees].[Employee ID])
+    ) ON ROWS
+FROM [Employee Turnover DB]
+
+-- Отделы и Должности
+SELECT
+    {[Employees].[Employee ID]} ON COLUMNS,
+    [Departments].[Department ID].MEMBERS ON ROWS
+FROM [Employee Turnover DB]

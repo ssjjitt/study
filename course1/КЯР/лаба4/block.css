@@ -1,0 +1,81 @@
+.p1
+{
+    border-style:solid;
+    border-left-color: brown;
+    border-bottom-color: yellow;
+    border-right-color: darkblue;
+    border-top-color: orange;
+}
+.p2
+{
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-color: #007BA7;
+    border-right-color:#007BA7;
+}
+.p3
+{
+    border-top-style: solid;
+    border-top-color: rgb(299 43 80);
+    border-bottom-style: dashed;
+    border-right-style: dashed;
+    border-left-style: dashed;
+    border-bottom-color: aqua;
+    border-right-color: aqua;
+    border-left-color: aqua;
+}
+.p4
+{
+    border-style: dotted;
+    border-width: 1px;
+    border-color: orange;
+}
+.p5
+{
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: darkblue;
+    border-bottom-color: darkblue;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-style: dashed;
+    border-right-style: dashed;
+    border-left-color: crimson;
+    border-right-color: crimson;
+}
+.p6
+{
+    border-style: double;
+    border-color: #B3446C;
+}
+.p7
+{
+    border-top-style: dashed;
+    border-top-color: #808000;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF7518;
+    border-bottom-width: 3px;
+}
+.p8
+{
+    border-left-style: double;
+    border-left-color: #CC7722;
+    border-bottom-style: double;
+    border-bottom-color: #CC7722;
+}
+.p9
+{
+    border-right-style: ridge;
+    border-right-color: #B5A642;
+    border-left-style: ridge;
+    border-left-color: #B5A642;
+}
+.p10
+{
+    border-left-style: dotted;
+    border-right-style: dotted;
+    border-bottom-style: dotted;
+    border-width: 5px;
+    border-color: rgb(0 40 0);
+}

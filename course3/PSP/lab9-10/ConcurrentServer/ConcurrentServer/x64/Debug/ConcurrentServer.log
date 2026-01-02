@@ -1,0 +1,15 @@
+﻿  ConcurrentServer.cpp
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(10,9): warning C4005: INADDR_ANY: изменение макроопределения
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(12,9): warning C4005: INADDR_BROADCAST: изменение макроопределения
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(261,20): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "unsigned __int64"
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(273,20): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "unsigned __int64"
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(346,51): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(381,83): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(389,85): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(440,45): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(530,1): warning C4477: "sprintf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "4" имеет тип "unsigned __int64"
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(612,1): warning C4477: "sprintf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "4" имеет тип "unsigned __int64"
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(621,57): warning C4267: аргумент: преобразование из "size_t" в "DWORD"; возможна потеря данных
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(332,1): warning C4715: set_param: значение возвращается не при всех путях выполнения
+D:\univer\!ПСП\lab9-10\ConcurrentServer\ConcurrentServer\ConcurrentServer.cpp(577,1): warning C4715: ConsolePipe: значение возвращается не при всех путях выполнения
+  ConcurrentServer.vcxproj -> D:\univer\!ПСП\lab9-10\ConcurrentServer\x64\Debug\ConcurrentServer.exe

@@ -1,0 +1,5 @@
+﻿  ClientT.cpp
+D:\Study\university\5semester\PSP\lab2\ClientT - Copy\ClientT\ClientT.cpp(53,59): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Study\university\5semester\PSP\lab2\ClientT - Copy\ClientT\ClientT.cpp(69,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Study\university\5semester\PSP\lab2\ClientT - Copy\ClientT\ClientT.cpp(75,51): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  ClientT.vcxproj -> D:\Study\university\5semester\PSP\lab2\ClientT - Copy\x64\Debug\ClientT.exe

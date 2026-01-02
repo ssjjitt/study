@@ -1,0 +1,32 @@
+.container-img {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-img img {
+    width: 33%;
+    border: 2px solid rgb(158, 158, 158);
+}
+
+li {
+    list-style-type: none;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#image-container img {
+    width: 50%;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}

@@ -1,0 +1,24 @@
+﻿  lab17_v02.cpp
+E:\уник\оаип\lab17_v02\lab17_v02.cpp(112,24): warning C4018: <: несоответствие типов со знаком и без знака
+E:\уник\оаип\lab17_v02\lab17_v02.cpp(165): message : выполняется компиляция ссылки на экземпляр шаблон функции "void bubleSort<int>(T [],int)"
+          with
+          [
+              T=int
+          ]
+E:\уник\оаип\lab17_v02\lab17_v02.cpp(66,4): warning C4101: buf: неиспользованная локальная переменная
+E:\уник\оаип\lab17_v02\lab17_v02.cpp(86): message : выполняется компиляция ссылки на экземпляр шаблон функции "T insOrd<T>(T [],int,int,int)"
+          with
+          [
+              T=int
+          ]
+E:\уник\оаип\lab17_v02\lab17_v02.cpp(99): message : выполняется компиляция ссылки на экземпляр шаблон функции "T *merge<T>(T [],int,int,int)"
+          with
+          [
+              T=int
+          ]
+E:\уник\оаип\lab17_v02\lab17_v02.cpp(153): message : выполняется компиляция ссылки на экземпляр шаблон функции "T *sortMerge<int>(T [],int,int)"
+          with
+          [
+              T=int
+          ]
+  lab17_v02.vcxproj -> E:\уник\оаип\lab17_v02\Debug\lab17_v02.exe

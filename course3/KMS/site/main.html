@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="top-menu">
+        <div id="menu">
+          <div id="menu-bar" onclick="menuOnClick()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <nav class="nav" id="nav">
+            <ul>
+              <li><a href="main.html">Главная</a></li>
+              <li><a href="teoria.html">Теория</a></li>
+              <li><a href="struktura.html">Структура</a></li>
+              <li><a href="simulator.html">Симулятор</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu-bg" id="menu-bg"></div>
+        <a class="navbar-logo" href="main.html"><img src="images/logo.png" /></a>
+        <ul class="menu-main">
+          <li><a href="">Главная</a></li>
+          <li><a href="teoria.html">Теория</a></li>
+          <li><a href="struktura.html">Структура</a></li>
+          <li><a href="simulator.html">Симулятор</a></li>
+        </ul>
+        <div class="navbar-phone" href=""></div>
+      </nav>
+    </header>
+    <section class="background-image">
+      <div class="background-text-annotation">
+        <h1>МОСТ СОТИ</h1>
+        <p>
+          Измерение ёмкости конденсаторов мостовым методом.
+        </p>
+        <p>ЛР №53</p>
+      </div>
+    </section>
+    <h2>ОБ УСТАНОВКЕ</h2>
+    <section class="our-programms">
+      <div class="programms-container">
+        <div>
+          <a href="teoria.html">
+            <img src="images/teoria.jpg" alt="academy" />
+            <h4>Теоретические сведения</h4>
+            <p>
+              
+            </p>
+          </a>
+        </div>
+        <div>
+          <a href="struktura.html">
+            <img src="images/strukt.avif" alt="academy" />
+            <h4>Структура установки</h4>
+            <p>
+              
+            </p>
+          </a>
+        </div>
+        <div>
+          <a href="simulator.html">
+            <img src="images/simulator.jpg" alt="academy" />
+            <h4>Симулятор установки</h4>
+            <p>
+              
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <img src="images/logo.png" alt="logo" />
+      <ul>
+        <li><a href="main.html">Главная</a></li>
+        <li><a href="teoria.html">Теория</a></li>
+        <li><a href="struktura.html">Структура</a></li>
+        <li><a href="simulator.html">Симулятор</a></li>
+      </ul>
+    </footer>
+    <script>
+      function menuOnClick() {
+        document.getElementById("menu-bar").classList.toggle("change");
+        document.getElementById("nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
+      }
+    </script>
+  </body>
+</html>

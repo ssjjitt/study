@@ -1,0 +1,12 @@
+﻿D:\Progtam files1\VisualStudio\main\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (ClientEcho.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Client.cpp
+D:\Study\university\5semester\PSP\lab8-10\Client\Client\Client.cpp(11,9): warning C4005: 'INADDR_ANY': macro redefinition
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(600,9):
+      see previous definition of 'INADDR_ANY'
+  
+D:\Study\university\5semester\PSP\lab8-10\Client\Client\Client.cpp(13,9): warning C4005: 'INADDR_BROADCAST': macro redefinition
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(602,9):
+      see previous definition of 'INADDR_BROADCAST'
+  
+D:\Study\university\5semester\PSP\lab8-10\Client\Client\Client.cpp(127,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Client.vcxproj -> D:\Study\university\5semester\PSP\lab8-10\Client\x64\Debug\Client.exe

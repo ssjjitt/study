@@ -1,0 +1,4 @@
+﻿  RsConsole.cpp
+D:\Study\university\5semester\PSP\lab8-10\RsConsole\RsConsole\RsConsole.cpp(46,7): warning C4101: 'serverName': unreferenced local variable
+D:\Study\university\5semester\PSP\lab8-10\RsConsole\RsConsole\RsConsole.cpp(48,7): warning C4101: 'result': unreferenced local variable
+  RsConsole.vcxproj -> D:\Study\university\5semester\PSP\lab8-10\RsConsole\Debug\RsConsole.exe

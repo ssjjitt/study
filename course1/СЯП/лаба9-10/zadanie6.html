@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu-item {
+        border: 2px soild #66cdaa;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        width: 150;
+      }
+      .menu-item .submenu {
+        height: 40px;
+        width: 120;
+        background: rgb(112, 205, 241);
+        position: absolute;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <div class="menu-item">
+        Меню 1
+        <div class="submenu">Подменю</div>
+      </div>
+      <div class="menu-item">
+        Меню 2
+        <div class="submenu">Подменю</div>
+      </div>
+      <div class="menu-item">
+        Меню 3
+        <div class="submenu">Подменю</div>
+      </div>
+    </div>
+    <script src="zadanie6.js"></script>
+  </body>
+</html>

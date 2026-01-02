@@ -1,0 +1,5 @@
+﻿  CPyramid.cpp
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+D:\univer\!ОКГ\lab7\Lab04\Win32Project1\CPyramid.cpp(225,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\univer\!ОКГ\lab7\Lab04\Win32Project1\CPyramid.cpp(227,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Win32Project1.vcxproj -> D:\univer\!ОКГ\lab7\Lab04\x64\Debug\lab7.exe

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>xmlhttprequest</title>
+</head>
+
+<body>
+    <h2>xmlhttprequest</h2>
+    <div id="userInfo">
+        <p>подождите пжпжппжпж...</p>
+    </div>
+</body>
+
+
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:5001/api/name?name=gluhova', true);
+    xhr.onload = function () {
+        document.getElementById('userInfo').innerHTML = `<p>Имя: ${xhr.responseText}</p>`;
+    };
+    xhr.send();
+</script>
+
+</html>

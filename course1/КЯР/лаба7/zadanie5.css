@@ -1,0 +1,178 @@
+body
+{
+    text-align: center;
+}
+img
+{
+    outline: 5px solid black;
+}
+.img1
+{
+    height: 200px;
+    width: 200px;
+    left: 410px;
+    position: relative;
+    animation: name1 5s linear infinite;
+}
+@keyframes name1 
+{
+0% 
+{  
+    z-index: 5;
+}
+25%
+{
+    z-index: 1;
+}
+50% 
+{ 
+    z-index: 1;
+}
+75%
+{
+    z-index: 1;
+}
+100% 
+{ 
+    z-index: 1;
+}
+}
+.img2
+{
+    height: 200px;
+    width: 200px;
+    left: 205px;
+    position: relative;
+    animation: name2 5s linear infinite;
+}
+@keyframes name2
+{
+0% 
+{  
+    z-index: 1;
+}
+25%
+{
+    z-index: 5;
+}
+50% 
+{ 
+    z-index: 1;
+}
+75%
+{
+    z-index: 1;
+}
+100% 
+{ 
+    z-index: 1;
+}
+}
+.img3
+{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    animation: name3 5s linear infinite;
+}
+@keyframes name3
+{
+0% 
+{  
+    z-index: 1;
+}
+25%
+{
+    z-index: 1;
+}
+50% 
+{ 
+    z-index: 5;
+}
+75%
+{
+    z-index: 1;
+}
+100% 
+{ 
+    z-index: 1;
+}
+}
+.img4
+{
+    height: 200px;
+    width: 200px;
+    left: -205px;
+    position: relative;
+    animation: name4 5s linear infinite;
+}
+@keyframes name4
+{
+0% 
+{  
+    z-index: 1;
+}
+25%
+{
+    z-index: 1;
+}
+50% 
+{ 
+    z-index: 1;
+}
+75%
+{
+    z-index: 5;
+}
+100% 
+{ 
+    z-index: 1;
+}
+}
+.img5
+{
+    height: 200px;
+    width: 200px;
+    left: -410px;
+    position: relative;
+    animation: name5 5s linear infinite;
+}
+@keyframes name5
+{
+0% 
+{  
+    z-index: 1;
+}
+25%
+{
+    z-index: 1;
+}
+50% 
+{ 
+    z-index: 1;
+}
+75%
+{
+    z-index: 1;
+}
+100% 
+{ 
+    z-index: 5;
+}
+}
+h1 {
+    text-align: center;
+    color: blue;
+    animation: nameh1 5s linear infinite;
+}
+@keyframes nameh1 {
+    0% {
+    opacity: 0;
+    }
+    50% {
+    opacity: 0.8;
+    }
+    100% {
+    opacity: 0;
+    }
+}

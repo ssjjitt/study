@@ -1,0 +1,73 @@
+body
+{
+    background-image: url(image/fit.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-attachment: fixed;
+    background-position: right top;
+    color: #611010;
+    text-align: justify;
+}
+ul > li 
+{
+    list-style: none;
+    background-image: url(image/marker.png);
+    background-repeat: no-repeat;
+    background-position: 0 4px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    background-size: 15px;
+}
+.img1
+{
+    float: left;
+    height: 270px;
+    width: 190px;
+}
+.img2
+{
+    float:right;
+    height: 270px;
+    width: 190px;
+}
+p
+{
+    text-indent: 25px;
+    margin: 0px;
+}
+
+
+table
+{
+    border-collapse: collapse;
+}
+span
+{
+    color: #ff0000;
+}
+h1, h2, h3
+{
+    text-align: center;
+    color: #372e2e;
+    font-family:"comfortaa";
+} 
+.class1
+{
+    font-size: 23px;
+    color: #761f20;
+    font-family:"exo 2";
+}
+.class2
+{
+    font-size: 18px;
+    color: #61000d;
+    font-family: "exo 2";
+}
+.class3
+{
+    font-size: 17px;
+    color: #7d1313;
+    font-family: "exo 2";
+}
+
+    

@@ -1,0 +1,130 @@
+.login {
+  margin-left: 30px;
+  width: 200px;
+}
+
+#inp {
+  background: white;
+  color: rgb(7 2 18);
+  height: 1.8rem;
+  padding: 0 calc(1.8rem * 0.5);
+  border-radius: calc(1.8rem * 0.3);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+}
+.progress_bar_bg {
+  position: relative;
+  height: 10px;
+  border: 4px solid #6e6e6e;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.progress_bar_bg .progress_bar {
+  position: absolute;
+  background-color: rgb(182, 182, 182);
+  height: 10px;
+  border-radius: 5px;
+}
+
+.divRad {
+  display: flex;
+}
+
+.rad-label {
+  display: flex;
+  padding: 14px 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.rad-input {
+  position: absolute;
+}
+
+.rad-design {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: rgb(255, 0, 0);
+  position: relative;
+}
+
+.rad-design::before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.rad-input:checked + .rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.container {
+  width: 100%;
+}
+
+.countrySelect {
+  margin: 5px;
+}
+
+.phoneInput {
+  min-width: 400px;
+  height: 40px;
+}
+.content {
+  display: flex;
+  align-items: center;
+}
+img {
+  width: 15%;
+  height: auto;
+  margin-left: 5px;
+}
+.input {
+  background: white;
+  color: rgb(7 2 18);
+  height: 1.8rem;
+  padding: 0 calc(1.8rem * 0.5);
+  border-radius: calc(1.8rem * 0.3);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.select {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 100%;
+  border: 1px solid #aaa;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  border-radius: calc(1.8rem * 0.3);
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"),
+    linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+
+.send{
+  margin-bottom: 4px;
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 100%;
+  border: 1px solid #aaa;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  border-radius: calc(1.8rem * 0.3);
+}

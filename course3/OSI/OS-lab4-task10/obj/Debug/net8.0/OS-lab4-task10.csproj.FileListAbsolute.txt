@@ -1,0 +1,14 @@
+D:\univer\!ОС\OS-lab4-task10\bin\Debug\net8.0\OS-lab4-task10.exe
+D:\univer\!ОС\OS-lab4-task10\bin\Debug\net8.0\OS-lab4-task10.deps.json
+D:\univer\!ОС\OS-lab4-task10\bin\Debug\net8.0\OS-lab4-task10.runtimeconfig.json
+D:\univer\!ОС\OS-lab4-task10\bin\Debug\net8.0\OS-lab4-task10.dll
+D:\univer\!ОС\OS-lab4-task10\bin\Debug\net8.0\OS-lab4-task10.pdb
+D:\univer\!ОС\OS-lab4-task10\obj\Debug\net8.0\OS-lab4-task10.GeneratedMSBuildEditorConfig.editorconfig
+D:\univer\!ОС\OS-lab4-task10\obj\Debug\net8.0\OS-lab4-task10.AssemblyInfoInputs.cache
+D:\univer\!ОС\OS-lab4-task10\obj\Debug\net8.0\OS-lab4-task10.AssemblyInfo.cs
+D:\univer\!ОС\OS-lab4-task10\obj\Debug\net8.0\OS-lab4-task10.csproj.CoreCompileInputs.cache
+D:\univer\!ОС\OS-lab4-task10\obj\Debug\net8.0\OS-lab4-task10.dll
+D:\univer\!ОС\OS-lab4-task10\obj\Debug\net8.0\refint\OS-lab4-task10.dll
+D:\univer\!ОС\OS-lab4-task10\obj\Debug\net8.0\OS-lab4-task10.pdb
+D:\univer\!ОС\OS-lab4-task10\obj\Debug\net8.0\OS-lab4-task10.genruntimeconfig.cache
+D:\univer\!ОС\OS-lab4-task10\obj\Debug\net8.0\ref\OS-lab4-task10.dll

@@ -1,0 +1,12 @@
+{
+  "name": "me0xffffpack",
+  "version": "1.100.123",
+  "description": "",
+  "main": "m0603.js",
+  "author": "me0xffff",
+  "dependencies": {
+    "nodemailer": "^6.10.0",
+    "sendmail": "^1.6.1"
+  },  
+  "license":"GPL-3.0-only"
+}

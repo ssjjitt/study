@@ -1,0 +1,79 @@
+.container{
+    display: flex;
+    flex-flow:row;
+}
+h2{
+    margin-top: 57px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border: 1px black solid;
+}
+.div{
+    width: auto;
+    border: 1px black solid;
+    padding: 10px;
+    margin: 10px;
+}
+
+html{
+    margin: 25px 30px 25px 30px;
+    font-family: comfortaa;
+
+}
+body{
+    margin: 0px;   
+}
+
+#burger, label[for=burger] {
+    display: none;
+}
+@media screen and (max-width: 500px) 
+{
+    label[for=burger] {
+        display: block;
+        position: fixed;
+        text-align: center;
+        right: 10px;
+        top: 10px;
+    }
+    label[for=burger]::before {
+        content: "\2261";
+    }
+    nav {
+        height: 45px;
+        display: none;
+        position: fixed;
+        top: 0px;
+        margin-top: 0px;
+    }
+    nav ul {
+        height: auto;
+        width: 425px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        background-color: rgb(135, 248, 100);
+        opacity: 0.8;
+    }
+    nav ul a {
+        text-decoration: none;
+        color: white;
+    }
+     #burger:checked + label + nav {
+        display: block;
+        }
+     #burger:checked + label[for=burger]::before  {
+        content: "\2716";
+     }
+}
+
+li{
+    list-style-type: none;
+    border: 1px black solid;
+    margin-bottom: 1px;
+}
+img{
+    width: 200px;
+    height: 200px;
+}

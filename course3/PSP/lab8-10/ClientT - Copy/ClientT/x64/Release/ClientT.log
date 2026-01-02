@@ -1,0 +1,10 @@
+﻿  ClientT.cpp
+D:\univer\!ПСП\lab8-10\ClientT - Copy\ClientT\ClientT.cpp(53,59): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab8-10\ClientT - Copy\ClientT\ClientT.cpp(69,67): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab8-10\ClientT - Copy\ClientT\ClientT.cpp(75,55): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  Создание кода
+  1 of 100 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  ClientT.vcxproj -> D:\univer\!ПСП\lab8-10\ClientT - Copy\x64\Release\ClientT.exe

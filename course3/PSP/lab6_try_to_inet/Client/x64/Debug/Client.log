@@ -1,0 +1,3 @@
+﻿  Client.cpp
+D:\univer\!ПСП\lab6_try_to_inet\Client\Client.cpp(191,41): warning C4267: аргумент: преобразование из "size_t" в "DWORD"; возможна потеря данных
+  Client.vcxproj -> D:\univer\!ПСП\lab6_try_to_inet\x64\Debug\Client.exe

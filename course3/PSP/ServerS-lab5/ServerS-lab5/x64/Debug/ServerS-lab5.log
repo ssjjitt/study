@@ -1,0 +1,6 @@
+﻿  ServerS-lab5.cpp
+D:\univer\!ПСП\ServerS-lab5\ServerS-lab5.cpp(129,44): warning C4244: аргумент: преобразование "SOCKET" в "short", возможна потеря данных
+D:\univer\!ПСП\ServerS-lab5\ServerS-lab5.cpp(138,45): warning C4244: аргумент: преобразование "SOCKET" в "short", возможна потеря данных
+D:\univer\!ПСП\ServerS-lab5\ServerS-lab5.cpp(186,17): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\ServerS-lab5\ServerS-lab5.cpp(216,43): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  ServerS-lab5.vcxproj -> D:\univer\!ПСП\ServerS-lab5\x64\Debug\ServerS-lab5.exe

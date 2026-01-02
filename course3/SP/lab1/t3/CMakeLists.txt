@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.28)
+project(MyProject)
+set(EXECUTABE_OUTPUT_PATH "${CMAKE_BINARY_DIR}")
+
+if(WIN32)
+    set(OS_NAME "Windows")
+elseif(LINUX)
+    set(OS_NAME "Linux")
+elseif(APPLE)
+    set(OS_NAME "macOS")
+else()
+    set(OS_NAME "Unknown OS")
+endif()
+
+message(STATUS "Hello, I am ${OS_NAME}!")
+
+add_subdirectory(C-Project)
+
+include(CheckLanguage)
+check_language(CSharp)
+
+if(WIN32)
+    if(CMAKE_CSharp_COMPILER)
+        enable_language(CSharp)
+        message(STATUS "Yes C# support")
+        add_subdirectory(CSharp-Project)
+    else()
+        message(STATUS "No C# support detected")
+    endif()
+else()
+    message(STATUS "C# project ignored (not Windows)")
+endif()

@@ -1,0 +1,11 @@
+﻿  ClientNP.cpp
+D:\Study\university\5semester\PSP\lab6\ClientNP\ClientNP\ClientNP.cpp(8,9): warning C4005: 'INADDR_ANY': macro redefinition
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(600,9):
+      see previous definition of 'INADDR_ANY'
+  
+D:\Study\university\5semester\PSP\lab6\ClientNP\ClientNP\ClientNP.cpp(10,9): warning C4005: 'INADDR_BROADCAST': macro redefinition
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(602,9):
+      see previous definition of 'INADDR_BROADCAST'
+  
+D:\Study\university\5semester\PSP\lab6\ClientNP\ClientNP\ClientNP.cpp(162,61): warning C4390: ';': empty controlled statement found; is this the intent?
+  ClientNP.vcxproj -> D:\Study\university\5semester\PSP\lab6\ClientNP\x64\Debug\ClientNP.exe

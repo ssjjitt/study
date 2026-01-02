@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <input type = "button" value ="КНОПКА" onclick = "myFunction()">
+    <script>
+        var myFunction=() => 
+        {
+            let chislo1 = new Number (145);           //создаем объекты Number
+            let chislo2 = new Number(7.654321);
+            document.write("<table border = '1px' style = 'color: #611410'>");
+            document.write("<tr style = 'background-color:#b7fec8'><td> число </td> <td>метод</td> <td> результат </td> <td>описание метода</td> </tr> ");
+            document.write("<tr><td>" +chislo1+ "</td><td> toExponential(2)</td>"); 
+            document.write("<td>" +chislo1.toExponential(2)+ "</td><td> представление числа в экспоненциальной форме с двумя цифрами после точки </td></tr>");
+            document.write("<tr><td>" +chislo2+ "</td><td>toExponential(3)</td>")
+            document.write("<td>" +chislo2.toExponential(3)+ "</td><td>представление числа в экспоненциальной форме с тремя цифрами после точки</td></tr>");
+            document.write("<tr><td>" +chislo1+ "</td><td>toFixed(2)</td>");
+            document.write("<td>" +chislo1.toFixed(2)+ "</td><td>представление числа в форме с фиксированным количеством двух цифр после точки</td></tr>");
+            document.write("<tr><td>" +chislo2+ "</td><td>toFixed(3)</td>");
+            document.write("<td>" +chislo2.toFixed(3)+ "</td><td>представление числа в форме с фиксированным количеством трех цифр после точки</td></tr>");
+            document.write("<tr><td>" +chislo1+ "</td><td> toPrecision(3) </td>");
+            document.write("<td>" +chislo1.toPrecision(3)+ "</td><td>представление числа с тремя значащими цифрами</td></tr>");
+            document.write("<tr><td>" +chislo2+ "</td><td>toPrecision(3)</td>");
+            document.write("<td>" +chislo2.toPrecision(3)+ "</td><td>представление числа с тремя значащими цифрами</td></tr>" );
+            document.write("<tr><td>" +chislo1+ "</td><td> toString(16) </td>");
+            document.write("<td>" +chislo1.toString(16)+ "</td><td>строковое представление числа в шестнадцатиричной системе счисления</td></tr>");
+            document.write("<tr><td>" +chislo2+ "</td><td>toString(2)</td>");
+            document.write("<td>" +chislo2.toString(2)+ "</td><td>троковое представление числа в двоичной системе счисления</td></tr>");
+            document.write("</table>");
+        }
+    </script>
+</body>
+</html>

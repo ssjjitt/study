@@ -1,0 +1,12 @@
+E:\уник\пп\Lab6Lib\bin\Debug\net8.0\Lab6Lib.deps.json
+E:\уник\пп\Lab6Lib\bin\Debug\net8.0\Lab6Lib.dll
+E:\уник\пп\Lab6Lib\bin\Debug\net8.0\Lab6Lib.pdb
+E:\уник\пп\Lab6Lib\obj\Debug\net8.0\Lab6Lib.GeneratedMSBuildEditorConfig.editorconfig
+E:\уник\пп\Lab6Lib\obj\Debug\net8.0\Lab6Lib.AssemblyInfoInputs.cache
+E:\уник\пп\Lab6Lib\obj\Debug\net8.0\Lab6Lib.AssemblyInfo.cs
+E:\уник\пп\Lab6Lib\obj\Debug\net8.0\Lab6Lib.csproj.CoreCompileInputs.cache
+E:\уник\пп\Lab6Lib\obj\Debug\net8.0\Lab6Lib.sourcelink.json
+E:\уник\пп\Lab6Lib\obj\Debug\net8.0\Lab6Lib.dll
+E:\уник\пп\Lab6Lib\obj\Debug\net8.0\refint\Lab6Lib.dll
+E:\уник\пп\Lab6Lib\obj\Debug\net8.0\Lab6Lib.pdb
+E:\уник\пп\Lab6Lib\obj\Debug\net8.0\ref\Lab6Lib.dll

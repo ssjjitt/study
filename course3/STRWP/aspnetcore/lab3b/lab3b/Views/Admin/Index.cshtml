@@ -1,0 +1,53 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    Layout = "_Layout";
+    var users = (List<IdentityUser>)ViewBag.users;
+    var roles = (List<IdentityRole>)ViewBag.roles;
+    var users_roles = (List<IdentityUserRole<string>>)ViewBag.users_roles;
+    var user_roles = (IList<string>)ViewBag.user_roles;
+
+    string getUserName(string userID)
+    {
+        string? name = users.FirstOrDefault(u => { return (u.Id == userID); })?.UserName;
+        return $"(Name:{name})";
+    }
+
+    string getRoleName(string roleID)
+    {
+        string? name = roles.FirstOrDefault(r => { return (r.Id == roleID); })?.Name;
+        return $"(Name:{name})";
+    }
+}
+
+<h1>Admin/Index</h1>
+<p>Hi, @User.Identity?.Name: @string.Join(", ", user_roles)</p>
+<ul>
+    <li><a href="/Admin/CreateUser">Create user</a></li>
+    <li><a href="/Admin/DeleteUser">Delete user</a></li>
+    <li><a href="/Admin/Assign">Assign role</a></li>
+    <li><a href="/Admin/RemoveRole">Remove role</a></li>
+    <li><a href="/Admin/CreateRole">Create role</a></li>
+    <li><a href="/Admin/DeleteRole">Delete role</a></li>
+</ul>
+
+<div>
+    <h2>Users</h2>
+    @foreach (var user in users)
+    {
+        <p>@user.Id, @user.UserName</p>
+    }
+
+    <h2>Roles</h2>
+    @foreach (var role in roles)
+    {
+        <p>@role.Id, @role.Name</p>
+    }
+
+    <h2>Users/Roles</h2>
+    @foreach (var ur in users_roles)
+    {
+        <p>@ur.UserId [@getUserName(ur.UserId)], @ur.RoleId [@getRoleName(ur.RoleId)] </p>
+    }
+</div>

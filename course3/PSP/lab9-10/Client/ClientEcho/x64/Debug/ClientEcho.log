@@ -1,0 +1,8 @@
+﻿  ClientEcho.cpp
+D:\univer\!ПСП\lab9-10\Client\ClientEcho\ClientEcho.cpp(11,9): warning C4005: INADDR_ANY: изменение макроопределения
+D:\univer\!ПСП\lab9-10\Client\ClientEcho\ClientEcho.cpp(13,9): warning C4005: INADDR_BROADCAST: изменение макроопределения
+D:\univer\!ПСП\lab9-10\Client\ClientEcho\ClientEcho.cpp(130,48): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab9-10\Client\ClientEcho\ClientEcho.cpp(225,63): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab9-10\Client\ClientEcho\ClientEcho.cpp(239,67): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab9-10\Client\ClientEcho\ClientEcho.cpp(245,55): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  ClientEcho.vcxproj -> D:\univer\!ПСП\lab9-10\Client\x64\Debug\ClientEcho.exe

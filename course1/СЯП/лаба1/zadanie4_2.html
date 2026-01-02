@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie4_2</title>
+</head>
+<body>
+    <input type = "button" value ="КНОПКА" onclick = "messageWrite()">
+    <script>
+        var messageWrite=() =>
+        {
+        /*  ввести число, если оно больше или равно 43 и меньше 93 и не равно 45 и делится на 2 с остатком,
+        то вывести сообщение 'правильное значение', иначе 'неправильное значение' */
+        let x = prompt("введите число");
+        if (((x >= 43) || (x < 93)) && ((x != 45) && (x % 2 != 0)))
+            alert("правильное значение");
+        else 
+            alert("неправильное значение");
+        }
+    </script>
+</body>
+</html>

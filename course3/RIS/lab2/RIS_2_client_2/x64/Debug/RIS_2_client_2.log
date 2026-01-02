@@ -1,0 +1,9 @@
+﻿  client2.cpp
+D:\univer\!РИС\lab2\RIS_2_client_2\client2.cpp(138,57): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!РИС\lab2\RIS_2_client_2\client2.cpp(149,71): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!РИС\lab2\RIS_2_client_2\client2.cpp(165,70): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!РИС\lab2\RIS_2_client_2\client2.cpp(172,67): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!РИС\lab2\RIS_2_client_2\client2.cpp(178,71): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!РИС\lab2\RIS_2_client_2\client2.cpp(206,67): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!РИС\lab2\RIS_2_client_2\client2.cpp(212,67): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  RIS_2_client_2.vcxproj -> D:\univer\!РИС\lab2\RIS_2_server\x64\Debug\RIS_2_client_2.exe

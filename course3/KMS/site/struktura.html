@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="authoring-tool" content="Adobe_Animate_CC">
+    <title>Структура установки</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/teoria.css">
+    <link rel="stylesheet" href="css/struktura.css">
+    <script src="../ruffle-nightly-2024_09_13-web-selfhosted/ruffle.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="Map2.js"></script>
+    <script>
+        function menuOnClick() {
+            document.getElementById("menu-bar").classList.toggle("change");
+            document.getElementById("nav").classList.toggle("change");
+            document.getElementById("menu-bg").classList.toggle("change-bg");
+        }
+
+        function showImage(imageSrc) {
+            const imgElement = document.getElementById('element-image');
+            imgElement.src = imageSrc;
+            imgElement.style.display = 'block';
+        }
+    </script>
+    <style>
+        .vid-center{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="top-menu">
+            <div id="menu">
+                <div id="menu-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="main.html">Главная</a></li>
+                        <li><a href="teoria.html">Теория</a></li>
+                        <li><a href="struktura.html">Структура</a></li>
+                        <li><a href="simulator.html">Симулятор</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-bg" id="menu-bg"></div>
+            <a class="navbar-logo" href="main.html"><img src="images/logo.png" /></a>
+            <ul class="menu-main">
+                <li><a href="main.html">Главная</a></li>
+                <li><a href="teoria.html">Теория</a></li>
+                <li><a href="struktura.html">Структура</a></li>
+                <li><a href="simulator.html">Симулятор</a></li>
+            </ul>
+            <div class="navbar-phone" href=""></div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Структура установки</h1>
+        <h3>Изображения установки: </h3>
+        <div class="container-img">
+            <img src="images/yst1.png" alt="">
+            <img src="images/yst2.png" alt="">
+            <img src="images/yst3.png" alt="">
+        </div>
+        <section>
+            <h3>Основные элементы установки: </h3>
+            <ul>
+                <li onclick="showImage('images/magazin.jpg')">Магазин емкостей</li>
+                <li onclick="showImage('images/zero.jpg')">Нульиндикатор</li>
+                <li onclick="showImage('images/q2.jfif')">Конденсаторы</li>
+                <li onclick="showImage('images/transform.avif')">Трансформатор</li>
+            </ul>
+            <div id="image-container">
+                <img id="element-image" src="" alt="Изображение элемента" style="display: none;">
+            </div>
+        </section>
+
+        <div class = "vid-center"> 
+            <video controls width="80%">
+                <source src="yst.webm" type="video/webm" />
+                <source src="yst.avi" type="video/avi" />
+                <source src="yst.mp4" type="video/mp4" />
+                <source src="yst.wmv" type="video/wmv" />
+            </video>
+        </div>
+    </main>
+
+   
+
+    <section class="flex">
+        <object data="map.swf" type="application/x-shockwave-flash" class="adobe">
+            <param name="movie" value="map.swf">
+            <param name="quality" value="high">
+            <param name="allowScriptAccess" value="sameDomain">
+            <param name="pluginspage" value="https://ruffle.rs/">
+        </object>
+    </section>
+
+    <footer>
+        <img src="images/logo.png" alt="logo" />
+        <ul>
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="teoria.html">Теория</a></li>
+            <li><a href="struktura.html">Структура</a></li>
+            <li><a href="simulator.html">Симулятор</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

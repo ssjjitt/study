@@ -1,0 +1,16 @@
+companies{
+    margin: 10px;
+}
+table{
+    display: table;
+    border: 1px solid black;
+    background-color: #a1c1c5;
+}
+company{
+    display: table-row;
+    border: 1px solid black;
+}
+info, since, name, location{
+    display: table-cell;
+    border: 1px solid black;
+} 

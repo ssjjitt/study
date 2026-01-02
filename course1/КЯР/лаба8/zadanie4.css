@@ -1,0 +1,56 @@
+.ul1 li 
+{
+    display: inline; 
+    text-align: center;
+}
+.ul1 a
+{
+    background: url(facultet.png) no-repeat;
+    background-position: 0 2px;
+    display: inline-block;
+    width: 200px;
+    height: 19px;
+}
+a[href = "https://it.belstu.by/"]:hover
+{
+    background-position: 0 -29px;
+}
+a[href = "https://pim.belstu.by/" ]:hover
+{
+    background-position: 0 -58px;
+}
+a[href = "https://htit.belstu.by/"]:hover
+{
+    background-position: 0 -89px;
+}
+
+
+
+.nav ul {
+    padding: 0;
+    list-style-type:none;
+}
+.nav>ul>li {
+    float:left;
+    width: 250px;
+    position: relative;
+}
+.nav li a {
+    display: block;
+    margin: 0;
+    border: 2px solid black;
+    padding: 6px;
+    text-decoration: none;
+}
+.nav li .second a {
+    display: block;
+    border: 2px solid black;
+}       
+.nav li .second {
+    display: none;
+    position: absolute;
+}
+.nav li:hover .second{
+    display: block;
+    text-decoration: none;
+}

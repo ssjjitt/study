@@ -1,0 +1,86 @@
+--ЧИСЛОВЫЕ
+--все
+SELECT
+    {[Measures].[STUDENT Count]} ON COLUMNS,
+    [GROUPS].[IDGROUP].MEMBERS ON ROWS
+FROM [Univer];
+--количество человек в группе < 3
+SELECT
+    {[Measures].[STUDENT Count]} ON COLUMNS,
+    FILTER(
+        [GROUPS].[IDGROUP].MEMBERS,
+        [Measures].[STUDENT Count] < 3 AND 
+        NOT IsEmpty([Measures].[STUDENT Count])
+    ) ON ROWS
+FROM [Univer]
+--СТРОКОВЫЕ
+--все студенты
+SELECT
+    {[Measures].[STUDENT Count]} ON COLUMNS,
+    [STUDENT].[IDSTUDENT].MEMBERS ON ROWS
+FROM [Univer]
+--фильтрация с буквой A
+SELECT
+    {[Measures].[STUDENT Count]} ON COLUMNS,
+    FILTER(
+        [FACULTY].[FACULTY].MEMBERS,
+        INSTR([FACULTY].[FACULTY].CURRENTMEMBER.MEMBER_CAPTION, "A") > 0
+    ) ON ROWS
+FROM [Univer]
+--ДЛЯ НАБОРОВ
+--все факультеты
+SELECT
+    {[Measures].[STUDENT Count]} ON COLUMNS,
+    [FACULTY].[FACULTY].MEMBERS ON ROWS
+FROM [Univer];
+--
+SELECT
+    {[Measures].[STUDENT Count]} ON COLUMNS,
+    [PROFESSION].[PROFESSION].MEMBERS ON ROWS
+FROM [Univer]
+--
+SELECT
+    {[Measures].[STUDENT Count]} ON COLUMNS,
+    GENERATE(
+        [FACULTY].[FACULTY].MEMBERS,
+        [PROFESSION].[PROFESSION].MEMBERS
+    ) ON ROWS
+FROM [Univer]
+--ЭЛЕМЕНТЫ ИЗМЕРЕНИЯ
+SELECT
+    [FACULTY].[FACULTY].MEMBERS ON ROWS,
+    [PROFESSION].[PROFESSION].MEMBERS ON COLUMNS
+FROM [Univer]
+--
+SELECT
+    [FACULTY].[FACULTY].MEMBERS ON ROWS,
+    [GROUPS].[IDGROUP].MEMBERS ON COLUMNS
+FROM [Univer]
+--
+SELECT
+    [FACULTY].[FACULTY].MEMBERS ON ROWS,
+    [TEACHER].[PULPIT].MEMBERS ON COLUMNS
+FROM [Univer]
+
+--ИЕРАРХИЯ
+SELECT
+    {[Measures].[STUDENT Count]} ON COLUMNS,
+    FILTER(
+        GENERATE(
+            {[FACULTY].[LAW]} ,  
+            {[PROFESSION].[LAW]} 
+        ),
+        NOT IsEmpty([Measures].[STUDENT Count])
+    ) ON ROWS
+FROM [Univer]
+--
+SELECT
+    {[Measures].[STUDENT Count]} ON COLUMNS,
+    FILTER(
+        GENERATE(
+            {[FACULTY].[ECON]} ,  
+            {[PROFESSION].[ECO]} 
+        ),
+        NOT IsEmpty([Measures].[STUDENT Count])
+    ) ON ROWS
+FROM [Univer]

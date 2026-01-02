@@ -1,0 +1,7 @@
+﻿  ClientRandom.cpp
+D:\univer\!ПСП\lab9-10\Client\ClientRandom\ClientRandom.cpp(11,9): warning C4005: INADDR_ANY: изменение макроопределения
+D:\univer\!ПСП\lab9-10\Client\ClientRandom\ClientRandom.cpp(13,9): warning C4005: INADDR_BROADCAST: изменение макроопределения
+D:\univer\!ПСП\lab9-10\Client\ClientRandom\ClientRandom.cpp(129,48): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab9-10\Client\ClientRandom\ClientRandom.cpp(227,63): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\!ПСП\lab9-10\Client\ClientRandom\ClientRandom.cpp(185,17): warning C4101: serverAddr: неиспользованная локальная переменная
+  ClientRandom.vcxproj -> D:\univer\!ПСП\lab9-10\Client\x64\Debug\ClientRandom.exe

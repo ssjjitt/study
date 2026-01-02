@@ -1,0 +1,10 @@
+E:\уник\сммиф\SMMIF_lab3_\obj\Debug\SMMIF_lab3_.csproj.AssemblyReference.cache
+E:\уник\сммиф\SMMIF_lab3_\obj\Debug\SMMIF_lab3_.Form1.resources
+E:\уник\сммиф\SMMIF_lab3_\obj\Debug\SMMIF_lab3_.Properties.Resources.resources
+E:\уник\сммиф\SMMIF_lab3_\obj\Debug\SMMIF_lab3_.csproj.GenerateResource.cache
+E:\уник\сммиф\SMMIF_lab3_\obj\Debug\SMMIF_lab3_.csproj.CoreCompileInputs.cache
+E:\уник\сммиф\SMMIF_lab3_\bin\Debug\SMMIF_lab3_.exe.config
+E:\уник\сммиф\SMMIF_lab3_\bin\Debug\SMMIF_lab3_.exe
+E:\уник\сммиф\SMMIF_lab3_\bin\Debug\SMMIF_lab3_.pdb
+E:\уник\сммиф\SMMIF_lab3_\obj\Debug\SMMIF_lab3_.exe
+E:\уник\сммиф\SMMIF_lab3_\obj\Debug\SMMIF_lab3_.pdb

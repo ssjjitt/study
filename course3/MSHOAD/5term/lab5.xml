@@ -1,0 +1,4 @@
+<!DOCTYPE connections>
+<qgsMssqlConnections version="1.0">
+    <mssql port="" saveUsername="false" savePassword="false" sslmode="1" service="" host="DESKTOP-9FDAEQH" database="lab5db" name="lab5" estimatedMetadata="true"/>
+</qgsMssqlConnections>

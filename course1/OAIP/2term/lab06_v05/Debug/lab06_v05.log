@@ -1,0 +1,4 @@
+﻿  lab06_v05.cpp
+E:\уник\оаип\lab06_v05\lab06_v05.cpp(116,16): warning C4244: return: преобразование "int" в "float", возможна потеря данных
+E:\уник\оаип\lab06_v05\lab06_v05.cpp(132,20): warning C4244: return: преобразование "int" в "float", возможна потеря данных
+  lab06_v05.vcxproj -> E:\уник\оаип\lab06_v02\Debug\lab06_v05.exe

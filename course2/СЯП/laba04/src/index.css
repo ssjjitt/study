@@ -1,0 +1,21 @@
+*{
+ box-sizing: border-box;
+}
+
+td {
+  border: 0;  padding: 0;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+}
+
+table {
+  padding: 0;
+  margin : 0;
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+thead td {
+  background: rgba(185, 186, 193, 0.59);
+}

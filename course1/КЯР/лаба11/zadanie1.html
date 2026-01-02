@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="E:\уник\кяр\лаба11\css\mainfile.css">
+</head>
+<body>
+    <div class="headercontainer">
+        <img src="images/sass.png" alt="1" class="logo">
+        <div class = "nav">
+          <ul>
+            <li><a href="https://sass-scss.ru/guide/">Основы</a></li>
+            <li><a href="https://tproger.ru/translations/complete-sass-guide/">Руководство</a></li>
+            <li><a href="https://itproger.com/course/sass">Уроки</a></li>
+            <li><a href="https://bootstrap-4.ru/docs/5.2/customize/sass/">Настройка</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bodycontainer">
+        <div>
+          <h2 class = "h2">Основы Sass</h2>
+          <div class="containertext">
+            <div class="text">
+              <h4>Импорт</h4>
+              CSS имеет возможность импорта, которая позволяет разделить ваш CSS-файл на более мелкие и облегчить@import, то в CSS создается еще один HTTP-запрос. Sass берет идею импорта файлов через директиву @import, но вместо создания отдельного HTTP-запроса Sass импортирует указанный в директиве файл в тот, где он вызывается, т.е. на выходе получается один CSS-файл, скомпилированный из нескольких фрагментов. Например, у вас есть несколько фрагментов Sass-файлов — _reset.scss и base.scss. И мы хотим импортировать _reset.scss в base.scss.
+            </div>
+            <div class="text">
+              <h4>Математические операторы</h4>
+              Использовать математику в CSS очень полезно. Sass имеет несколько стандартных математических операторов, таких как +, -, *, / и %. В нашем примере мы совершаем простые математические вычисления для расчета ширины aside и article.
+            </div>
+            <div class="text">
+              <h4>Вложенности</h4>
+              При написании HTML, Вы, наверное, заметили, что он имеет четкую вложенную и визуальную иерархию. С CSS это не так. Sass позволит вам вкладывать CSS селекторы таким же образом, как и в визуальной иерархии HTML. Но помните, что чрезмерное количество вложенностей делает ваш документ менее читабельным и воспринимаемым, что считается плохой практикой. Чтобы понять что мы имеем ввиду, приведем типичный пример стилей навигации на сайте:
+            </div>
+          </div>
+          <h2>Примеры</h2>
+          <div>
+            <img src="images/prim2.jpg" alt="" class = "img">
+            <img src="images/prim4.jpg" alt="" class = "img">
+            <img src="images/prim5.jpg" alt="" class = "img">
+          </div>
+        </div>
+        <div>
+          <form>
+            <h3>Форма</h3>
+            <div class="form">
+              <label>Фамилия:</label>
+              <input type="text">
+            </div>
+            <div class="form">
+              <label>Имя:</label>
+              <input type="text">
+            </div>
+            <div class="form">
+              <label>Фамилия:</label>
+              <input type="text">
+            </div>
+            <div class="form">
+              <label>Возраст:</label>
+              <input type="number">
+            </div>
+            <div class="form">
+              <label>Пол:</label>
+              <input type="checkbox">
+              <span>мужской</span>
+              <input type="checkbox">
+              <span>женский</span>
+            </div>
+            <div class="form">
+              <label>Email:</label>
+              <input type="email">
+            </div>
+            <div class="form">
+              <label>Страна проживания:</label>
+              <input type="text">
+            </div>
+            <div class = "form">
+                <label></label>
+                <input type="submit">
+            </div>
+          </form>
+          <h2>Примеры</h2>
+          <div class = "bodycontainer">
+            <img src="images/prim1.jpg" alt="" class = "img1">
+            <div class="text2">
+              <h5>Переменные</h5>
+            </div>
+          </div>
+          <div class = "bodycontainer">
+            <img src="images/prim3.jpg" alt="" class = img1>
+            <div class="text2">
+              <h5>Миксины</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>ФИТ, 2 группа, Глухова Дарья Витальевна</div>
+    </body>
+</body>
+</html>

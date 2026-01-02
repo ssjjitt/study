@@ -1,0 +1,4 @@
+﻿  sd_lab05.cpp
+E:\уник\сд\sd_lab05\sd_lab05.cpp(29,7): warning C4101: ch: неиспользованная локальная переменная
+E:\уник\сд\sd_lab05\sd_lab05.cpp(28,6): warning C4101: n: неиспользованная локальная переменная
+  sd_lab05.vcxproj -> E:\уник\сд\sd_lab05\Debug\sd_lab05.exe

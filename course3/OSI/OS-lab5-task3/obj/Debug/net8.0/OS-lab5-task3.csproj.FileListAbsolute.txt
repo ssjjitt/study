@@ -1,0 +1,14 @@
+D:\univer\!ОС\OS-lab5-task3\bin\Debug\net8.0\OS-lab5-task3.exe
+D:\univer\!ОС\OS-lab5-task3\bin\Debug\net8.0\OS-lab5-task3.deps.json
+D:\univer\!ОС\OS-lab5-task3\bin\Debug\net8.0\OS-lab5-task3.runtimeconfig.json
+D:\univer\!ОС\OS-lab5-task3\bin\Debug\net8.0\OS-lab5-task3.dll
+D:\univer\!ОС\OS-lab5-task3\bin\Debug\net8.0\OS-lab5-task3.pdb
+D:\univer\!ОС\OS-lab5-task3\obj\Debug\net8.0\OS-lab5-task3.GeneratedMSBuildEditorConfig.editorconfig
+D:\univer\!ОС\OS-lab5-task3\obj\Debug\net8.0\OS-lab5-task3.AssemblyInfoInputs.cache
+D:\univer\!ОС\OS-lab5-task3\obj\Debug\net8.0\OS-lab5-task3.AssemblyInfo.cs
+D:\univer\!ОС\OS-lab5-task3\obj\Debug\net8.0\OS-lab5-task3.csproj.CoreCompileInputs.cache
+D:\univer\!ОС\OS-lab5-task3\obj\Debug\net8.0\OS-lab5-task3.dll
+D:\univer\!ОС\OS-lab5-task3\obj\Debug\net8.0\refint\OS-lab5-task3.dll
+D:\univer\!ОС\OS-lab5-task3\obj\Debug\net8.0\OS-lab5-task3.pdb
+D:\univer\!ОС\OS-lab5-task3\obj\Debug\net8.0\OS-lab5-task3.genruntimeconfig.cache
+D:\univer\!ОС\OS-lab5-task3\obj\Debug\net8.0\ref\OS-lab5-task3.dll

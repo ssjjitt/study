@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамические Эффекты</title>
+    <style>
+        img {
+            transition: width 0.5s ease;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <p id="text">
+        <span id="word">слово</span>
+    </p>
+    <img id="image" src="1.jpg" alt="Яблоко" width="200">
+    <script>
+        const word = document.getElementById('word');
+        const image = document.getElementById('image');
+        let isImageVisible = false;
+
+        // Замена слова на изображение при наведении
+        word.addEventListener('click', () => {
+            word.style.display = 'none';
+            image.style.display = 'inline';
+            isImageVisible = true;
+        });
+
+        // Возврат слова при уходе курсора
+        image.addEventListener('dblclick', () => {
+            if (!isImageVisible) return;
+            word.style.display = 'inline';
+            image.style.display = 'none';
+        });
+
+        // Изменение размера изображения при клике на слово
+        image.addEventListener('mouseenter', () => {
+            if (isImageVisible) {
+                if (image.style.width === '200px') {
+                    image.style.width = '400px'; // Увеличить размер
+                } else {
+                    image.style.width = '200px'; // Уменьшить размер
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

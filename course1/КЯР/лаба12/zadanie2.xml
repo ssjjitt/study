@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>                             
+<?xml-stylesheet type="text/css" href="zadanie1.css"?>              
+<!DOCTYPE companies [
+<!ELEMENT companies (header, company, info, name, since, location)>
+<!ELEMENT company (info, name, since, location)>
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT since (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ENTITY name "Company">
+<!ENTITY name2 "Location">
+]>
+<companies>
+<header> Companies </header>
+<table>
+        <company>
+            <info> Information: </info>
+            <name> &name;: Lenovo </name>
+            <since> Since: 1984 </since>
+            <location> &name2;: Hong Kong </location>
+        </company>
+        <company>
+            <info> Information: </info>
+            <name> &name;: Apple </name>
+            <since> Since: 1976 </since>
+            <location> &name2;: California </location>
+        </company>
+         <company>
+            <info> Information: </info>
+            <name> &name;: Asus </name>
+            <since> Since: 1989 </since>
+            <location> &name2;: Taipei </location>
+        </company>
+</table>
+</companies>
