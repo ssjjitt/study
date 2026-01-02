@@ -1,0 +1,198 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 OPR/124.0.0.0 (Edition Yx GX)" version="29.2.2">
+  <diagram name="Страница-1" id="_dyExCwKgPMUmN8R9G-M">
+    <mxGraphModel dx="5012" dy="1004" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-1" edge="1" parent="1" source="syr0ZWHsBryMqUp-mVqF-5" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" target="syr0ZWHsBryMqUp-mVqF-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-2" connectable="0" parent="syr0ZWHsBryMqUp-mVqF-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="2 вар" vertex="1">
+          <mxGeometry relative="1" x="-0.3312" y="4" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-3" edge="1" parent="1" source="syr0ZWHsBryMqUp-mVqF-5" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" target="syr0ZWHsBryMqUp-mVqF-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-4" connectable="0" parent="syr0ZWHsBryMqUp-mVqF-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="3 вар" vertex="1">
+          <mxGeometry relative="1" x="-0.0004" y="3" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Рассмотрение&lt;br&gt;вариантов" vertex="1">
+          <mxGeometry height="60" width="120" x="-1960" y="805" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-6" edge="1" parent="1" source="syr0ZWHsBryMqUp-mVqF-10" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" target="syr0ZWHsBryMqUp-mVqF-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-7" connectable="0" parent="syr0ZWHsBryMqUp-mVqF-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="0.3" vertex="1">
+          <mxGeometry relative="1" x="0.1469" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-8" edge="1" parent="1" source="syr0ZWHsBryMqUp-mVqF-10" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" target="syr0ZWHsBryMqUp-mVqF-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-9" connectable="0" parent="syr0ZWHsBryMqUp-mVqF-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="0.7" vertex="1">
+          <mxGeometry relative="1" x="-0.061" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="Строительство нового цеха" vertex="1">
+          <mxGeometry height="60" width="120" x="-1580" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-11" edge="1" parent="1" source="syr0ZWHsBryMqUp-mVqF-15" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" target="syr0ZWHsBryMqUp-mVqF-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-12" connectable="0" parent="syr0ZWHsBryMqUp-mVqF-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="0.6" vertex="1">
+          <mxGeometry relative="1" x="0.082" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-13" edge="1" parent="1" source="syr0ZWHsBryMqUp-mVqF-15" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" target="syr0ZWHsBryMqUp-mVqF-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-14" connectable="0" parent="syr0ZWHsBryMqUp-mVqF-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="0.4" vertex="1">
+          <mxGeometry relative="1" x="-0.2062" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="Создание нового предприятия" vertex="1">
+          <mxGeometry height="60" width="120" x="-1720" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-16" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="0.8" vertex="1">
+          <mxGeometry x="-1588.1428571428564" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-17" edge="1" parent="1" source="syr0ZWHsBryMqUp-mVqF-19" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" target="syr0ZWHsBryMqUp-mVqF-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-18" connectable="0" parent="syr0ZWHsBryMqUp-mVqF-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="0.2" vertex="1">
+          <mxGeometry relative="1" x="-0.2603" y="3" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Отложить инвестиции на 1 год" vertex="1">
+          <mxGeometry height="60" width="120" x="-1750" y="985" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-20" edge="1" parent="1" source="syr0ZWHsBryMqUp-mVqF-52" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.707;exitY=1.046;exitDx=0;exitDy=0;exitPerimeter=0;" target="syr0ZWHsBryMqUp-mVqF-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-1820" y="800" as="sourcePoint" />
+            <mxPoint x="-1770" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-21" connectable="0" parent="syr0ZWHsBryMqUp-mVqF-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="1 вар" vertex="1">
+          <mxGeometry relative="1" x="-0.0843" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="-500 млн руб" vertex="1">
+          <mxGeometry height="30" width="100" x="-1570" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="230*5=1150" vertex="1">
+          <mxGeometry height="60" width="120" x="-1135" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="-90*5=-450" vertex="1">
+          <mxGeometry height="60" width="120" x="-1135" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="больш спрос" vertex="1">
+          <mxGeometry height="30" width="130" x="-1140" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="I низкий спрос" vertex="1">
+          <mxGeometry height="30" width="150" x="-1145" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="450*5=2250" vertex="1">
+          <mxGeometry height="60" width="120" x="-1140" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="-150*5=-750" vertex="1">
+          <mxGeometry height="60" width="120" x="-1140" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="I больш спрос" vertex="1">
+          <mxGeometry height="30" width="130" x="-1145" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="I низкий спрос" vertex="1">
+          <mxGeometry height="30" width="150" x="-1150" y="705" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-31" edge="1" parent="1" source="syr0ZWHsBryMqUp-mVqF-33" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1360" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-32" edge="1" parent="1" source="syr0ZWHsBryMqUp-mVqF-33" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" target="syr0ZWHsBryMqUp-mVqF-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1360" y="1060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-33" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Позитивный прогноз" vertex="1">
+          <mxGeometry height="60" width="120" x="-1530" y="985" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-34" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="Негативный прогноз" vertex="1">
+          <mxGeometry height="60" width="120" x="-1560" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="Строительство нового цеха" vertex="1">
+          <mxGeometry height="60" width="120" x="-1360" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Создание нового предприятия" vertex="1">
+          <mxGeometry height="60" width="120" x="-1370" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="-500 млн" vertex="1">
+          <mxGeometry height="30" width="100" x="-1350" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="230*5=1150" vertex="1">
+          <mxGeometry height="60" width="120" x="-1140" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="-90*5=-450" vertex="1">
+          <mxGeometry height="60" width="120" x="-1140" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="I больш спрос" vertex="1">
+          <mxGeometry height="30" width="130" x="-1145" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-41" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="I низкий спрос" vertex="1">
+          <mxGeometry height="30" width="150" x="-1155" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-42" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="0" vertex="1">
+          <mxGeometry height="30" width="60" x="-1530" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="450*5=2250" vertex="1">
+          <mxGeometry height="60" width="120" x="-1140" y="1109" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="-150*5=-750" vertex="1">
+          <mxGeometry height="60" width="120" x="-1140" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="I больш спрос" vertex="1">
+          <mxGeometry height="30" width="130" x="-1145" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="I низкий спрос" vertex="1">
+          <mxGeometry height="30" width="150" x="-1155" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;div&gt;прибыль по первому варианту&lt;/div&gt;-500+0.7*1150-0.3*450=170" vertex="1">
+          <mxGeometry height="30" width="260" x="-1005" y="479" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-48" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;div&gt;прибыль по второму варианту&lt;/div&gt;-700+0.6*2250-0.4*750=350" vertex="1">
+          <mxGeometry height="30" width="240" x="-995" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-49" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;div&gt;прибыль по варианту 3.1&lt;/div&gt;500+0,9*1150-0,1*450 = 490" vertex="1">
+          <mxGeometry height="40" width="190" x="-1010" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-50" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;div&gt;прибыль по варианту 3.2&lt;/div&gt;-700+0,9*2250-0,1*750 = 1250" vertex="1">
+          <mxGeometry height="40" width="175" x="-1050" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-51" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;div&gt;прибыль по варианту 3&lt;/div&gt;0,8*max(490;1250)+0,2*0=1000" vertex="1">
+          <mxGeometry height="40" width="200" x="-900" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-52" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;div&gt;смотрим по прибылям&lt;/div&gt;max(170;350;1000) = 1000" vertex="1">
+          <mxGeometry height="40" width="180" x="-1970" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Первый вариант -&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;строительство нового цеха для увеличения объема выпуска продукции стоимостью М1 = 500 млн.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;При этом варианте возможны большой спрос (годовой доход в размере R1 = 230 млн. руб. в&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;течение 5 последующих лет) с вероятностью p1 = 0,7 и низкий спрос (ежегодные убытки R2 = 90&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;млн. руб. с вероятностью p2 = 0,3.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Второй вариант предусматривает создание нового предприятия для выпуска новой продукции&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Стоимостью М1 = 700 млн. руб.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;При этом варианте возможны большой спрос (годовой доход в&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;размере R1 = 450 млн. руб. в течение 5 последующих лет) с вероятностью p1 = 0,6 и низкий спрос&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(ежегодные убытки R2 = 150 млн. руб. с вероятностью p2 = 0,4.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;При третьем варианте предлагается отложить инвестиции на 1 год для сбора дополнительной&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;информации, которая может быть позитивной или негативной с вероятностью p1 = 0,8 и p2 = 0,2&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;соответственно.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;В случае позитивной информации можно осуществить инвестиции по указанным&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;выше расценкам, в вероятности большого и низкого спроса меняются на p1 = 0,9 и p2 = 0,1&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;соответственно.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Доходы на последующие годы остаются на том же уровне.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;В случае негативной&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;информации инвестиции осуществляться не будут.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Все расчеты выражены в текущих ценах и не должны дисконтироваться. Нарисовать дерево&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;решений. Определить наиболее эффективную последовательность действий, основываясь на&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ожидаемых доходах. Какова ожидаемая стоимостная оценка наилучшего решения?&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="490" width="550" x="-2570" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-54" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="-700" vertex="1">
+          <mxGeometry height="30" width="60" x="-1677.5" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="syr0ZWHsBryMqUp-mVqF-55" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="-700 млн" vertex="1">
+          <mxGeometry height="30" width="70" x="-1332.5" y="1040" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
